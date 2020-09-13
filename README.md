@@ -7,3 +7,8 @@ be compiled with mingw on Linux. It automatically runs them with Wine and report
 are run.
 
 Results are saved in the `fails.txt` and `success.txt`.
+
+# TODO
+
+Not all code runs. Sometimes, variables are missing. Sometimes, there's no `main` defined and so on.
+I have to modify the `modify.pl` so that all example-codes will be proper `C++`-programs.
