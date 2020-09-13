@@ -21,7 +21,7 @@ while ($list =~ m#href="https://docs.microsoft.com/en-us/windows/win32/api/([^"]
 	push @headers, $match;
 }
 
-foreach my $header (@headers) {
+foreach my $header (sort { sort() <=> sort() } @headers) {
 	parse_overview("https://docs.microsoft.com/en-us/windows/win32/api/$header");
 }
 
@@ -41,7 +41,7 @@ sub parse_overview {
 		push @urls, "https://docs.microsoft.com/en-us/windows/win32/api/$1";
 	}
 	
-	foreach my $url (@urls) {
+	foreach my $url (sort { rand() <=> rand() } @urls) {
 		parse_and_run($url);
 	}
 }
@@ -63,7 +63,7 @@ sub parse_and_run {
 	my $min_version = undef;
 	my $example = undef;
 
-	if($contents =~ m#<meta name="req.target-min-winverclnt" content="Windows[^"]*(2000|XP)[^"]*" />#) {
+	if($contents =~ m#<meta name="req.target-min-winverclnt" content="Windows[^"]*(2000|XP|Vista|10|8\.1)[^"]*" />#) {
 		$min_version = $1;
 	}
 
@@ -79,10 +79,10 @@ sub parse_and_run {
 
 		if($?) {
 			print color("red")."The file $path could not be built or it could not be executed by wine correctly.".color("reset")."\n";
-			system("echo $library/$function_name >> fails.txt");
+			system("echo $min_version/$library/$function_name >> fails.txt");
 		} else {
 			print color("green")."The file $path could be built and wine correctly.".color("reset")."\n";
-			system("echo $library/$function_name >> success.txt");
+			system("echo $min_version/$library/$function_name >> success.txt");
 		}
 	} else {
 		my $string = 'An error occured with URL $url;';
