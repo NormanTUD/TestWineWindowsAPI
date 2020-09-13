@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="FormatMessageA function (winbase.h) - Win32 apps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-formatmessagea" />
+			<meta property="og:description" content="Formats a message string." />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+
+	<meta name="APILocation" content="Kernel32.dll" />
+<meta name="APILocation" content="API-MS-Win-Core-Localization-l1-2-0.dll" />
+<meta name="APILocation" content="KernelBase.dll" />
+<meta name="APILocation" content="API-MS-Win-Core-Localization-l1-2-1.dll" />
+<meta name="APILocation" content="API-MS-Win-Core-misc-l1-1-0.dll" />
+<meta name="APILocation" content="API-MS-Win-DownLevel-Kernel32-l1-1-0.dll" />
+<meta name="APILocation" content="MinKernelBase.dll" />
+<meta name="APILocation" content="API-MS-Win-Core-Localization-L1-2-2.dll" />
+<meta name="APIName" content="FormatMessage" />
+<meta name="APIName" content="FormatMessageA" />
+<meta name="APIName" content="FormatMessageW" />
+<meta name="APIType" content="DllExport" />
+<meta name="author" content="lastnameholiu" />
+<meta name="breadcrumb_path" content="/windows/desktop/api/breadcrumb/toc.json" />
+<meta name="depot_name" content="MSDN.sdk-api-build" />
+<meta name="description" content="Formats a message string." />
+<meta name="document_id" content="4291704a-6ec8-ad8a-e0dd-09c90d84a3e7" />
+<meta name="document_version_independent_id" content="24738518-2b81-9de8-f5b2-749826aea4fd" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build/commit/7bab390bf30a864183bdb415009b59ef671b931e?path=/sdk-api-src/content/winbase/nf-winbase-formatmessagea.md&amp;_a=contents" />
+<meta name="locale" content="en-us" />
+<meta name="ms.assetid" content="b9d61342-4bcf-42e9-96f1-a5993dfb6c0c" />
+<meta name="ms.author" content="alholiu" />
+<meta name="ms.custom" content="19H1" />
+<meta name="ms.date" content="12/05/2018" />
+<meta name="ms.keywords" content="FORMAT_MESSAGE_ALLOCATE_BUFFER, FORMAT_MESSAGE_ARGUMENT_ARRAY, FORMAT_MESSAGE_FROM_HMODULE, FORMAT_MESSAGE_FROM_STRING, FORMAT_MESSAGE_FROM_SYSTEM, FORMAT_MESSAGE_IGNORE_INSERTS, FORMAT_MESSAGE_MAX_WIDTH_MASK, FormatMessage, FormatMessage function, FormatMessageA, FormatMessageW, _win32_formatmessage, base.formatmessage, winbase/FormatMessage, winbase/FormatMessageA, winbase/FormatMessageW" />
+<meta name="ms.prod" content="desktop" />
+<meta name="ms.technology" content="sdk-api-reference" />
+<meta name="ms.topic" content="language-reference" />
+<meta name="old-location" content="base\formatmessage.htm" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/nf-winbase-formatmessagea.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="req.assembly" content="" />
+<meta name="req.ddi-compliance" content="" />
+<meta name="req.dll" content="Kernel32.dll" />
+<meta name="req.header" content="winbase.h" />
+<meta name="req.idl" content="" />
+<meta name="req.include-header" content="Windows.h" />
+<meta name="req.irql" content="" />
+<meta name="req.kmdf-ver" content="" />
+<meta name="req.lib" content="Kernel32.lib" />
+<meta name="req.max-support" content="" />
+<meta name="req.namespace" content="" />
+<meta name="req.redist" content="" />
+<meta name="req.target-min-winverclnt" content="Windows XP [desktop apps \| UWP apps]" />
+<meta name="req.target-min-winversvr" content="Windows Server 2003 [desktop apps \| UWP apps]" />
+<meta name="req.target-type" content="Windows" />
+<meta name="req.type-library" content="" />
+<meta name="req.typenames" content="" />
+<meta name="req.umdf-ver" content="" />
+<meta name="req.unicode-ansi" content="FormatMessageW (Unicode) and FormatMessageA (ANSI)" />
+<meta name="search.ms_docsetname" content="sdk-api-build" />
+<meta name="search.ms_product" content="MSDN" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="targetos" content="Windows" />
+<meta name="tech.root" content="Debug" />
+<meta name="TopicType" content="APIRef" />
+<meta name="TopicType" content="kbSyntax" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDevCenter" />
+<meta name="UID" content="NF:winbase.FormatMessageA" />
+<meta name="updated_at" content="2020-06-30 09:41 AM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.sdk-api-build/{branchName}{pdfName}" />
+<meta name="feedback_config_error" content="feedback_system metadata is invalid. Expected GitHub. Received none." />
+<meta name="search.mshattr.devlang" content="c++" />
+<meta name="word_count" content="2339" />
+
+
+	<meta name="scope" content="Windows, Desktop" />
+<link href="https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-formatmessagea" rel="canonical">
+	<title>FormatMessageA function (winbase.h) - Win32 apps | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/284eaf13.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/2e5ce4ab.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/nf-winbase-formatmessagea.md',
+			extendBreadcrumb: true,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/2f860d58.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+							<li id="contenteditbtn">
+								<a href="https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/nf-winbase-formatmessagea.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/nf-winbase-formatmessagea.md&version=GBlive&_a=contents" data-original_content_git_url_template="{repo}?path=/sdk-api-src/content/winbase/nf-winbase-formatmessagea.md&version=GB{branch}&_a=contents" data-pr_repo="" data-pr_branch="">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-edit-outline"></span>
+								</span>
+								<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+							</a>
+						</li>
+					<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="formatmessagea-function">FormatMessageA function</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li>
+								<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2018-12-05T00:00:00.000Z" data-article-date-source="ms.date">12/05/2018</time>
+							</li>
+								<li class="readingTime">11 minutes to read</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+							<h3>In this article</h3>
+						</nav>
+
+						<!-- <content> -->
+							<p>Formats a message string. The function requires a message definition as input. The message
+definition can come from a buffer passed into the function. It can come from a message table resource in an
+already-loaded module. Or the caller can ask the function to search the system's message table resource(s) for the
+message definition. The function finds the message definition in a message table resource based on a message
+identifier and a language identifier. The function copies the formatted message text to an output buffer,
+processing any embedded insert sequences if requested.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-cpp">DWORD FormatMessageA(
+  DWORD   dwFlags,
+  LPCVOID lpSource,
+  DWORD   dwMessageId,
+  DWORD   dwLanguageId,
+  LPSTR   lpBuffer,
+  DWORD   nSize,
+  va_list *Arguments
+);
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<p><code>dwFlags</code></p>
+<p>The formatting options, and how to interpret the <i>lpSource</i> parameter. The
+low-order byte of <i>dwFlags</i> specifies how the function handles line breaks in the output
+buffer. The low-order byte can also specify the maximum width of a formatted output line.</p>
+<p>This parameter can be one or more of the following values.</p>
+<table>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_ALLOCATE_BUFFER"></a><a id="format_message_allocate_buffer"></a><dl>
+<dt><b>FORMAT_MESSAGE_ALLOCATE_BUFFER</b></dt>
+<dt>0x00000100</dt>
+</dl>
+</td>
+<td width="60%">
+The function allocates a buffer large enough to hold the formatted message, and places a pointer to the 
+         allocated buffer at the address specified by <i>lpBuffer</i>. The 
+         <i>lpBuffer</i> parameter is a pointer to an <b>LPTSTR</b>; you must 
+         cast the pointer to an <b>LPTSTR</b> (for example, 
+         <code>(LPTSTR)&amp;lpBuffer</code>). The <i>nSize</i> 
+         parameter specifies the minimum number of <b>TCHARs</b> to allocate for an output 
+         message buffer. The caller should use the <a href="/en-us/windows/desktop/api/winbase/nf-winbase-localfree" data-linktype="absolute-path">LocalFree</a> 
+         function to free the buffer when it is no longer needed.
+<p>If the length of the formatted message exceeds 128K bytes, then
+<b>FormatMessage</b> will fail and a subsequent call to
+<a href="/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror" data-linktype="absolute-path">GetLastError</a> will return
+<b>ERROR_MORE_DATA</b>.</p>
+<p>In previous versions of Windows, this value was not available for use when compiling Windows Store apps. As of Windows 10 this value can be used.</p>
+<p><b>Windows Server 2003 and Windows XP:  </b><p class="note">If the length of the formatted message exceeds 128K bytes, then
+<b>FormatMessage</b> will not automatically fail with an
+error of <b>ERROR_MORE_DATA</b>.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_ARGUMENT_ARRAY"></a><a id="format_message_argument_array"></a><dl>
+<dt><b>FORMAT_MESSAGE_ARGUMENT_ARRAY</b></dt>
+<dt>0x00002000</dt>
+</dl>
+</td>
+<td width="60%">
+The <i>Arguments</i> parameter is not a <b>va_list</b> 
+         structure, but is a pointer to an array of values that represent the arguments.
+<p>This flag cannot be used with 64-bit integer values.  If you are using a 64-bit integer, you must use the
+<b>va_list</b> structure.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_FROM_HMODULE"></a><a id="format_message_from_hmodule"></a><dl>
+<dt><b>FORMAT_MESSAGE_FROM_HMODULE</b></dt>
+<dt>0x00000800</dt>
+</dl>
+</td>
+<td width="60%">
+The <i>lpSource</i> parameter is a module handle containing the message-table 
+         resource(s) to search. If this <i>lpSource</i> handle is <b>NULL</b>, 
+         the current process's application image file will be searched. This flag cannot be used with 
+        <b>FORMAT_MESSAGE_FROM_STRING</b>.
+<p>If the module has no message table resource, the function fails with
+<b>ERROR_RESOURCE_TYPE_NOT_FOUND</b>.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_FROM_STRING"></a><a id="format_message_from_string"></a><dl>
+<dt><b>FORMAT_MESSAGE_FROM_STRING</b></dt>
+<dt>0x00000400</dt>
+</dl>
+</td>
+<td width="60%">
+The <i>lpSource</i> parameter is a pointer to a null-terminated string that contains 
+        a message definition. The message definition may contain insert sequences, just as the message text in a 
+        message table resource may. This flag cannot be used with 
+        <b>FORMAT_MESSAGE_FROM_HMODULE</b> or 
+        <b>FORMAT_MESSAGE_FROM_SYSTEM</b>.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_FROM_SYSTEM"></a><a id="format_message_from_system"></a><dl>
+<dt><b>FORMAT_MESSAGE_FROM_SYSTEM</b></dt>
+<dt>0x00001000</dt>
+</dl>
+</td>
+<td width="60%">
+The function should search the system message-table resource(s) for the requested message. If this flag is 
+         specified with <b>FORMAT_MESSAGE_FROM_HMODULE</b>, the function searches the system 
+         message table if the message is not found in the module specified by <i>lpSource</i>. This 
+         flag cannot be used with <b>FORMAT_MESSAGE_FROM_STRING</b>.
+<p>If this flag is specified, an application can pass the result of the
+<a href="/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror" data-linktype="absolute-path">GetLastError</a> function to retrieve the message text
+for a system-defined error.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_IGNORE_INSERTS"></a><a id="format_message_ignore_inserts"></a><dl>
+<dt><b>FORMAT_MESSAGE_IGNORE_INSERTS</b></dt>
+<dt>0x00000200</dt>
+</dl>
+</td>
+<td width="60%">
+Insert sequences in the message definition are to be ignored and passed through to the output buffer 
+        unchanged. This flag is useful for fetching a message for later formatting. If this flag is set, the 
+        <i>Arguments</i> parameter is ignored.
+</td>
+</tr>
+</table>
+ 
+<p>The low-order byte of <i>dwFlags</i> can specify the maximum width of a formatted output
+line. The following are possible values of the low-order byte.</p>
+<table>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%">
+<dl>
+<dt>0</dt>
+</dl>
+</td>
+<td width="60%">
+There are no output line width restrictions. The function stores line breaks that are in the message 
+        definition text into the output buffer.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_MAX_WIDTH_MASK"></a><a id="format_message_max_width_mask"></a><dl>
+<dt><b>FORMAT_MESSAGE_MAX_WIDTH_MASK</b></dt>
+<dt>0x000000FF</dt>
+</dl>
+</td>
+<td width="60%">
+The function ignores regular line breaks in the message definition text. The function stores hard-coded 
+        line breaks in the message definition text into the output buffer. The function generates no new line 
+        breaks.
+</td>
+</tr>
+</table>
+ 
+<p>If the low-order byte is a nonzero value other than
+<b>FORMAT_MESSAGE_MAX_WIDTH_MASK</b>, it specifies the maximum number of characters in an
+output line. The function ignores regular line breaks in the message definition text. The function never splits
+a string delimited by white space across a line break. The function stores hard-coded line breaks in the message
+definition text into the output buffer. Hard-coded line breaks are coded with the %n escape sequence.</p>
+<p><code>lpSource</code></p>
+<p>The location of the message definition. The type of this parameter depends upon the settings in the
+<i>dwFlags</i> parameter.</p>
+<table>
+<tr>
+<th><i>dwFlags</i> Setting</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_FROM_HMODULE"></a><a id="format_message_from_hmodule"></a><dl>
+<dt><b>FORMAT_MESSAGE_FROM_HMODULE</b></dt>
+<dt>0x00000800</dt>
+</dl>
+</td>
+<td width="60%">
+A handle to the module that contains the message table to search.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FORMAT_MESSAGE_FROM_STRING"></a><a id="format_message_from_string"></a><dl>
+<dt><b>FORMAT_MESSAGE_FROM_STRING</b></dt>
+<dt>0x00000400</dt>
+</dl>
+</td>
+<td width="60%">
+Pointer to a string that consists of unformatted message text. It will be scanned for inserts and 
+        formatted accordingly.
+</td>
+</tr>
+</table>
+ 
+<p>If neither of these flags is set in <i>dwFlags</i>, then
+<i>lpSource</i> is ignored.</p>
+<p><code>dwMessageId</code></p>
+<p>The message identifier for the requested message. This parameter is ignored if
+<i>dwFlags</i> includes <b>FORMAT_MESSAGE_FROM_STRING</b>.</p>
+<p><code>dwLanguageId</code></p>
+<p>The <a href="/en-us/windows/desktop/Intl/language-identifiers" data-linktype="absolute-path">language identifier</a> for the requested
+message. This parameter is ignored if <i>dwFlags</i> includes
+<b>FORMAT_MESSAGE_FROM_STRING</b>.</p>
+<p>If you pass a specific <b>LANGID</b> in this parameter,
+<b>FormatMessage</b> will return a message for that
+<b>LANGID</b> only. If the function cannot find a message for that
+<b>LANGID</b>, it sets Last-Error to
+<b>ERROR_RESOURCE_LANG_NOT_FOUND</b>. If you pass in zero,
+<b>FormatMessage</b> looks for a message for
+<b>LANGIDs</b> in the following order:</p>
+<ol>
+<li>Language neutral</li>
+<li>Thread <b>LANGID</b>, based on the thread's locale value</li>
+<li>User default <b>LANGID</b>, based on the user's default locale value</li>
+<li>System default <b>LANGID</b>, based on the system default locale value</li>
+<li>US English</li>
+</ol>
+If <b>FormatMessage</b> does not locate a message for any 
+       of the preceding <b>LANGIDs</b>, it returns any language message string that is present. 
+       If that fails, it returns <b>ERROR_RESOURCE_LANG_NOT_FOUND</b>.
+<p><code>lpBuffer</code></p>
+<p>A pointer to a buffer that receives the null-terminated string that specifies the formatted message. If
+<i>dwFlags</i> includes <b>FORMAT_MESSAGE_ALLOCATE_BUFFER</b>, the
+function allocates a buffer using the <a href="/en-us/windows/desktop/api/winbase/nf-winbase-localalloc" data-linktype="absolute-path">LocalAlloc</a>
+function, and places the pointer to the buffer at the address specified in
+<i>lpBuffer</i>.</p>
+<p>This buffer cannot be larger than 64K bytes.</p>
+<p><code>nSize</code></p>
+<p>If the <b>FORMAT_MESSAGE_ALLOCATE_BUFFER</b> flag is not set, this parameter specifies
+the size of the output buffer, in <b>TCHARs</b>. If
+<b>FORMAT_MESSAGE_ALLOCATE_BUFFER</b> is set, this parameter specifies the minimum number of
+<b>TCHARs</b> to allocate for an output buffer.</p>
+<p>The output buffer cannot be larger than 64K bytes.</p>
+<p><code>Arguments</code></p>
+<p>An array of values that are used as insert values in the formatted message. A %1 in the format string
+indicates the first value in the <i>Arguments</i> array; a %2 indicates the second argument;
+and so on.</p>
+<p>The interpretation of each value depends on the formatting information associated with the insert in the
+message definition. The default is to treat each value as a pointer to a null-terminated string.</p>
+<p>By default, the <i>Arguments</i> parameter is of type
+<b>va_list*</b>, which is a language- and implementation-specific data type for
+describing a variable number of arguments. The state of the <b>va_list</b> argument is
+undefined upon return from the function. To use the <b>va_list</b> again, destroy the
+variable argument list pointer using <b>va_end</b> and reinitialize it with
+<b>va_start</b>.</p>
+<p>If you do not have a pointer of type
+<b>va_list*</b>, then specify the <b>FORMAT_MESSAGE_ARGUMENT_ARRAY</b>
+flag and pass a pointer to an array of <b>DWORD_PTR</b> values; those values are input to
+the message formatted as the insert values. Each insert must have a corresponding element in the array.</p>
+<h2 id="return-value">Return value</h2>
+<p>If the function succeeds, the return value is the number of <b>TCHARs</b> stored in the
+output buffer, excluding the terminating null character.</p>
+<p>If the function fails, the return value is zero. To get extended error information, call
+<a href="/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror" data-linktype="absolute-path">GetLastError</a>.</p>
+<h2 id="remarks">Remarks</h2>
+<p>Within the message text, several escape sequences are supported for dynamically formatting the message. These
+escape sequences and their meanings are shown in the following tables. All escape sequences start with the percent
+character (%).</p>
+<table>
+<tr>
+<th>Escape sequence</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>%0</td>
+<td>Terminates a message text line without a trailing new line character. This escape sequence can be used to 
+       build up long lines or to terminate the message itself without a trailing new line character. It is useful for 
+       prompt messages.</td>
+</tr>
+<tr>
+<td>%<i>n</i>!<i>format string</i>!</td>
+<td>
+Identifies an insert. The value of <i>n</i> can be in the range from 1 through 99. The 
+        format string (which must be surrounded by exclamation marks) is optional and defaults to !s! if not 
+        specified. For more information, see 
+        <a href="https://msdn.microsoft.com/library/56e442dc.aspx" data-linktype="external">Format Specification Fields</a>.
+<p>The format string can include a width and precision specifier for strings and a width specifier for
+integers. Use an asterisk (<em>) to specify the width and precision. For example, %1!</em>.*s! or %1!*u!.</p>
+<p>If you do not use the width and precision specifiers, the insert numbers correspond directly to the input
+arguments. For example, if the source string is &quot;%1 %2 %1&quot; and the input arguments are &quot;Bill&quot; and &quot;Bob&quot;, the
+formatted output string is &quot;Bill Bob Bill&quot;.</p>
+<p>However, if you use a width and precision specifier, the insert numbers do not correspond directly to the
+input arguments. For example, the insert numbers for the previous example could change to
+&quot;%1!*.*s! %4 %5!*s!&quot;.</p>
+<p>The insert numbers depend on whether you use an arguments array
+(<b>FORMAT_MESSAGE_ARGUMENT_ARRAY</b>) or a <b>va_list</b>. For an
+arguments array, the next insert number is <i>n+2</i> if the previous format string
+contained one asterisk and is <i>n+3</i> if two asterisks were specified. For a
+<b>va_list</b>, the next insert number is <i>n+1</i> if the previous
+format string contained one asterisk and is <i>n+2</i> if two asterisks were specified.</p>
+<p>If you want to repeat &quot;Bill&quot;, as in the previous example, the arguments must include &quot;Bill&quot; twice. For
+example, if the source string is &quot;%1!*.*s! %4 %5!*s!&quot;, the arguments could be, 4, 2, Bill, Bob, 6, Bill
+(if using the <b>FORMAT_MESSAGE_ARGUMENT_ARRAY</b> flag). The formatted string would then
+be &quot;  Bi Bob   Bill&quot;.</p>
+<p>Repeating insert numbers when the source string contains width and precision specifiers may not yield the
+intended results. If you replaced %5 with %1, the function would try to print a string at address 6 (likely
+resulting in an access violation).</p>
+<p>Floating-point format specifiers—e, E, f, and g—are not supported.
+The workaround is to use the <a href="/en-us/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa" data-linktype="absolute-path">StringCchPrintf</a>
+function to format the floating-point number into a temporary buffer, then use that buffer as the insert
+string.</p>
+<p>Inserts that use the I64 prefix are treated as two 32-bit arguments. They must be used before subsequent
+arguments are used. Note that it may be easier for you to use
+<a href="/en-us/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa" data-linktype="absolute-path">StringCchPrintf</a> instead of this prefix.</p>
+</td>
+</tr>
+</table>
+ 
+<p>Any other nondigit character following a percent character is formatted in the output message without the
+percent character. Following are some examples.</p>
+<table>
+<tr>
+<th>Format string</th>
+<th>Resulting output</th>
+</tr>
+<tr>
+<td>%%</td>
+<td>A single percent sign.</td>
+</tr>
+<tr>
+<td>%<i>space</i></td>
+<td>A single space. This format string can be used to ensure the appropriate number of trailing spaces in a 
+       message text line.</td>
+</tr>
+<tr>
+<td>%.</td>
+<td>A single period. This format string can be used to include a single period at the beginning of a line 
+       without terminating the message text definition.</td>
+</tr>
+<tr>
+<td>%!</td>
+<td>A single exclamation point. This format string can be used to include an exclamation point immediately after 
+       an insert without its being mistaken for the beginning of a format string.</td>
+</tr>
+<tr>
+<td>%n</td>
+<td>A hard line break when the format string occurs at the end of a line. This format string is 
+       useful when <b>FormatMessage</b> is supplying regular line 
+       breaks so the message fits in a certain width.</td>
+</tr>
+<tr>
+<td>%r</td>
+<td>A hard carriage return without a trailing newline character.</td>
+</tr>
+<tr>
+<td>%t</td>
+<td>A single tab.</td>
+</tr>
+</table>
+ 
+<h3><a id="Security_Remarks"></a><a id="security_remarks"></a><a id="SECURITY_REMARKS"></a>Security Remarks</h3>
+If this function is called without <b>FORMAT_MESSAGE_IGNORE_INSERTS</b>, the 
+      <i>Arguments</i> parameter must contain enough parameters to satisfy all insertion sequences 
+      in the message string, and they must be of the correct type. Therefore, do not use untrusted or unknown message 
+      strings with inserts enabled because they can contain more insertion sequences than 
+      <i>Arguments</i> provides, or those that may be of the wrong type. In particular, it is 
+      unsafe to take an arbitrary system error code returned from an API and use 
+      <b>FORMAT_MESSAGE_FROM_SYSTEM</b> without 
+      <b>FORMAT_MESSAGE_IGNORE_INSERTS</b>.
+<h4 id="examples">Examples</h4>
+<p>The <b>FormatMessage</b> function can be used to obtain
+error message strings for the system error codes returned by
+<a href="/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror" data-linktype="absolute-path">GetLastError</a>. For an example, see
+<a href="/en-us/windows/desktop/Debug/retrieving-the-last-error-code" data-linktype="absolute-path">Retrieving the Last-Error Code</a>.</p>
+<div class="code"></div>
+The following example shows how to use an argument array and the width and precision specifiers.
+<pre><code class="lang-cpp">#ifndef UNICODE
+#define UNICODE
+#endif
+
+#include &lt;windows.h&gt;
+#include &lt;stdio.h&gt;
+
+void main(void)
+{
+    LPWSTR pMessage = L&quot;%1!*.*s! %4 %5!*s!&quot;;
+    DWORD_PTR pArgs[] = { (DWORD_PTR)4, (DWORD_PTR)2, (DWORD_PTR)L&quot;Bill&quot;,  // %1!*.*s! refers back to the first insertion string in pMessage
+         (DWORD_PTR)L&quot;Bob&quot;,                                                // %4 refers back to the second insertion string in pMessage
+         (DWORD_PTR)6, (DWORD_PTR)L&quot;Bill&quot; };                               // %5!*s! refers back to the third insertion string in pMessage
+    const DWORD size = 100+1;
+    WCHAR buffer[size];
+
+
+    if (!FormatMessage(FORMAT_MESSAGE_FROM_STRING | FORMAT_MESSAGE_ARGUMENT_ARRAY,
+                       pMessage, 
+                       0,
+                       0,
+                       buffer, 
+                       size, 
+                       (va_list*)pArgs))
+    {
+        wprintf(L&quot;Format message failed with 0x%x\n&quot;, GetLastError());
+        return;
+    }
+
+    // Buffer contains &quot;  Bi Bob   Bill&quot;.
+    wprintf(L&quot;Formatted message: %s\n&quot;, buffer);
+}
+
+
+</code></pre>
+<p>The following example shows how to implement the previous example using
+<b>va_list</b>.</p>
+<pre><code class="lang-cpp">#ifndef UNICODE
+#define UNICODE
+#endif
+
+#include &lt;windows.h&gt;
+#include &lt;stdio.h&gt;
+
+LPWSTR GetFormattedMessage(LPWSTR pMessage, ...);
+
+void main(void)
+{
+    LPWSTR pBuffer = NULL;
+    LPWSTR pMessage = L&quot;%1!*.*s! %3 %4!*s!&quot;;
+
+    // The variable length arguments correspond directly to the format
+    // strings in pMessage.
+    pBuffer = GetFormattedMessage(pMessage, 4, 2, L&quot;Bill&quot;, L&quot;Bob&quot;, 6, L&quot;Bill&quot;);
+    if (pBuffer)
+    {
+        // Buffer contains &quot;  Bi Bob   Bill&quot;.
+        wprintf(L&quot;Formatted message: %s\n&quot;, pBuffer);
+        LocalFree(pBuffer);
+    }
+    else
+    {
+        wprintf(L&quot;Format message failed with 0x%x\n&quot;, GetLastError());
+    }
+}
+
+// Formats a message string using the specified message and variable
+// list of arguments.
+LPWSTR GetFormattedMessage(LPWSTR pMessage, ...)
+{
+    LPWSTR pBuffer = NULL;
+
+    va_list args = NULL;
+    va_start(args, pMessage);
+
+    FormatMessage(FORMAT_MESSAGE_FROM_STRING |
+                  FORMAT_MESSAGE_ALLOCATE_BUFFER,
+                  pMessage, 
+                  0,
+                  0,
+                  (LPWSTR)&amp;pBuffer, 
+                  0, 
+                  &amp;args);
+
+    va_end(args);
+
+    return pBuffer;
+}
+
+</code></pre>
+<div class="NOTE">
+<p>Note</p>
+<p>The winbase.h header defines FormatMessage as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see <a href="/en-us/windows/win32/intl/conventions-for-function-prototypes" data-linktype="absolute-path">Conventions for Function Prototypes</a>.</p>
+</div>
+<h2 id="requirements">Requirements</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th style="text-align: left;"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimum supported client</strong></td>
+<td style="text-align: left;">Windows XP [desktop apps | UWP apps]</td>
+</tr>
+<tr>
+<td><strong>Minimum supported server</strong></td>
+<td style="text-align: left;">Windows Server 2003 [desktop apps | UWP apps]</td>
+</tr>
+<tr>
+<td><strong>Target Platform</strong></td>
+<td style="text-align: left;">Windows</td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td style="text-align: left;">winbase.h (include Windows.h)</td>
+</tr>
+<tr>
+<td><strong>Library</strong></td>
+<td style="text-align: left;">Kernel32.lib</td>
+</tr>
+<tr>
+<td><strong>DLL</strong></td>
+<td style="text-align: left;">Kernel32.dll</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See also</h2>
+<p><a href="/en-us/windows/desktop/Debug/error-handling-functions" data-linktype="absolute-path">Error Handling Functions</a></p>
+<p><a href="/en-us/windows/desktop/WES/message-compiler--mc-exe-" data-linktype="absolute-path">Message Compiler</a></p>
+<p>Message Tables</p>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-small">
+									
+									
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								</div>
+						<!-- end page rating section -->
+
+
+						<!-- feedback section -->
+
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable">
+								
+								
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+								<h3>In this article</h3>
+							</nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+	<span id="adobe-target-experiment-container" hidden></span>
+</body>
+</html>

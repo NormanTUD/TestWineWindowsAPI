@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="RADIUS_ATTRIBUTE_TYPE (authif.h) - Win32 apps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/windows/win32/api/authif/ne-authif-radius_attribute_type" />
+			<meta property="og:description" content="The RADIUS_ATTRIBUTE_TYPE type enumerates the possible types for a RADIUS attribute." />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+
+	<meta name="APILocation" content="AuthIf.h" />
+<meta name="APIName" content="RADIUS_ATTRIBUTE_TYPE" />
+<meta name="APIType" content="HeaderDef" />
+<meta name="author" content="mikben" />
+<meta name="breadcrumb_path" content="/windows/desktop/api/breadcrumb/toc.json" />
+<meta name="depot_name" content="MSDN.sdk-api-build" />
+<meta name="description" content="The RADIUS_ATTRIBUTE_TYPE type enumerates the possible types for a RADIUS attribute." />
+<meta name="document_id" content="7cd22203-d2b2-ea54-420b-62f3b212512d" />
+<meta name="document_version_independent_id" content="566fb687-10e9-6d25-e07d-ba13bf8487d5" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build/commit/59029b1d1bc33ea186769489a27f5e6622e6e615?path=/sdk-api-src/content/authif/ne-authif-radius_attribute_type.md&amp;_a=contents" />
+<meta name="locale" content="en-us" />
+<meta name="ms.assetid" content="b0b39062-0622-48f8-a06a-232713ec8c3c" />
+<meta name="ms.author" content="mikben" />
+<meta name="ms.custom" content="19H1" />
+<meta name="ms.date" content="12/05/2018" />
+<meta name="ms.keywords" content="RADIUS_ATTRIBUTE_TYPE, RADIUS_ATTRIBUTE_TYPE enumeration [Network Policy Server], _ias_radius_attribute_type, authif/RADIUS_ATTRIBUTE_TYPE, authif/ratAcctAuthentic, authif/ratAcctDelayTime, authif/ratAcctInputOctets, authif/ratAcctInputPackets, authif/ratAcctOutputOctets, authif/ratAcctOutputPackets, authif/ratAcctSessionId, authif/ratAcctSessionTime, authif/ratAcctStatusType, authif/ratAcctTerminationCause, authif/ratAuthenticator, authif/ratCHAPChallenge, authif/ratCHAPPassword, authif/ratCRPPolicyName, authif/ratCallbackId, authif/ratCallbackNumber, authif/ratCalledStationId, authif/ratCallingStationId, authif/ratClass, authif/ratClearTextPassword, authif/ratCode, authif/ratEAPTLV, authif/ratExtensionState, authif/ratFQUserName, authif/ratFilterId, authif/ratFramedAppleTalkLink, authif/ratFramedAppleTalkNetwork, authif/ratFramedAppleTalkZone, authif/ratFramedCompression, authif/ratFramedIPAddress, authif/ratFramedIPNetmask, authif/ratFramedIPXNetwork, authif/ratFramedIPv6Pool, authif/ratFramedIPv6Prefix, authif/ratFramedIPv6Route, authif/ratFramedInterfaceId, authif/ratFramedMTU, authif/ratFramedProtocol, authif/ratFramedRoute, authif/ratFramedRouting, authif/ratIdentifier, authif/ratIdleTimeout, authif/ratLoginIPHost, authif/ratLoginIPv6Host, authif/ratLoginLATGroup, authif/ratLoginLATNode, authif/ratLoginLATService, authif/ratLoginPort, authif/ratLoginService, authif/ratMediumType, authif/ratMinimum, authif/ratNASIPAddress, authif/ratNASIPv6Address, authif/ratNASIdentifier, authif/ratNASPort, authif/ratNASPortType, authif/ratPolicyName, authif/ratPortLimit, authif/ratProvider, authif/ratProviderName, authif/ratProxyState, authif/ratRejectReasonCode, authif/ratReplyMessage, authif/ratServiceType, authif/ratSessionTimeout, authif/ratSrcIPAddress, authif/ratSrcIPv6Address, authif/ratSrcPort, authif/ratState, authif/ratStrippedUserName, authif/ratTerminationAction, authif/ratTunnelPassword, authif/ratTunnelPrivateGroupID, authif/ratTunnelType, authif/ratUniqueId, authif/ratUserName, authif/ratUserPassword, authif/ratVendorSpecific, ias.radius_attribute_type, nps.IAS_radius_attribute_type, ratAcctAuthentic, ratAcctDelayTime, ratAcctInputOctets, ratAcctInputPackets, ratAcctOutputOctets, ratAcctOutputPackets, ratAcctSessionId, ratAcctSessionTime, ratAcctStatusType, ratAcctTerminationCause, ratAuthenticator, ratCHAPChallenge, ratCHAPPassword, ratCRPPolicyName, ratCallbackId, ratCallbackNumber, ratCalledStationId, ratCallingStationId, ratClass, ratClearTextPassword, ratCode, ratEAPTLV, ratExtensionState, ratFQUserName, ratFilterId, ratFramedAppleTalkLink, ratFramedAppleTalkNetwork, ratFramedAppleTalkZone, ratFramedCompression, ratFramedIPAddress, ratFramedIPNetmask, ratFramedIPXNetwork, ratFramedIPv6Pool, ratFramedIPv6Prefix, ratFramedIPv6Route, ratFramedInterfaceId, ratFramedMTU, ratFramedProtocol, ratFramedRoute, ratFramedRouting, ratIdentifier, ratIdleTimeout, ratLoginIPHost, ratLoginIPv6Host, ratLoginLATGroup, ratLoginLATNode, ratLoginLATService, ratLoginPort, ratLoginService, ratMediumType, ratMinimum, ratNASIPAddress, ratNASIPv6Address, ratNASIdentifier, ratNASPort, ratNASPortType, ratPolicyName, ratPortLimit, ratProvider, ratProviderName, ratProxyState, ratRejectReasonCode, ratReplyMessage, ratServiceType, ratSessionTimeout, ratSrcIPAddress, ratSrcIPv6Address, ratSrcPort, ratState, ratStrippedUserName, ratTerminationAction, ratTunnelPassword, ratTunnelPrivateGroupID, ratTunnelType, ratUniqueId, ratUserName, ratUserPassword, ratVendorSpecific" />
+<meta name="ms.prod" content="desktop" />
+<meta name="ms.technology" content="sdk-api-reference" />
+<meta name="ms.topic" content="language-reference" />
+<meta name="old-location" content="nps\IAS_radius_attribute_type.htm" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/authif/ne-authif-radius_attribute_type.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="req.assembly" content="" />
+<meta name="req.ddi-compliance" content="" />
+<meta name="req.dll" content="" />
+<meta name="req.header" content="authif.h" />
+<meta name="req.idl" content="" />
+<meta name="req.include-header" content="" />
+<meta name="req.irql" content="" />
+<meta name="req.kmdf-ver" content="" />
+<meta name="req.lib" content="" />
+<meta name="req.max-support" content="" />
+<meta name="req.namespace" content="" />
+<meta name="req.redist" content="" />
+<meta name="req.target-min-winverclnt" content="None supported" />
+<meta name="req.target-min-winversvr" content="Windows Server 2008" />
+<meta name="req.target-type" content="Windows" />
+<meta name="req.type-library" content="" />
+<meta name="req.typenames" content="RADIUS_ATTRIBUTE_TYPE" />
+<meta name="req.umdf-ver" content="" />
+<meta name="req.unicode-ansi" content="" />
+<meta name="search.ms_docsetname" content="sdk-api-build" />
+<meta name="search.ms_product" content="MSDN" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="targetos" content="Windows" />
+<meta name="tech.root" content="Nps" />
+<meta name="TopicType" content="APIRef" />
+<meta name="TopicType" content="kbSyntax" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDevCenter" />
+<meta name="UID" content="NE:authif._RADIUS_ATTRIBUTE_TYPE" />
+<meta name="updated_at" content="2020-06-30 09:41 AM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="../_nps/toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.sdk-api-build/{branchName}{pdfName}" />
+<meta name="feedback_config_error" content="feedback_system metadata is invalid. Expected GitHub. Received none." />
+<meta name="search.mshattr.devlang" content="c++" />
+<meta name="word_count" content="2555" />
+
+
+	<meta name="scope" content="Windows, Desktop" />
+<link href="https://docs.microsoft.com/en-us/windows/win32/api/authif/ne-authif-radius_attribute_type" rel="canonical">
+	<title>RADIUS_ATTRIBUTE_TYPE (authif.h) - Win32 apps | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/284eaf13.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/2e5ce4ab.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/authif/ne-authif-radius_attribute_type.md',
+			extendBreadcrumb: true,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/2f860d58.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+							<li id="contenteditbtn">
+								<a href="https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/authif/ne-authif-radius_attribute_type.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/authif/ne-authif-radius_attribute_type.md&version=GBlive&_a=contents" data-original_content_git_url_template="{repo}?path=/sdk-api-src/content/authif/ne-authif-radius_attribute_type.md&version=GB{branch}&_a=contents" data-pr_repo="" data-pr_branch="">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-edit-outline"></span>
+								</span>
+								<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+							</a>
+						</li>
+					<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="radius_attribute_type-enumeration">RADIUS_ATTRIBUTE_TYPE enumeration</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li>
+								<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2018-12-05T00:00:00.000Z" data-article-date-source="ms.date">12/05/2018</time>
+							</li>
+								<li class="readingTime">12 minutes to read</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+							<h3>In this article</h3>
+						</nav>
+
+						<!-- <content> -->
+							<div class="alert"><b>Note</b>  Internet Authentication Service (IAS) was renamed Network Policy Server (NPS) starting with Windows Server 2008.  The content of this topic applies to both IAS and NPS. Throughout the text, NPS is used to refer to all versions of the service, including the versions originally referred to as IAS.</div><div> </div>The 
+<b>RADIUS_ATTRIBUTE_TYPE</b> type enumerates the possible types for a RADIUS attribute.
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-cpp">typedef enum _RADIUS_ATTRIBUTE_TYPE {
+  ratMinimum,
+  ratUserName,
+  ratUserPassword,
+  ratCHAPPassword,
+  ratNASIPAddress,
+  ratNASPort,
+  ratServiceType,
+  ratFramedProtocol,
+  ratFramedIPAddress,
+  ratFramedIPNetmask,
+  ratFramedRouting,
+  ratFilterId,
+  ratFramedMTU,
+  ratFramedCompression,
+  ratLoginIPHost,
+  ratLoginService,
+  ratLoginPort,
+  ratReplyMessage,
+  ratCallbackNumber,
+  ratCallbackId,
+  ratFramedRoute,
+  ratFramedIPXNetwork,
+  ratState,
+  ratClass,
+  ratVendorSpecific,
+  ratSessionTimeout,
+  ratIdleTimeout,
+  ratTerminationAction,
+  ratCalledStationId,
+  ratCallingStationId,
+  ratNASIdentifier,
+  ratProxyState,
+  ratLoginLATService,
+  ratLoginLATNode,
+  ratLoginLATGroup,
+  ratFramedAppleTalkLink,
+  ratFramedAppleTalkNetwork,
+  ratFramedAppleTalkZone,
+  ratAcctStatusType,
+  ratAcctDelayTime,
+  ratAcctInputOctets,
+  ratAcctOutputOctets,
+  ratAcctSessionId,
+  ratAcctAuthentic,
+  ratAcctSessionTime,
+  ratAcctInputPackets,
+  ratAcctOutputPackets,
+  ratAcctTerminationCause,
+  ratCHAPChallenge,
+  ratNASPortType,
+  ratPortLimit,
+  ratTunnelType,
+  ratMediumType,
+  ratTunnelPassword,
+  ratTunnelPrivateGroupID,
+  ratNASIPv6Address,
+  ratFramedInterfaceId,
+  ratFramedIPv6Prefix,
+  ratLoginIPv6Host,
+  ratFramedIPv6Route,
+  ratFramedIPv6Pool,
+  ratCode,
+  ratIdentifier,
+  ratAuthenticator,
+  ratSrcIPAddress,
+  ratSrcPort,
+  ratProvider,
+  ratStrippedUserName,
+  ratFQUserName,
+  ratPolicyName,
+  ratUniqueId,
+  ratExtensionState,
+  ratEAPTLV,
+  ratRejectReasonCode,
+  ratCRPPolicyName,
+  ratProviderName,
+  ratClearTextPassword,
+  ratSrcIPv6Address,
+  ratCertificateThumbprint
+} RADIUS_ATTRIBUTE_TYPE;
+</code></pre>
+<h2 id="constants">Constants</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ratMinimum</td>
+<td>This value is equal to zero, and used as the null-terminator in any array of <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> structures.</td>
+</tr>
+<tr>
+<td>ratUserName</td>
+<td>Specifies the name of the user to be authenticated. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information. Also see <br><a href="/en-us/windows/desktop/Nps/ias-user-identification-attributes" data-linktype="absolute-path">User Identification Attributes</a>.</td>
+</tr>
+<tr>
+<td>ratUserPassword</td>
+<td>Specifies the password of the user to be authenticated. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratCHAPPassword</td>
+<td>Specifies the password provided by the user in response to an Challenge Handshake Authentication Protocol (CHAP) challenge. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratNASIPAddress</td>
+<td>Specifies the NAS IP address. An Access-Request should specify either an NAS IP address or an NAS identifier. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratNASPort</td>
+<td>Identifies the physical or virtual private network (VPN) through which the user is connecting to the NAS. Note that this value is not a port number in the sense of TCP or UDP. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratServiceType</td>
+<td>Specifies the type of service the user has requested or the type of service to be provided. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedProtocol</td>
+<td>Specifies the type of framed protocol to use for framed access, for example SLIP, PPP, or ARAP (AppleTalk Remote Access Protocol). The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedIPAddress</td>
+<td>Specifies the IP address that will be configured for the user requesting authentication. This attribute is typically returned by the authentication provider. However, the NAS may use it in an authentication request to specify a preferred IP address. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedIPNetmask</td>
+<td>Specifies the IP network mask for a user that is a router to a network. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedRouting</td>
+<td>Specifies the routing method for a user that is a router to a network. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFilterId</td>
+<td>Identifies the filter list for the user requesting authentication. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedMTU</td>
+<td>Specifies the Maximum Transmission Unit (MTU) for the user. This attribute is used in cases where the MTU is not negotiated through some other means, such as PPP. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedCompression</td>
+<td>Specifies a compression protocol to use for the connection. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information</td>
+</tr>
+<tr>
+<td>ratLoginIPHost</td>
+<td>Specifies the system with which to connect the user. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratLoginService</td>
+<td>Specifies the service to use to connect the user to the host specified by <b>ratLoginIPHost</b>. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratLoginPort</td>
+<td>Specifies the port to which to connect the user. This attribute is present only if the <b>ratLoginService</b> attribute is present. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratReplyMessage</td>
+<td>Specifies a message to display to the user. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratCallbackNumber</td>
+<td>Specifies a callback number. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratCallbackId</td>
+<td>Identifies a location to callback. The value of this attribute is interpreted by the NAS. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedRoute</td>
+<td>Provides routing information to configure on the NAS for the user. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedIPXNetwork</td>
+<td>Specifies the IPX network number to configure for the user. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratState</td>
+<td>This attribute is included in Access-Challenge and Access-Accept communications between the server and the client. Please refer to <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for detailed information about this value. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer.</td>
+</tr>
+<tr>
+<td>ratClass</td>
+<td>Specifies a value that is provided to the NAS by the authentication provider. The NAS should use this value when communicating with the accounting provider. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratVendorSpecific</td>
+<td>Allows vendors to provide their own extended attributes. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratSessionTimeout</td>
+<td>Specifies the maximum number of seconds for which to provide service to the user. After this time, the session is terminated. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratIdleTimeout</td>
+<td>Specifies the maximum number of consecutive seconds the session can be idle. If the idle time exceeds this value, the session is terminated. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratTerminationAction</td>
+<td>Indicates what action the NAS should take when the<br>      specified service is completed.  It is only used in Access-Accept<br>      packets. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratCalledStationId</td>
+<td>Specifies the number that the user dialed to connect to the NAS. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratCallingStationId</td>
+<td>Specifies the number from which the user is calling. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratNASIdentifier</td>
+<td>Specifies the NAS identifier. An Access-Request should specify either an NAS identifier or an NAS IP address. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratProxyState</td>
+<td>Specifies a value that a proxy server includes when forwarding an authentication request. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratLoginLATService</td>
+<td>This attribute is not currently used for authentication on Windows. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratLoginLATNode</td>
+<td>This attribute is not currently used for authentication on Windows. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratLoginLATGroup</td>
+<td>This attribute is not currently used for authentication on Windows. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedAppleTalkLink</td>
+<td>Specifies the AppleTalk network number for a user that is another router. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedAppleTalkNetwork</td>
+<td>Specifies the AppleTalk network number that the NAS should use to allocate an AppleTalk node for the user. This attribute is used only when the user is not another router. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedAppleTalkZone</td>
+<td>Specifies the AppleTalk default zone for the user. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctStatusType</td>
+<td>Specifies whether the accounting provider should start or stop accounting for the user. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctDelayTime</td>
+<td>Specifies the length of time that the client has been attempting to send the current request. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctInputOctets</td>
+<td>Specifies the number of octets that have been received during the current accounting session. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctOutputOctets</td>
+<td>Specifies the number of octets sent during the current accounting session. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctSessionId</td>
+<td>Specifies a value to enable the identification of matching start and stop records within a log file. The start and stop records are sent in the <b>ratAcctStatusType</b> attribute. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctAuthentic</td>
+<td>Specifies, to the accounting provider, how the user was authenticated. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctSessionTime</td>
+<td>Specifies the number of seconds that have elapsed in the current accounting session. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctInputPackets</td>
+<td>Specifies the number of packets that have been received during the current accounting session. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctOutputPackets</td>
+<td>Specifies the number of packets that have been sent during the current accounting session. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratAcctTerminationCause</td>
+<td>Specifies how the current accounting session was terminated. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2866.txt" data-linktype="external">RFC 2866</a> for more information.</td>
+</tr>
+<tr>
+<td>ratCHAPChallenge</td>
+<td>Specifies the CHAP challenge sent by the NAS to a CHAP user. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a pointer. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratNASPortType</td>
+<td>Specifies the type of the port through which the user is connecting, for example, asynchronous, ISDN, virtual. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information.</td>
+</tr>
+<tr>
+<td>ratPortLimit</td>
+<td>Specifies the number of ports the NAS should make available to the user for multilink sessions. The value field in <br><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a> for this type is a 32-bit integral value. See <br><a href="https://www.ietf.org/rfc/rfc2865.txt" data-linktype="external">RFC 2865</a> for more information</td>
+</tr>
+<tr>
+<td>ratTunnelType</td>
+<td>Specifies either the tunneling protocol or protocols to be used (in<br>      the case of a tunnel initiator) or specifies the tunneling protocol in<br>      use (in the case of a tunnel terminator). See <a href="https://www.ietf.org/rfc/rfc2868.txt" data-linktype="external">RFC 2868</a> for more information.</td>
+</tr>
+<tr>
+<td>ratMediumType</td>
+<td>Specifies the transport medium<br>      to use when creating a tunnel for protocols, such as L2TP,<br>      that can operate over multiple transports. See <a href="https://www.ietf.org/rfc/rfc2868.txt" data-linktype="external">RFC 2868</a> for more information.</td>
+</tr>
+<tr>
+<td>ratTunnelPassword</td>
+<td>May contain a password to be used to authenticate<br>      to a remote server.  It may only be included in an Access-Accept<br>      packet.</td>
+</tr>
+<tr>
+<td>ratTunnelPrivateGroupID</td>
+<td>Specifies the group ID for a particular tunneled<br>      session.</td>
+</tr>
+<tr>
+<td>ratNASIPv6Address</td>
+<td>Specifies the IPv6 Address of the NAS<br>      that requests authentication of the user. It should be<br>      unique to the NAS within the scope of the RADIUS server.  It is only used in an Access-Request packet. See the NAS-IPv6-Address section in <a href="https://www.ietf.org/rfc/rfc3162.txt" data-linktype="external">RFC 3162</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedInterfaceId</td>
+<td>Specifies the IPv6 interface identifier to be<br>      configured for the user.  It may be used in an Access-Accept packet.<br>      See the Framed-Interface-Id section in <a href="https://www.ietf.org/rfc/rfc3162.txt" data-linktype="external">RFC 3162</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedIPv6Prefix</td>
+<td>Specifies an IPv6 prefix (and corresponding route)<br>      to be configured for the user.  It may be used in an Access-Accept<br>      packet and can appear multiple times.  See the Framed-IPv6-Prefix section in <a href="https://www.ietf.org/rfc/rfc3162.txt" data-linktype="external">RFC 3162</a> for more information.</td>
+</tr>
+<tr>
+<td>ratLoginIPv6Host</td>
+<td>Specifies the system with which to connect the<br>      user, when the ratLoginService attribute is included.  It may be<br>      used in an Access-Accept packet.<br>See the Login-IPv6-Host section in <a href="https://www.ietf.org/rfc/rfc3162.txt" data-linktype="external">RFC 3162</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedIPv6Route</td>
+<td>Specifies routing information to be configured for<br>      the user on the NAS.  It is used in an Access-Accept packet and<br>      can appear multiple times.<br>See the Framed-IPv6-Route section in <a href="https://www.ietf.org/rfc/rfc3162.txt" data-linktype="external">RFC 3162</a> for more information.</td>
+</tr>
+<tr>
+<td>ratFramedIPv6Pool</td>
+<td>Specifies the name of an assigned pool that should<br>      be used to assign an IPv6 prefix for the user.  If a NAS does not<br>      support multiple prefix pools, the NAS must ignore this attribute.<br><br>See the Framed-IPv6-Pool section in <a href="https://www.ietf.org/rfc/rfc3162.txt" data-linktype="external">RFC 3162</a> for more information.</td>
+</tr>
+<tr>
+<td>ratCode</td>
+<td>Specifies the request type code. This is an extended, read-only attribute, used only in the <br><a href="/en-us/windows/desktop/api/authif/nc-authif-pradius_extension_process" data-linktype="absolute-path">RadiusExtensionProcess</a> and <br><a href="/en-us/windows/desktop/api/authif/nc-authif-pradius_extension_process_ex" data-linktype="absolute-path">RadiusExtensionProcessEx</a> functions. Its contents can be interpreted by comparing it with <a href="/en-us/windows/desktop/api/authif/ne-authif-radius_code" data-linktype="absolute-path">RADIUS_CODE</a> enumeration values.</td>
+</tr>
+<tr>
+<td>ratIdentifier</td>
+<td>Specifies the request identifier. This is an extended, read-only attribute.</td>
+</tr>
+<tr>
+<td>ratAuthenticator</td>
+<td>Specifies the request authenticator. This is an extended, read-only attribute.</td>
+</tr>
+<tr>
+<td>ratSrcIPAddress</td>
+<td>Specifies the source IP address. This is an extended, read-only attribute.</td>
+</tr>
+<tr>
+<td>ratSrcPort</td>
+<td>Specifies the source IP port. This is an extended, read-only attribute.</td>
+</tr>
+<tr>
+<td>ratProvider</td>
+<td>Specifies the authentication provider. The value for this attribute is taken from the <br><a href="/en-us/windows/desktop/api/authif/ne-authif-radius_authentication_provider" data-linktype="absolute-path">RADIUS_AUTHENTICATION_PROVIDER</a> enumerated type. This is an extended, read-only attribute.</td>
+</tr>
+<tr>
+<td>ratStrippedUserName</td>
+<td>Specifies the user name with the realm removed. See <br><a href="/en-us/windows/desktop/Nps/ias-user-identification-attributes" data-linktype="absolute-path">User Identification Attributes</a> for more information. This is an extended attribute.</td>
+</tr>
+<tr>
+<td>ratFQUserName</td>
+<td>Specifies the fully qualified user name. See <br><a href="/en-us/windows/desktop/Nps/ias-user-identification-attributes" data-linktype="absolute-path">User Identification Attributes</a> for more information. This is an extended attribute.</td>
+</tr>
+<tr>
+<td>ratPolicyName</td>
+<td>Specifies  a remote access  policy name. This is an extended attribute.</td>
+</tr>
+<tr>
+<td>ratUniqueId</td>
+<td>Specifies a unique ID for the request. This is a read-only attribute.</td>
+</tr>
+<tr>
+<td>ratExtensionState</td>
+<td>This attribute is used to pass state information between extensions.</td>
+</tr>
+<tr>
+<td>ratEAPTLV</td>
+<td>Specifies an EAP-TLV packet. For more information about the EAP-TLV packet format, see <a href="https://www.ee.oulu.fi/research/ouspg/frontier/sota/whitepaper-wots/specs/draft-josefsson-pppext-eap-tls-eap-07.txt" data-linktype="external">IETF EAP Working Draft</a>.</td>
+</tr>
+<tr>
+<td>ratRejectReasonCode</td>
+<td>Specifies the reason code for a RADIUS Reject. For more information, see  <a href="/en-us/windows/desktop/api/authif/ne-authif-radius_reject_reason_code" data-linktype="absolute-path">RADIUS_REJECT_REASON_CODE</a>.</td>
+</tr>
+<tr>
+<td>ratCRPPolicyName</td>
+<td>Specifies the Connection Request Policy  Name that matched this RADIUS packet.</td>
+</tr>
+<tr>
+<td>ratProviderName</td>
+<td>Specifies the remote RADIUS server group name for request forwarding.<br><br>If the Authentication indicated by <b>ratProvider</b> is a proxy, the extension DLL can change the <b>ratProviderName</b> to indicate which remote server group the request should be forwarded to.</td>
+</tr>
+<tr>
+<td>ratClearTextPassword</td>
+<td>Specifies the user password in clear text.<br><br>To support authorization databases using PEAP-MSChapv2, the extension DLL retrieves the user password from the database and sends it to NPS.</td>
+</tr>
+<tr>
+<td>ratSrcIPv6Address</td>
+<td>Source IPv6 address. It is not a standard RADIUS attribute. It corresponds to the internal attribute <a href="/en-us/windows/desktop/api/sdoias/ne-sdoias-attributeid" data-linktype="absolute-path">IAS_ATTRIBUTE_CLIENT_IPv6_ADDRESS</a>. This is a read-only attribute.</td>
+</tr>
+<tr>
+<td>ratCertificateThumbprint</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<p>The following attributes are read-only. Extension DLLs that implement <a href="/en-us/windows/desktop/api/authif/nc-authif-pradius_extension_process_2" data-linktype="absolute-path">RadiusExtensionProcess2</a> cannot add/remove/modify these attributes within a request or response contained in a <a href="/en-us/windows/desktop/api/authif/ns-authif-radius_extension_control_block" data-linktype="absolute-path">RADIUS_EXTENSION_CONTROL_BLOCK</a>.</p>
+<ul>
+<li><b>ratCode</b></li>
+<li><b>ratIdentifier</b></li>
+<li><b>ratAuthenticator</b></li>
+<li><b>ratSrcIPAddress</b></li>
+<li><b>ratSrcPort</b></li>
+<li><b>ratProvider</b></li>
+<li><b>ratUniqueId</b></li>
+<li><b>ratSrcIPv6Address</b></li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th style="text-align: left;"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimum supported client</strong></td>
+<td style="text-align: left;">None supported</td>
+</tr>
+<tr>
+<td><strong>Minimum supported server</strong></td>
+<td style="text-align: left;">Windows Server 2008</td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td style="text-align: left;">authif.h</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See also</h2>
+<p><a href="/en-us/windows/desktop/Nps/ias-about-internet-authentication-service" data-linktype="absolute-path">About NPS Extensions</a></p>
+<p><a href="/en-us/windows/desktop/Nps/ias-internet-authentication-service-enumerations" data-linktype="absolute-path">NPS Extensions Enumerations</a></p>
+<p><a href="/en-us/windows/desktop/Nps/ias-internet-authentication-service-reference" data-linktype="absolute-path">NPS Extensions Reference</a></p>
+<p><a href="/en-us/windows/desktop/api/authif/ns-authif-radius_attribute" data-linktype="absolute-path">RADIUS_ATTRIBUTE</a></p>
+<p><a href="/en-us/windows/desktop/api/authif/ne-authif-radius_authentication_provider" data-linktype="absolute-path">RADIUS_AUTHENTICATION_PROVIDER</a></p>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-small">
+									
+									
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								</div>
+						<!-- end page rating section -->
+
+
+						<!-- feedback section -->
+
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable">
+								
+								
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+								<h3>In this article</h3>
+							</nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+	<span id="adobe-target-experiment-container" hidden></span>
+</body>
+</html>

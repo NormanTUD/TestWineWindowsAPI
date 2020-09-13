@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="ReOpenFile function (winbase.h) - Win32 apps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-reopenfile" />
+			<meta property="og:description" content="Reopens the specified file system object with different access rights, sharing mode, and flags." />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+
+	<meta name="APILocation" content="Kernel32.dll" />
+<meta name="APILocation" content="API-MS-Win-Core-File-l2-1-0.dll" />
+<meta name="APILocation" content="KernelBase.dll" />
+<meta name="APILocation" content="API-MS-Win-Core-File-l2-1-1.dll" />
+<meta name="APILocation" content="API-MS-Win-Core-File-l2-1-2.dll" />
+<meta name="APILocation" content="API-MS-Win-DownLevel-Kernel32-l1-1-0.dll" />
+<meta name="APIName" content="ReOpenFile" />
+<meta name="APIType" content="DllExport" />
+<meta name="author" content="lastnameholiu" />
+<meta name="breadcrumb_path" content="/windows/desktop/api/breadcrumb/toc.json" />
+<meta name="depot_name" content="MSDN.sdk-api-build" />
+<meta name="description" content="Reopens the specified file system object with different access rights, sharing mode, and flags." />
+<meta name="document_id" content="c652d4b2-c71d-9167-c47b-5a1af2b23c1b" />
+<meta name="document_version_independent_id" content="20949ac7-37e9-b794-0570-2850f7ebed9e" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build/commit/80958e5ed7dca317a3858faf8ae9181162089a2c?path=/sdk-api-src/content/winbase/nf-winbase-reopenfile.md&amp;_a=contents" />
+<meta name="locale" content="en-us" />
+<meta name="ms.assetid" content="56d8a4b1-e3b5-4134-8d21-bf40761e9dcc" />
+<meta name="ms.author" content="alholiu" />
+<meta name="ms.custom" content="19H1" />
+<meta name="ms.date" content="12/05/2018" />
+<meta name="ms.keywords" content="FILE_FLAG_BACKUP_SEMANTICS, FILE_FLAG_DELETE_ON_CLOSE, FILE_FLAG_NO_BUFFERING, FILE_FLAG_OPEN_NO_RECALL, FILE_FLAG_OPEN_REPARSE_POINT, FILE_FLAG_OVERLAPPED, FILE_FLAG_POSIX_SEMANTICS, FILE_FLAG_RANDOM_ACCESS, FILE_FLAG_SEQUENTIAL_SCAN, FILE_FLAG_WRITE_THROUGH, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE, ReOpenFile, ReOpenFile function [Files], SECURITY_ANONYMOUS, SECURITY_CONTEXT_TRACKING, SECURITY_DELEGATION, SECURITY_EFFECTIVE_ONLY, SECURITY_IDENTIFICATION, SECURITY_IMPERSONATION, base.reopenfile, fs.reopenfile, winbase/ReOpenFile" />
+<meta name="ms.prod" content="desktop" />
+<meta name="ms.technology" content="sdk-api-reference" />
+<meta name="ms.topic" content="language-reference" />
+<meta name="old-location" content="fs\reopenfile.htm" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/nf-winbase-reopenfile.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="req.assembly" content="" />
+<meta name="req.ddi-compliance" content="" />
+<meta name="req.dll" content="Kernel32.dll" />
+<meta name="req.header" content="winbase.h" />
+<meta name="req.idl" content="" />
+<meta name="req.include-header" content="Windows.h" />
+<meta name="req.irql" content="" />
+<meta name="req.kmdf-ver" content="" />
+<meta name="req.lib" content="Kernel32.lib" />
+<meta name="req.max-support" content="" />
+<meta name="req.namespace" content="" />
+<meta name="req.redist" content="" />
+<meta name="req.target-min-winverclnt" content="Windows Vista [desktop apps only]" />
+<meta name="req.target-min-winversvr" content="Windows Server 2003 [desktop apps only]" />
+<meta name="req.target-type" content="Windows" />
+<meta name="req.type-library" content="" />
+<meta name="req.typenames" content="" />
+<meta name="req.umdf-ver" content="" />
+<meta name="req.unicode-ansi" content="" />
+<meta name="search.ms_docsetname" content="sdk-api-build" />
+<meta name="search.ms_product" content="MSDN" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="targetos" content="Windows" />
+<meta name="tech.root" content="fs" />
+<meta name="TopicType" content="APIRef" />
+<meta name="TopicType" content="kbSyntax" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDevCenter" />
+<meta name="UID" content="NF:winbase.ReOpenFile" />
+<meta name="updated_at" content="2020-08-24 11:50 PM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="../_fs/toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.sdk-api-build/{branchName}{pdfName}" />
+<meta name="feedback_config_error" content="feedback_system metadata is invalid. Expected GitHub. Received none." />
+<meta name="search.mshattr.devlang" content="c++" />
+<meta name="word_count" content="1494" />
+
+
+	<meta name="scope" content="Windows, Desktop" />
+<link href="https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-reopenfile" rel="canonical">
+	<title>ReOpenFile function (winbase.h) - Win32 apps | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/284eaf13.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/2e5ce4ab.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/nf-winbase-reopenfile.md',
+			extendBreadcrumb: true,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/2f860d58.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+							<li id="contenteditbtn">
+								<a href="https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/nf-winbase-reopenfile.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/nf-winbase-reopenfile.md&version=GBlive&_a=contents" data-original_content_git_url_template="{repo}?path=/sdk-api-src/content/winbase/nf-winbase-reopenfile.md&version=GB{branch}&_a=contents" data-pr_repo="" data-pr_branch="">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-edit-outline"></span>
+								</span>
+								<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+							</a>
+						</li>
+					<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="reopenfile-function">ReOpenFile function</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li>
+								<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2018-12-05T00:00:00.000Z" data-article-date-source="ms.date">12/05/2018</time>
+							</li>
+								<li class="readingTime">7 minutes to read</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+							<h3>In this article</h3>
+						</nav>
+
+						<!-- <content> -->
+							<p>Reopens the specified file system object with different access rights, sharing mode, and
+flags.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-cpp">HANDLE ReOpenFile(
+  HANDLE hOriginalFile,
+  DWORD  dwDesiredAccess,
+  DWORD  dwShareMode,
+  DWORD  dwFlagsAndAttributes
+);
+</code></pre>
+<h2 id="parameters">Parameters</h2>
+<p><code>hOriginalFile</code></p>
+<p>A handle to the object to be reopened. The object must have been created by the
+<a href="/en-us/windows/desktop/api/fileapi/nf-fileapi-createfilea" data-linktype="absolute-path">CreateFile</a> function.</p>
+<p><code>dwDesiredAccess</code></p>
+<p>The required access to the object. For a list of values, see
+<a href="/en-us/windows/desktop/FileIO/file-security-and-access-rights" data-linktype="absolute-path">File Security and Access Rights</a>. You
+cannot request an access mode that conflicts with the sharing mode specified in a previous open request whose
+handle is still open.</p>
+<p>If this parameter is zero (0), the application can query device attributes without accessing the device. This
+is useful if an application wants to determine the size of a floppy disk drive and the formats it supports
+without requiring a floppy in the drive.</p>
+<p><code>dwShareMode</code></p>
+<p>The sharing mode of the object. You cannot request a sharing mode that conflicts with the access mode
+specified in a previous open request whose handle is still open.</p>
+<p>If this parameter is zero (0) and <a href="/en-us/windows/desktop/api/fileapi/nf-fileapi-createfilea" data-linktype="absolute-path">CreateFile</a> succeeds,
+the object cannot be shared and cannot be opened again until the handle is closed.</p>
+<p>To enable other processes to share the object while your process has it open, use a combination of one or
+more of the following values to specify the type of access they can request when they open the object. These
+sharing options remain in effect until you close the handle to the object.</p>
+<table>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_SHARE_DELETE"></a><a id="file_share_delete"></a><dl>
+<dt><b>FILE_SHARE_DELETE</b></dt>
+<dt>0x00000004</dt>
+</dl>
+</td>
+<td width="60%">
+Enables subsequent open operations on the object to request delete access. Otherwise, other processes 
+         cannot open the object if they request delete access.
+<p>If the object has already been opened with delete access, the sharing mode must include this flag.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_SHARE_READ"></a><a id="file_share_read"></a><dl>
+<dt><b>FILE_SHARE_READ</b></dt>
+<dt>0x00000001</dt>
+</dl>
+</td>
+<td width="60%">
+Enables subsequent open operations on the object to request read access. Otherwise, other processes cannot 
+         open the object if they request read access.
+<p>If the object has already been opened with read access, the sharing mode must include this flag.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_SHARE_WRITE"></a><a id="file_share_write"></a><dl>
+<dt><b>FILE_SHARE_WRITE</b></dt>
+<dt>0x00000002</dt>
+</dl>
+</td>
+<td width="60%">
+Enables subsequent open operations on the object to request write access. Otherwise, other processes cannot 
+         open the object if they request write access.
+<p>If the object has already been opened with write access, the sharing mode must include this flag.</p>
+</td>
+</tr>
+</table>
+<p><code>dwFlagsAndAttributes</code></p>
+<p>The file flags. This parameter can be one or more of the following values.</p>
+<table>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_BACKUP_SEMANTICS"></a><a id="file_flag_backup_semantics"></a><dl>
+<dt><b>FILE_FLAG_BACKUP_SEMANTICS</b></dt>
+<dt>0x02000000</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the file is being opened or created for a backup or restore operation. The system ensures 
+         that the calling process overrides file security checks, provided it has the 
+         <b>SE_BACKUP_NAME</b> and <b>SE_RESTORE_NAME</b> privileges. For more 
+         information, see 
+         <a href="/en-us/windows/desktop/SecBP/changing-privileges-in-a-token" data-linktype="absolute-path">Changing Privileges in a Token</a>.
+<p>You can also set this flag to obtain a handle to a directory. Where indicated, a directory handle can be
+passed to some functions in place of a file handle.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_DELETE_ON_CLOSE"></a><a id="file_flag_delete_on_close"></a><dl>
+<dt><b>FILE_FLAG_DELETE_ON_CLOSE</b></dt>
+<dt>0x04000000</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the operating system is to delete the file immediately after all of its handles have been 
+         closed, not just the specified handle but also any other open or duplicated handles.
+<p>Subsequent open requests for the file fail, unless <b>FILE_SHARE_DELETE</b> is used.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_NO_BUFFERING"></a><a id="file_flag_no_buffering"></a><dl>
+<dt><b>FILE_FLAG_NO_BUFFERING</b></dt>
+<dt>0x20000000</dt>
+</dl>
+</td>
+<td width="60%">
+Instructs the system to open the file with no intermediate buffering or caching. When combined with 
+         <b>FILE_FLAG_OVERLAPPED</b>, the flag gives maximum asynchronous performance, because the 
+         I/O does not rely on the synchronous operations of the memory manager. However, some I/O operations take 
+         longer, because data is not being held in the cache.
+<p>An application must meet specific requirements when working with files opened with
+<b>FILE_FLAG_NO_BUFFERING</b>:</p>
+<ul>
+<li>File access must begin at byte offsets within the file that are integer multiples of the volume sector 
+          size.</li>
+<li>File access must be for numbers of bytes that are integer multiples of the volume sector size. For 
+          example, if the sector size is 512 bytes, an application can request reads and writes of 512, 1024, 1536, or 
+          2048 bytes, but not of 335, 981, or 7171 bytes.</li>
+<li>Buffer addresses for read and write operations should be sector aligned (aligned on addresses in memory 
+          that are integer multiples of the volume sector size). Depending on the disk, this requirement may not be 
+          enforced.</li>
+</ul>
+One way to align buffers on integer multiples of the volume sector size is to use 
+         <a href="/en-us/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc" data-linktype="absolute-path">VirtualAlloc</a> to allocate the buffers. It allocates 
+         memory that is aligned on addresses that are integer multiples of the operating system memory page size. 
+         Because both memory page and volume sector sizes are powers of 2, this memory is also aligned on addresses 
+         that are integer multiples of a volume sector size. Memory pages are 4-8 KB in size; sectors are 512 bytes 
+         (hard disks) or 2048 bytes (CD), and therefore, volume sectors can never be larger than memory pages.
+<p>An application can determine a volume sector size by calling the
+<a href="/en-us/windows/desktop/api/fileapi/nf-fileapi-getdiskfreespacea" data-linktype="absolute-path">GetDiskFreeSpace</a> function.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_OPEN_NO_RECALL"></a><a id="file_flag_open_no_recall"></a><dl>
+<dt><b>FILE_FLAG_OPEN_NO_RECALL</b></dt>
+<dt>0x00100000</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the file data is requested, but it should continue to reside in remote storage. It should 
+         not be transported back to local storage. This flag is intended for use by remote storage systems.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_OPEN_REPARSE_POINT"></a><a id="file_flag_open_reparse_point"></a><dl>
+<dt><b>FILE_FLAG_OPEN_REPARSE_POINT</b></dt>
+<dt>0x00200000</dt>
+</dl>
+</td>
+<td width="60%">
+When this flag is used, normal <a href="/en-us/windows/desktop/FileIO/reparse-points" data-linktype="absolute-path">reparse point</a> 
+         processing does not occur, and <b>ReOpenFile</b> attempts to 
+         open the reparse point. When a file is opened, a file handle is returned, whether or not the filter that 
+         controls the reparse point is operational. This flag cannot be used with the 
+         <b>CREATE_ALWAYS</b> flag. If the file is not a reparse point, then this flag is ignored.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_OVERLAPPED"></a><a id="file_flag_overlapped"></a><dl>
+<dt><b>FILE_FLAG_OVERLAPPED</b></dt>
+<dt>0x40000000</dt>
+</dl>
+</td>
+<td width="60%">
+Instructs the system to initialize the object, so that operations that take a significant amount of time to
+        process return <b>ERROR_IO_PENDING</b>. When the operation is finished, the specified event is set to the signaled
+        state.
+<p>When you specify <b>FILE_FLAG_OVERLAPPED</b>, the file read and write functions
+<b>must</b> specify an
+<a href="/en-us/windows/desktop/api/minwinbase/ns-minwinbase-overlapped" data-linktype="absolute-path">OVERLAPPED</a> structure. That is, when
+<b>FILE_FLAG_OVERLAPPED</b> is specified, an application <b>must</b>
+perform overlapped reading and writing.</p>
+<p>When <b>FILE_FLAG_OVERLAPPED</b> is specified, the system does not maintain the file
+pointer. The file position must be passed as part of the <i>lpOverlapped</i> parameter
+(pointing to an <a href="/en-us/windows/desktop/api/minwinbase/ns-minwinbase-overlapped" data-linktype="absolute-path">OVERLAPPED</a> structure) to the file
+read and write functions.</p>
+<p>This flag also enables more than one operation to be performed simultaneously with the handle (a
+simultaneous read and write operation, for example).</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_POSIX_SEMANTICS"></a><a id="file_flag_posix_semantics"></a><dl>
+<dt><b>FILE_FLAG_POSIX_SEMANTICS</b></dt>
+<dt>0x01000000</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the file is to be accessed according to POSIX rules. This includes allowing multiple files 
+         with names, differing only in case, for file systems that support such naming. Use care when using this 
+         option because files created with this flag may not be accessible by applications written for MS-DOS or 
+         16-bit Windows.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_RANDOM_ACCESS"></a><a id="file_flag_random_access"></a><dl>
+<dt><b>FILE_FLAG_RANDOM_ACCESS</b></dt>
+<dt>0x10000000</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the file is accessed randomly. The system can use this as a hint to optimize file 
+         caching.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_SEQUENTIAL_SCAN"></a><a id="file_flag_sequential_scan"></a><dl>
+<dt><b>FILE_FLAG_SEQUENTIAL_SCAN</b></dt>
+<dt>0x08000000</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the file is to be accessed sequentially from beginning to end. The system can use this as a 
+         hint to optimize file caching. If an application moves the file pointer for random access, optimum caching 
+         may not occur; however, correct operation is still guaranteed.
+<p>Specifying this flag can increase performance for applications that read large files using sequential
+access. Performance gains can be even more noticeable for applications that read large files mostly
+sequentially, but occasionally skip over small ranges of bytes.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="FILE_FLAG_WRITE_THROUGH"></a><a id="file_flag_write_through"></a><dl>
+<dt><b>FILE_FLAG_WRITE_THROUGH</b></dt>
+<dt>0x80000000</dt>
+</dl>
+</td>
+<td width="60%">
+Instructs the system to write through any intermediate cache and go directly to disk. The system can still 
+         cache write operations, but cannot lazily flush them.
+</td>
+</tr>
+</table>
+ 
+<p>If the handle represents the client side of a named pipe, the <i>dwFlags</i> parameter can
+also contain Security Quality of Service information. For more information, see
+<a href="/en-us/windows/desktop/SecAuthZ/impersonation-levels" data-linktype="absolute-path">Impersonation Levels</a>. When the calling
+application specifies the <b>SECURITY_SQOS_PRESENT</b> flag, the
+<i>dwFlags</i> parameter can contain one or more of the following values.</p>
+<table>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%"><a id="SECURITY_ANONYMOUS"></a><a id="security_anonymous"></a><dl>
+<dt><b>SECURITY_ANONYMOUS</b></dt>
+</dl>
+</td>
+<td width="60%">
+Impersonate the client at the Anonymous impersonation level.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SECURITY_CONTEXT_TRACKING"></a><a id="security_context_tracking"></a><dl>
+<dt><b>SECURITY_CONTEXT_TRACKING</b></dt>
+</dl>
+</td>
+<td width="60%">
+The security tracking mode is dynamic. If this flag is not specified, the security tracking mode is 
+         static.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SECURITY_DELEGATION"></a><a id="security_delegation"></a><dl>
+<dt><b>SECURITY_DELEGATION</b></dt>
+</dl>
+</td>
+<td width="60%">
+Impersonate the client at the Delegation impersonation level.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SECURITY_EFFECTIVE_ONLY"></a><a id="security_effective_only"></a><dl>
+<dt><b>SECURITY_EFFECTIVE_ONLY</b></dt>
+</dl>
+</td>
+<td width="60%">
+Only the enabled aspects of the client security context are available to the server. If you do not specify 
+         this flag, all aspects of the client security context are available.
+<p>This allows the client to limit the groups and privileges that a server can use while impersonating the
+client.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SECURITY_IDENTIFICATION"></a><a id="security_identification"></a><dl>
+<dt><b>SECURITY_IDENTIFICATION</b></dt>
+</dl>
+</td>
+<td width="60%">
+Impersonate the client at the Identification impersonation level.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SECURITY_IMPERSONATION"></a><a id="security_impersonation"></a><dl>
+<dt><b>SECURITY_IMPERSONATION</b></dt>
+</dl>
+</td>
+<td width="60%">
+Impersonate the client at the Impersonation impersonation level.
+</td>
+</tr>
+</table>
+<h2 id="return-value">Return value</h2>
+<p>If the function succeeds, the return value is an open handle to the specified file.</p>
+<p>If the function fails, the return value is <b>INVALID_HANDLE_VALUE</b>. To get extended
+error information, call <a href="/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror" data-linktype="absolute-path">GetLastError</a>.</p>
+<h2 id="remarks">Remarks</h2>
+<p>The <i>dwFlags</i> parameter cannot contain any of the file attribute flags
+(<b>FILE_ATTRIBUTE_*</b>). These can only be specified when the file is created.</p>
+<p>In Windows 8 and Windows Server 2012, this function is supported by the following technologies.</p>
+<table>
+<tr>
+<th>Technology</th>
+<th>Supported</th>
+</tr>
+<tr>
+<td>
+Server Message Block (SMB) 3.0 protocol
+</td>
+<td>
+Yes
+</td>
+</tr>
+<tr>
+<td>
+SMB 3.0 Transparent Failover (TFO)
+</td>
+<td>
+Yes
+</td>
+</tr>
+<tr>
+<td>
+SMB 3.0 with Scale-out File Shares (SO)
+</td>
+<td>
+Yes
+</td>
+</tr>
+<tr>
+<td>
+Cluster Shared Volume File System (CsvFS)
+</td>
+<td>
+Yes
+</td>
+</tr>
+<tr>
+<td>
+Resilient File System (ReFS)
+</td>
+<td>
+Yes
+</td>
+</tr>
+</table>
+<h2 id="requirements">Requirements</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th style="text-align: left;"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimum supported client</strong></td>
+<td style="text-align: left;">Windows Vista [desktop apps only]</td>
+</tr>
+<tr>
+<td><strong>Minimum supported server</strong></td>
+<td style="text-align: left;">Windows Server 2003 [desktop apps only]</td>
+</tr>
+<tr>
+<td><strong>Target Platform</strong></td>
+<td style="text-align: left;">Windows</td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td style="text-align: left;">winbase.h (include Windows.h)</td>
+</tr>
+<tr>
+<td><strong>Library</strong></td>
+<td style="text-align: left;">Kernel32.lib</td>
+</tr>
+<tr>
+<td><strong>DLL</strong></td>
+<td style="text-align: left;">Kernel32.dll</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See also</h2>
+<p><a href="/en-us/windows/desktop/api/fileapi/nf-fileapi-createfilea" data-linktype="absolute-path">CreateFile</a></p>
+<p><a href="/en-us/windows/desktop/FileIO/file-management-functions" data-linktype="absolute-path">File Management Functions</a></p>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-small">
+									
+									
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								</div>
+						<!-- end page rating section -->
+
+
+						<!-- feedback section -->
+
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable">
+								
+								
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+								<h3>In this article</h3>
+							</nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+	<span id="adobe-target-experiment-container" hidden></span>
+</body>
+</html>

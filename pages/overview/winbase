@@ -1,0 +1,2760 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Winbase.h header - Win32 apps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/windows/win32/api/winbase/" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+
+	<meta name="author" content="lastnameholiu" />
+<meta name="breadcrumb_path" content="/windows/desktop/api/breadcrumb/toc.json" />
+<meta name="depot_name" content="MSDN.sdk-api-build" />
+<meta name="document_id" content="a9511fb6-0801-7206-c8e2-cc4d482ed091" />
+<meta name="document_version_independent_id" content="19a0a475-28a5-6377-bbd7-17d98882f92c" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build/commit/0f569407f88d8c410e32623b60d188d2f3c7ab9f?path=/sdk-api-src/content/winbase/index.md&amp;_a=contents" />
+<meta name="locale" content="en-us" />
+<meta name="ms.assetid" content="c7676757-54c2-3bf6-bd4b-6cd582f4b204" />
+<meta name="ms.author" content="alholiu" />
+<meta name="ms.date" content="01/11/2019" />
+<meta name="ms.keywords" content="" />
+<meta name="ms.prod" content="desktop" />
+<meta name="ms.technology" content="sdk-api-reference" />
+<meta name="ms.topic" content="conceptual" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/index.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="search.ms_docsetname" content="sdk-api-build" />
+<meta name="search.ms_product" content="MSDN" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="tech.root" content="backup" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDevCenter" />
+<meta name="UID" content="NA:winbase" />
+<meta name="updated_at" content="2020-06-30 09:41 AM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.sdk-api-build/{branchName}{pdfName}" />
+<meta name="feedback_config_error" content="feedback_system metadata is invalid. Expected GitHub. Received none." />
+<meta name="word_count" content="7562" />
+
+
+	<meta name="scope" content="Windows, Desktop" />
+<link href="https://docs.microsoft.com/en-us/windows/win32/api/winbase/" rel="canonical">
+	<title>Winbase.h header - Win32 apps | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/284eaf13.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/2e5ce4ab.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/index.md',
+			extendBreadcrumb: true,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/2f860d58.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+							<li id="contenteditbtn">
+								<a href="https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/index.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/index.md&version=GBlive&_a=contents" data-original_content_git_url_template="{repo}?path=/sdk-api-src/content/winbase/index.md&version=GB{branch}&_a=contents" data-pr_repo="" data-pr_branch="">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-edit-outline"></span>
+								</span>
+								<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+							</a>
+						</li>
+					<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="winbaseh-header">winbase.h header</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li>
+								<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2019-01-11T00:00:00.000Z" data-article-date-source="ms.date">01/11/2019</time>
+							</li>
+								<li class="readingTime">37 minutes to read</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+							<h3>In this article</h3>
+						</nav>
+
+						<!-- <content> -->
+							<p>This header is used by Backup. For more information, see:</p>
+<ul>
+<li><a href="../_backup/" data-linktype="relative-path">Backup</a>
+winbase.h contains the following programming interfaces:</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-_lclose" data-linktype="absolute-path">_lclose</a></td>
+<td style="text-align: left;">The _lclose function closes the specified file so that it is no longer available for reading or writing. This function is provided for compatibility with 16-bit versions of Windows. Win32-based applications should use the CloseHandle function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-_lcreat" data-linktype="absolute-path">_lcreat</a></td>
+<td style="text-align: left;">Creates or opens the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-_llseek" data-linktype="absolute-path">_llseek</a></td>
+<td style="text-align: left;">Repositions the file pointer for the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-_lopen" data-linktype="absolute-path">_lopen</a></td>
+<td style="text-align: left;">The _lopen function opens an existing file and sets the file pointer to the beginning of the file. This function is provided for compatibility with 16-bit versions of Windows. Win32-based applications should use the CreateFile function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-_lread" data-linktype="absolute-path">_lread</a></td>
+<td style="text-align: left;">The _lread function reads data from the specified file. This function is provided for compatibility with 16-bit versions of Windows. Win32-based applications should use the ReadFile function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-_lwrite" data-linktype="absolute-path">_lwrite</a></td>
+<td style="text-align: left;">Writes data to the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-accesscheckandauditalarma" data-linktype="absolute-path">AccessCheckAndAuditAlarmA</a></td>
+<td style="text-align: left;">Determines whether a security descriptor grants a specified set of access rights to the client being impersonated by the calling thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-accesscheckbytypeandauditalarma" data-linktype="absolute-path">AccessCheckByTypeAndAuditAlarmA</a></td>
+<td style="text-align: left;">Determines whether a security descriptor grants a specified set of access rights to the client being impersonated by the calling thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-accesscheckbytyperesultlistandauditalarma" data-linktype="absolute-path">AccessCheckByTypeResultListAndAuditAlarmA</a></td>
+<td style="text-align: left;">Determines whether a security descriptor grants a specified set of access rights to the client being impersonated by the calling thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-accesscheckbytyperesultlistandauditalarmbyhandlea" data-linktype="absolute-path">AccessCheckByTypeResultListAndAuditAlarmByHandleA</a></td>
+<td style="text-align: left;">Determines whether a security descriptor grants a specified set of access rights to the client that the calling thread is impersonating.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-activateactctx" data-linktype="absolute-path">ActivateActCtx</a></td>
+<td style="text-align: left;">The ActivateActCtx function activates the specified activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-addatoma" data-linktype="absolute-path">AddAtomA</a></td>
+<td style="text-align: left;">Adds a character string to the local atom table and returns a unique value (an atom) identifying the string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-addatomw" data-linktype="absolute-path">AddAtomW</a></td>
+<td style="text-align: left;">Adds a character string to the local atom table and returns a unique value (an atom) identifying the string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-addconditionalace" data-linktype="absolute-path">AddConditionalAce</a></td>
+<td style="text-align: left;">Adds a conditional access control entry (ACE) to the specified access control list (ACL).</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-addintegritylabeltoboundarydescriptor" data-linktype="absolute-path">AddIntegrityLabelToBoundaryDescriptor</a></td>
+<td style="text-align: left;">Adds a new required security identifier (SID) to the specified boundary descriptor.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-addrefactctx" data-linktype="absolute-path">AddRefActCtx</a></td>
+<td style="text-align: left;">The AddRefActCtx function increments the reference count of the specified activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-addsecurememorycachecallback" data-linktype="absolute-path">AddSecureMemoryCacheCallback</a></td>
+<td style="text-align: left;">Registers a callback function to be called when a secured memory range is freed or its protections are changed.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-applicationrecoveryfinished" data-linktype="absolute-path">ApplicationRecoveryFinished</a></td>
+<td style="text-align: left;">Indicates that the calling application has completed its data recovery.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-applicationrecoveryinprogress" data-linktype="absolute-path">ApplicationRecoveryInProgress</a></td>
+<td style="text-align: left;">Indicates that the calling application is continuing to recover data.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-backupeventloga" data-linktype="absolute-path">BackupEventLogA</a></td>
+<td style="text-align: left;">Saves the specified event log to a backup file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-backupeventlogw" data-linktype="absolute-path">BackupEventLogW</a></td>
+<td style="text-align: left;">Saves the specified event log to a backup file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-backupread" data-linktype="absolute-path">BackupRead</a></td>
+<td style="text-align: left;">Back up a file or directory, including the security information.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-backupseek" data-linktype="absolute-path">BackupSeek</a></td>
+<td style="text-align: left;">Seeks forward in a data stream initially accessed by using the BackupRead or BackupWrite function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-backupwrite" data-linktype="absolute-path">BackupWrite</a></td>
+<td style="text-align: left;">Restore a file or directory that was backed up using BackupRead.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-beginupdateresourcea" data-linktype="absolute-path">BeginUpdateResourceA</a></td>
+<td style="text-align: left;">Retrieves a handle that can be used by the UpdateResource function to add, delete, or replace resources in a binary module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-beginupdateresourcew" data-linktype="absolute-path">BeginUpdateResourceW</a></td>
+<td style="text-align: left;">Retrieves a handle that can be used by the UpdateResource function to add, delete, or replace resources in a binary module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-bindiocompletioncallback" data-linktype="absolute-path">BindIoCompletionCallback</a></td>
+<td style="text-align: left;">Associates the I/O completion port owned by the thread pool with the specified file handle. On completion of an I/O request involving this file, a non-I/O worker thread will execute the specified callback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-buildcommdcba" data-linktype="absolute-path">BuildCommDCBA</a></td>
+<td style="text-align: left;">Fills a specified DCB structure with values specified in a device-control string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-buildcommdcbandtimeoutsa" data-linktype="absolute-path">BuildCommDCBAndTimeoutsA</a></td>
+<td style="text-align: left;">Translates a device-definition string into appropriate device-control block codes and places them into a device control block.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-buildcommdcbandtimeoutsw" data-linktype="absolute-path">BuildCommDCBAndTimeoutsW</a></td>
+<td style="text-align: left;">Translates a device-definition string into appropriate device-control block codes and places them into a device control block.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-buildcommdcbw" data-linktype="absolute-path">BuildCommDCBW</a></td>
+<td style="text-align: left;">Fills a specified DCB structure with values specified in a device-control string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-callnamedpipea" data-linktype="absolute-path">CallNamedPipeA</a></td>
+<td style="text-align: left;">Connects to a message-type pipe (and waits if an instance of the pipe is not available), writes to and reads from the pipe, and then closes the pipe.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-checknamelegaldos8dot3a" data-linktype="absolute-path">CheckNameLegalDOS8Dot3A</a></td>
+<td style="text-align: left;">Determines whether the specified name can be used to create a file on a FAT file system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-checknamelegaldos8dot3w" data-linktype="absolute-path">CheckNameLegalDOS8Dot3W</a></td>
+<td style="text-align: left;">Determines whether the specified name can be used to create a file on a FAT file system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-clearcommbreak" data-linktype="absolute-path">ClearCommBreak</a></td>
+<td style="text-align: left;">Restores character transmission for a specified communications device and places the transmission line in a nonbreak state.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-clearcommerror" data-linktype="absolute-path">ClearCommError</a></td>
+<td style="text-align: left;">Retrieves information about a communications error and reports the current status of a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-cleareventloga" data-linktype="absolute-path">ClearEventLogA</a></td>
+<td style="text-align: left;">Clears the specified event log, and optionally saves the current copy of the log to a backup file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-cleareventlogw" data-linktype="absolute-path">ClearEventLogW</a></td>
+<td style="text-align: left;">Clears the specified event log, and optionally saves the current copy of the log to a backup file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-closeencryptedfileraw" data-linktype="absolute-path">CloseEncryptedFileRaw</a></td>
+<td style="text-align: left;">Closes an encrypted file after a backup or restore operation, and frees associated system resources.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-closeeventlog" data-linktype="absolute-path">CloseEventLog</a></td>
+<td style="text-align: left;">Closes the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-commconfigdialoga" data-linktype="absolute-path">CommConfigDialogA</a></td>
+<td style="text-align: left;">Displays a driver-supplied configuration dialog box.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-commconfigdialogw" data-linktype="absolute-path">CommConfigDialogW</a></td>
+<td style="text-align: left;">Displays a driver-supplied configuration dialog box.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-convertfibertothread" data-linktype="absolute-path">ConvertFiberToThread</a></td>
+<td style="text-align: left;">Converts the current fiber into a thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-convertthreadtofiber" data-linktype="absolute-path">ConvertThreadToFiber</a></td>
+<td style="text-align: left;">Converts the current thread into a fiber. You must convert a thread into a fiber before you can schedule other fibers.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-convertthreadtofiberex" data-linktype="absolute-path">ConvertThreadToFiberEx</a></td>
+<td style="text-align: left;">Converts the current thread into a fiber. You must convert a thread into a fiber before you can schedule other fibers.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copycontext" data-linktype="absolute-path">CopyContext</a></td>
+<td style="text-align: left;">Copies a source context structure (including any XState) onto an initialized destination context structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfile" data-linktype="absolute-path">CopyFile</a></td>
+<td style="text-align: left;">Copies an existing file to a new file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfile2" data-linktype="absolute-path">CopyFile2</a></td>
+<td style="text-align: left;">Copies an existing file to a new file, notifying the application of its progress through a callback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfilea" data-linktype="absolute-path">CopyFileA</a></td>
+<td style="text-align: left;">Copies an existing file to a new file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfileexa" data-linktype="absolute-path">CopyFileExA</a></td>
+<td style="text-align: left;">Copies an existing file to a new file, notifying the application of its progress through a callback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfileexw" data-linktype="absolute-path">CopyFileExW</a></td>
+<td style="text-align: left;">Copies an existing file to a new file, notifying the application of its progress through a callback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfiletransacteda" data-linktype="absolute-path">CopyFileTransactedA</a></td>
+<td style="text-align: left;">Copies an existing file to a new file as a transacted operation, notifying the application of its progress through a callback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfiletransactedw" data-linktype="absolute-path">CopyFileTransactedW</a></td>
+<td style="text-align: left;">Copies an existing file to a new file as a transacted operation, notifying the application of its progress through a callback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-copyfilew" data-linktype="absolute-path">CopyFileW</a></td>
+<td style="text-align: left;">Copies an existing file to a new file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createactctxa" data-linktype="absolute-path">CreateActCtxA</a></td>
+<td style="text-align: left;">The CreateActCtx function creates an activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createactctxw" data-linktype="absolute-path">CreateActCtxW</a></td>
+<td style="text-align: left;">The CreateActCtx function creates an activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createboundarydescriptora" data-linktype="absolute-path">CreateBoundaryDescriptorA</a></td>
+<td style="text-align: left;">Creates a boundary descriptor.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createdirectory" data-linktype="absolute-path">CreateDirectory</a></td>
+<td style="text-align: left;">Creates a new directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createdirectoryexa" data-linktype="absolute-path">CreateDirectoryExA</a></td>
+<td style="text-align: left;">Creates a new directory with the attributes of a specified template directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createdirectoryexw" data-linktype="absolute-path">CreateDirectoryExW</a></td>
+<td style="text-align: left;">Creates a new directory with the attributes of a specified template directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createdirectorytransacteda" data-linktype="absolute-path">CreateDirectoryTransactedA</a></td>
+<td style="text-align: left;">Creates a new directory as a transacted operation, with the attributes of a specified template directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createdirectorytransactedw" data-linktype="absolute-path">CreateDirectoryTransactedW</a></td>
+<td style="text-align: left;">Creates a new directory as a transacted operation, with the attributes of a specified template directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createfiber" data-linktype="absolute-path">CreateFiber</a></td>
+<td style="text-align: left;">Allocates a fiber object, assigns it a stack, and sets up execution to begin at the specified start address, typically the fiber function. This function does not schedule the fiber.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createfiberex" data-linktype="absolute-path">CreateFiberEx</a></td>
+<td style="text-align: left;">Allocates a fiber object, assigns it a stack, and sets up execution to begin at the specified start address, typically the fiber function. This function does not schedule the fiber.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createfilemappinga" data-linktype="absolute-path">CreateFileMappingA</a></td>
+<td style="text-align: left;">Creates or opens a named or unnamed file mapping object for a specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createfilemappingnumaa" data-linktype="absolute-path">CreateFileMappingNumaA</a></td>
+<td style="text-align: left;">Creates or opens a named or unnamed file mapping object for a specified file and specifies the NUMA node for the physical memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createfiletransacteda" data-linktype="absolute-path">CreateFileTransactedA</a></td>
+<td style="text-align: left;">Creates or opens a file, file stream, or directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createfiletransactedw" data-linktype="absolute-path">CreateFileTransactedW</a></td>
+<td style="text-align: left;">Creates or opens a file, file stream, or directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createhardlinka" data-linktype="absolute-path">CreateHardLinkA</a></td>
+<td style="text-align: left;">Establishes a hard link between an existing file and a new file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createhardlinktransacteda" data-linktype="absolute-path">CreateHardLinkTransactedA</a></td>
+<td style="text-align: left;">Establishes a hard link between an existing file and a new file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createhardlinktransactedw" data-linktype="absolute-path">CreateHardLinkTransactedW</a></td>
+<td style="text-align: left;">Establishes a hard link between an existing file and a new file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createhardlinkw" data-linktype="absolute-path">CreateHardLinkW</a></td>
+<td style="text-align: left;">Establishes a hard link between an existing file and a new file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createjobobjecta" data-linktype="absolute-path">CreateJobObjectA</a></td>
+<td style="text-align: left;">Creates or opens a job object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createmailslota" data-linktype="absolute-path">CreateMailslotA</a></td>
+<td style="text-align: left;">Creates a mailslot with the specified name and returns a handle that a mailslot server can use to perform operations on the mailslot.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createmailslotw" data-linktype="absolute-path">CreateMailslotW</a></td>
+<td style="text-align: left;">Creates a mailslot with the specified name and returns a handle that a mailslot server can use to perform operations on the mailslot.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createnamedpipea" data-linktype="absolute-path">CreateNamedPipeA</a></td>
+<td style="text-align: left;">Creates an instance of a named pipe and returns a handle for subsequent pipe operations.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createprivatenamespacea" data-linktype="absolute-path">CreatePrivateNamespaceA</a></td>
+<td style="text-align: left;">Creates a private namespace.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createprocesswithlogonw" data-linktype="absolute-path">CreateProcessWithLogonW</a></td>
+<td style="text-align: left;">Creates a new process and its primary thread. Then the new process runs the specified executable file in the security context of the specified credentials (user, domain, and password). It can optionally load the user profile for a specified user.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createprocesswithtokenw" data-linktype="absolute-path">CreateProcessWithTokenW</a></td>
+<td style="text-align: left;">Creates a new process and its primary thread. The new process runs in the security context of the specified token. It can optionally load the user profile for the specified user.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createsemaphorea" data-linktype="absolute-path">CreateSemaphoreA</a></td>
+<td style="text-align: left;">Creates or opens a named or unnamed semaphore object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createsemaphoreexa" data-linktype="absolute-path">CreateSemaphoreExA</a></td>
+<td style="text-align: left;">Creates or opens a named or unnamed semaphore object and returns a handle to the object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createsymboliclinka" data-linktype="absolute-path">CreateSymbolicLinkA</a></td>
+<td style="text-align: left;">Creates a symbolic link.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createsymboliclinktransacteda" data-linktype="absolute-path">CreateSymbolicLinkTransactedA</a></td>
+<td style="text-align: left;">Creates a symbolic link as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createsymboliclinktransactedw" data-linktype="absolute-path">CreateSymbolicLinkTransactedW</a></td>
+<td style="text-align: left;">Creates a symbolic link as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createsymboliclinkw" data-linktype="absolute-path">CreateSymbolicLinkW</a></td>
+<td style="text-align: left;">Creates a symbolic link.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createtapepartition" data-linktype="absolute-path">CreateTapePartition</a></td>
+<td style="text-align: left;">Reformats a tape.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createumscompletionlist" data-linktype="absolute-path">CreateUmsCompletionList</a></td>
+<td style="text-align: left;">Creates a user-mode scheduling (UMS) completion list.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-createumsthreadcontext" data-linktype="absolute-path">CreateUmsThreadContext</a></td>
+<td style="text-align: left;">Creates a user-mode scheduling (UMS) thread context to represent a UMS worker thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deactivateactctx" data-linktype="absolute-path">DeactivateActCtx</a></td>
+<td style="text-align: left;">The DeactivateActCtx function deactivates the activation context corresponding to the specified cookie.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-debugbreakprocess" data-linktype="absolute-path">DebugBreakProcess</a></td>
+<td style="text-align: left;">Causes a breakpoint exception to occur in the specified process. This allows the calling thread to signal the debugger to handle the exception.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-debugsetprocesskillonexit" data-linktype="absolute-path">DebugSetProcessKillOnExit</a></td>
+<td style="text-align: left;">Sets the action to be performed when the calling thread exits.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-decryptfilea" data-linktype="absolute-path">DecryptFileA</a></td>
+<td style="text-align: left;">Decrypts an encrypted file or directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-decryptfilew" data-linktype="absolute-path">DecryptFileW</a></td>
+<td style="text-align: left;">Decrypts an encrypted file or directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-definedosdevicea" data-linktype="absolute-path">DefineDosDeviceA</a></td>
+<td style="text-align: left;">Defines, redefines, or deletes MS-DOS device names.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deleteatom" data-linktype="absolute-path">DeleteAtom</a></td>
+<td style="text-align: left;">Decrements the reference count of a local string atom. If the atom's reference count is reduced to zero, DeleteAtom removes the string associated with the atom from the local atom table.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deletefiber" data-linktype="absolute-path">DeleteFiber</a></td>
+<td style="text-align: left;">Deletes an existing fiber.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deletefile" data-linktype="absolute-path">DeleteFile</a></td>
+<td style="text-align: left;">Deletes an existing file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deletefiletransacteda" data-linktype="absolute-path">DeleteFileTransactedA</a></td>
+<td style="text-align: left;">Deletes an existing file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deletefiletransactedw" data-linktype="absolute-path">DeleteFileTransactedW</a></td>
+<td style="text-align: left;">Deletes an existing file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deletetimerqueue" data-linktype="absolute-path">DeleteTimerQueue</a></td>
+<td style="text-align: left;">Deletes a timer queue. Any pending timers in the queue are canceled and deleted.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deleteumscompletionlist" data-linktype="absolute-path">DeleteUmsCompletionList</a></td>
+<td style="text-align: left;">Deletes the specified user-mode scheduling (UMS) completion list. The list must be empty.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deleteumsthreadcontext" data-linktype="absolute-path">DeleteUmsThreadContext</a></td>
+<td style="text-align: left;">Deletes the specified user-mode scheduling (UMS) thread context. The thread must be terminated.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deletevolumemountpointa" data-linktype="absolute-path">DeleteVolumeMountPointA</a></td>
+<td style="text-align: left;">Deletes a drive letter or mounted folder.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-dequeueumscompletionlistitems" data-linktype="absolute-path">DequeueUmsCompletionListItems</a></td>
+<td style="text-align: left;">Retrieves user-mode scheduling (UMS) worker threads from the specified UMS completion list.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-deregistereventsource" data-linktype="absolute-path">DeregisterEventSource</a></td>
+<td style="text-align: left;">Closes the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-destroythreadpoolenvironment" data-linktype="absolute-path">DestroyThreadpoolEnvironment</a></td>
+<td style="text-align: left;">Deletes the specified callback environment. Call this function when the callback environment is no longer needed for creating new thread pool objects.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-disablethreadprofiling" data-linktype="absolute-path">DisableThreadProfiling</a></td>
+<td style="text-align: left;">Disables thread profiling.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-dnshostnametocomputernamea" data-linktype="absolute-path">DnsHostnameToComputerNameA</a></td>
+<td style="text-align: left;">Converts a DNS-style host name to a NetBIOS-style computer name.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-dnshostnametocomputernamew" data-linktype="absolute-path">DnsHostnameToComputerNameW</a></td>
+<td style="text-align: left;">Converts a DNS-style host name to a NetBIOS-style computer name.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-dosdatetimetofiletime" data-linktype="absolute-path">DosDateTimeToFileTime</a></td>
+<td style="text-align: left;">Converts MS-DOS date and time values to a file time.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-enablethreadprofiling" data-linktype="absolute-path">EnableThreadProfiling</a></td>
+<td style="text-align: left;">Enables thread profiling on the specified thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-encryptfilea" data-linktype="absolute-path">EncryptFileA</a></td>
+<td style="text-align: left;">Encrypts a file or directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-encryptfilew" data-linktype="absolute-path">EncryptFileW</a></td>
+<td style="text-align: left;">Encrypts a file or directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-endupdateresourcea" data-linktype="absolute-path">EndUpdateResourceA</a></td>
+<td style="text-align: left;">Commits or discards changes made prior to a call to UpdateResource.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-endupdateresourcew" data-linktype="absolute-path">EndUpdateResourceW</a></td>
+<td style="text-align: left;">Commits or discards changes made prior to a call to UpdateResource.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-enterumsschedulingmode" data-linktype="absolute-path">EnterUmsSchedulingMode</a></td>
+<td style="text-align: left;">Converts the calling thread into a user-mode scheduling (UMS) scheduler thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-enumresourcelanguagesa" data-linktype="absolute-path">EnumResourceLanguagesA</a></td>
+<td style="text-align: left;">Enumerates language-specific resources, of the specified type and name, associated with a binary module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-enumresourcelanguagesw" data-linktype="absolute-path">EnumResourceLanguagesW</a></td>
+<td style="text-align: left;">Enumerates language-specific resources, of the specified type and name, associated with a binary module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-enumresourcenamesa" data-linktype="absolute-path">EnumResourceNamesA</a></td>
+<td style="text-align: left;">Enumerates resources of a specified type within a binary module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-enumresourcetypesa" data-linktype="absolute-path">EnumResourceTypesA</a></td>
+<td style="text-align: left;">Enumerates resource types within a binary module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-enumresourcetypesw" data-linktype="absolute-path">EnumResourceTypesW</a></td>
+<td style="text-align: left;">Enumerates resource types within a binary module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-erasetape" data-linktype="absolute-path">EraseTape</a></td>
+<td style="text-align: left;">Erases all or part of a tape.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-escapecommfunction" data-linktype="absolute-path">EscapeCommFunction</a></td>
+<td style="text-align: left;">Directs the specified communications device to perform an extended function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-executeumsthread" data-linktype="absolute-path">ExecuteUmsThread</a></td>
+<td style="text-align: left;">Runs the specified UMS worker thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-fatalexit" data-linktype="absolute-path">FatalExit</a></td>
+<td style="text-align: left;">Transfers execution control to the debugger. The behavior of the debugger thereafter is specific to the type of debugger used.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-fileencryptionstatusa" data-linktype="absolute-path">FileEncryptionStatusA</a></td>
+<td style="text-align: left;">Retrieves the encryption status of the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-fileencryptionstatusw" data-linktype="absolute-path">FileEncryptionStatusW</a></td>
+<td style="text-align: left;">Retrieves the encryption status of the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-filetimetodosdatetime" data-linktype="absolute-path">FileTimeToDosDateTime</a></td>
+<td style="text-align: left;">Converts a file time to MS-DOS date and time values.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findactctxsectionguid" data-linktype="absolute-path">FindActCtxSectionGuid</a></td>
+<td style="text-align: left;">The FindActCtxSectionGuid function retrieves information on a specific GUID in the current activation context and returns a ACTCTX_SECTION_KEYED_DATA structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findactctxsectionstringa" data-linktype="absolute-path">FindActCtxSectionStringA</a></td>
+<td style="text-align: left;">The FindActCtxSectionString function retrieves information on a specific string in the current activation context and returns a ACTCTX_SECTION_KEYED_DATA structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findactctxsectionstringw" data-linktype="absolute-path">FindActCtxSectionStringW</a></td>
+<td style="text-align: left;">The FindActCtxSectionString function retrieves information on a specific string in the current activation context and returns a ACTCTX_SECTION_KEYED_DATA structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findatoma" data-linktype="absolute-path">FindAtomA</a></td>
+<td style="text-align: left;">Searches the local atom table for the specified character string and retrieves the atom associated with that string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findatomw" data-linktype="absolute-path">FindAtomW</a></td>
+<td style="text-align: left;">Searches the local atom table for the specified character string and retrieves the atom associated with that string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findfirstfilenametransactedw" data-linktype="absolute-path">FindFirstFileNameTransactedW</a></td>
+<td style="text-align: left;">Creates an enumeration of all the hard links to the specified file as a transacted operation. The function returns a handle to the enumeration that can be used on subsequent calls to the FindNextFileNameW function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findfirstfiletransacteda" data-linktype="absolute-path">FindFirstFileTransactedA</a></td>
+<td style="text-align: left;">Searches a directory for a file or subdirectory with a name that matches a specific name as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findfirstfiletransactedw" data-linktype="absolute-path">FindFirstFileTransactedW</a></td>
+<td style="text-align: left;">Searches a directory for a file or subdirectory with a name that matches a specific name as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findfirststreamtransactedw" data-linktype="absolute-path">FindFirstStreamTransactedW</a></td>
+<td style="text-align: left;">Enumerates the first stream in the specified file or directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findfirstvolumea" data-linktype="absolute-path">FindFirstVolumeA</a></td>
+<td style="text-align: left;">Retrieves the name of a volume on a computer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findfirstvolumemountpointa" data-linktype="absolute-path">FindFirstVolumeMountPointA</a></td>
+<td style="text-align: left;">Retrieves the name of a mounted folder on the specified volume.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findfirstvolumemountpointw" data-linktype="absolute-path">FindFirstVolumeMountPointW</a></td>
+<td style="text-align: left;">Retrieves the name of a mounted folder on the specified volume.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findnextvolumea" data-linktype="absolute-path">FindNextVolumeA</a></td>
+<td style="text-align: left;">Continues a volume search started by a call to the FindFirstVolume function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findnextvolumemountpointa" data-linktype="absolute-path">FindNextVolumeMountPointA</a></td>
+<td style="text-align: left;">Continues a mounted folder search started by a call to the FindFirstVolumeMountPoint function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findnextvolumemountpointw" data-linktype="absolute-path">FindNextVolumeMountPointW</a></td>
+<td style="text-align: left;">Continues a mounted folder search started by a call to the FindFirstVolumeMountPoint function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findresourcea" data-linktype="absolute-path">FindResourceA</a></td>
+<td style="text-align: left;">Determines the location of a resource with the specified type and name in the specified module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findresourceexa" data-linktype="absolute-path">FindResourceExA</a></td>
+<td style="text-align: left;">Determines the location of the resource with the specified type, name, and language in the specified module.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-findvolumemountpointclose" data-linktype="absolute-path">FindVolumeMountPointClose</a></td>
+<td style="text-align: left;">Closes the specified mounted folder search handle.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-formatmessage" data-linktype="absolute-path">FormatMessage</a></td>
+<td style="text-align: left;">Formats a message string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-formatmessagea" data-linktype="absolute-path">FormatMessageA</a></td>
+<td style="text-align: left;">Formats a message string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-formatmessagew" data-linktype="absolute-path">FormatMessageW</a></td>
+<td style="text-align: left;">Formats a message string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getactiveprocessorcount" data-linktype="absolute-path">GetActiveProcessorCount</a></td>
+<td style="text-align: left;">Returns the number of active processors in a processor group or in the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getactiveprocessorgroupcount" data-linktype="absolute-path">GetActiveProcessorGroupCount</a></td>
+<td style="text-align: left;">Returns the number of active processor groups in the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getapplicationrecoverycallback" data-linktype="absolute-path">GetApplicationRecoveryCallback</a></td>
+<td style="text-align: left;">Retrieves a pointer to the callback routine registered for the specified process. The address returned is in the virtual address space of the process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getapplicationrestartsettings" data-linktype="absolute-path">GetApplicationRestartSettings</a></td>
+<td style="text-align: left;">Retrieves the restart information registered for the specified process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getatomnamea" data-linktype="absolute-path">GetAtomNameA</a></td>
+<td style="text-align: left;">Retrieves a copy of the character string associated with the specified local atom.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getatomnamew" data-linktype="absolute-path">GetAtomNameW</a></td>
+<td style="text-align: left;">Retrieves a copy of the character string associated with the specified local atom.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getbinarytypea" data-linktype="absolute-path">GetBinaryTypeA</a></td>
+<td style="text-align: left;">Determines whether a file is an executable (.exe) file, and if so, which subsystem runs the executable file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getbinarytypew" data-linktype="absolute-path">GetBinaryTypeW</a></td>
+<td style="text-align: left;">Determines whether a file is an executable (.exe) file, and if so, which subsystem runs the executable file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcommconfig" data-linktype="absolute-path">GetCommConfig</a></td>
+<td style="text-align: left;">Retrieves the current configuration of a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcommmask" data-linktype="absolute-path">GetCommMask</a></td>
+<td style="text-align: left;">Retrieves the value of the event mask for a specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcommmodemstatus" data-linktype="absolute-path">GetCommModemStatus</a></td>
+<td style="text-align: left;">Retrieves the modem control-register values.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcommports" data-linktype="absolute-path">GetCommPorts</a></td>
+<td style="text-align: left;">Gets an array that contains the well-formed COM ports.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcommproperties" data-linktype="absolute-path">GetCommProperties</a></td>
+<td style="text-align: left;">Retrieves information about the communications properties for a specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcommstate" data-linktype="absolute-path">GetCommState</a></td>
+<td style="text-align: left;">Retrieves the current control settings for a specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcommtimeouts" data-linktype="absolute-path">GetCommTimeouts</a></td>
+<td style="text-align: left;">Retrieves the time-out parameters for all read and write operations on a specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcompressedfilesizetransacteda" data-linktype="absolute-path">GetCompressedFileSizeTransactedA</a></td>
+<td style="text-align: left;">Retrieves the actual number of bytes of disk storage used to store a specified file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcompressedfilesizetransactedw" data-linktype="absolute-path">GetCompressedFileSizeTransactedW</a></td>
+<td style="text-align: left;">Retrieves the actual number of bytes of disk storage used to store a specified file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcomputernamea" data-linktype="absolute-path">GetComputerNameA</a></td>
+<td style="text-align: left;">Retrieves the NetBIOS name of the local computer. This name is established at system startup, when the system reads it from the registry.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcomputernamew" data-linktype="absolute-path">GetComputerNameW</a></td>
+<td style="text-align: left;">Retrieves the NetBIOS name of the local computer. This name is established at system startup, when the system reads it from the registry.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcurrentactctx" data-linktype="absolute-path">GetCurrentActCtx</a></td>
+<td style="text-align: left;">The GetCurrentActCtx function returns the handle to the active activation context of the calling thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcurrentdirectory" data-linktype="absolute-path">GetCurrentDirectory</a></td>
+<td style="text-align: left;">Retrieves the current directory for the current process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcurrenthwprofilea" data-linktype="absolute-path">GetCurrentHwProfileA</a></td>
+<td style="text-align: left;">Retrieves information about the current hardware profile for the local computer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcurrenthwprofilew" data-linktype="absolute-path">GetCurrentHwProfileW</a></td>
+<td style="text-align: left;">Retrieves information about the current hardware profile for the local computer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getcurrentumsthread" data-linktype="absolute-path">GetCurrentUmsThread</a></td>
+<td style="text-align: left;">Returns the user-mode scheduling (UMS) thread context of the calling UMS thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getdefaultcommconfiga" data-linktype="absolute-path">GetDefaultCommConfigA</a></td>
+<td style="text-align: left;">Retrieves the default configuration for the specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getdefaultcommconfigw" data-linktype="absolute-path">GetDefaultCommConfigW</a></td>
+<td style="text-align: left;">Retrieves the default configuration for the specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getdevicepowerstate" data-linktype="absolute-path">GetDevicePowerState</a></td>
+<td style="text-align: left;">Retrieves the current power state of the specified device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getdlldirectorya" data-linktype="absolute-path">GetDllDirectoryA</a></td>
+<td style="text-align: left;">Retrieves the application-specific portion of the search path used to locate DLLs for the application.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getdlldirectoryw" data-linktype="absolute-path">GetDllDirectoryW</a></td>
+<td style="text-align: left;">Retrieves the application-specific portion of the search path used to locate DLLs for the application.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getenabledxstatefeatures" data-linktype="absolute-path">GetEnabledXStateFeatures</a></td>
+<td style="text-align: left;">Gets a mask of enabled XState features on x86 or x64 processors.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getenvironmentvariable" data-linktype="absolute-path">GetEnvironmentVariable</a></td>
+<td style="text-align: left;">Retrieves the contents of the specified variable from the environment block of the calling process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-geteventloginformation" data-linktype="absolute-path">GetEventLogInformation</a></td>
+<td style="text-align: left;">Retrieves information about the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfileattributestransacteda" data-linktype="absolute-path">GetFileAttributesTransactedA</a></td>
+<td style="text-align: left;">Retrieves file system attributes for a specified file or directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfileattributestransactedw" data-linktype="absolute-path">GetFileAttributesTransactedW</a></td>
+<td style="text-align: left;">Retrieves file system attributes for a specified file or directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfilebandwidthreservation" data-linktype="absolute-path">GetFileBandwidthReservation</a></td>
+<td style="text-align: left;">Retrieves the bandwidth reservation properties of the volume on which the specified file resides.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfileinformationbyhandleex" data-linktype="absolute-path">GetFileInformationByHandleEx</a></td>
+<td style="text-align: left;">Retrieves file information for the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfilesecuritya" data-linktype="absolute-path">GetFileSecurityA</a></td>
+<td style="text-align: left;">Obtains specified information about the security of a file or directory. The information obtained is constrained by the caller's access rights and privileges.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfirmwareenvironmentvariablea" data-linktype="absolute-path">GetFirmwareEnvironmentVariableA</a></td>
+<td style="text-align: left;">Retrieves the value of the specified firmware environment variable.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfirmwareenvironmentvariableexa" data-linktype="absolute-path">GetFirmwareEnvironmentVariableExA</a></td>
+<td style="text-align: left;">Retrieves the value of the specified firmware environment variable and its attributes.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfirmwareenvironmentvariableexw" data-linktype="absolute-path">GetFirmwareEnvironmentVariableExW</a></td>
+<td style="text-align: left;">Retrieves the value of the specified firmware environment variable and its attributes.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfirmwareenvironmentvariablew" data-linktype="absolute-path">GetFirmwareEnvironmentVariableW</a></td>
+<td style="text-align: left;">Retrieves the value of the specified firmware environment variable.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfirmwaretype" data-linktype="absolute-path">GetFirmwareType</a></td>
+<td style="text-align: left;">Retrieves the firmware type of the local computer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfullpathnametransacteda" data-linktype="absolute-path">GetFullPathNameTransactedA</a></td>
+<td style="text-align: left;">Retrieves the full path and file name of the specified file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getfullpathnametransactedw" data-linktype="absolute-path">GetFullPathNameTransactedW</a></td>
+<td style="text-align: left;">Retrieves the full path and file name of the specified file as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getlogicaldrivestringsa" data-linktype="absolute-path">GetLogicalDriveStringsA</a></td>
+<td style="text-align: left;">Fills a buffer with strings that specify valid drives in the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getlongpathnametransacteda" data-linktype="absolute-path">GetLongPathNameTransactedA</a></td>
+<td style="text-align: left;">Converts the specified path to its long form as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getlongpathnametransactedw" data-linktype="absolute-path">GetLongPathNameTransactedW</a></td>
+<td style="text-align: left;">Converts the specified path to its long form as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getmailslotinfo" data-linktype="absolute-path">GetMailslotInfo</a></td>
+<td style="text-align: left;">Retrieves information about the specified mailslot.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getmaximumprocessorcount" data-linktype="absolute-path">GetMaximumProcessorCount</a></td>
+<td style="text-align: left;">Returns the maximum number of logical processors that a processor group or the system can have.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getmaximumprocessorgroupcount" data-linktype="absolute-path">GetMaximumProcessorGroupCount</a></td>
+<td style="text-align: left;">Returns the maximum number of processor groups that the system can have.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeclientcomputernamea" data-linktype="absolute-path">GetNamedPipeClientComputerNameA</a></td>
+<td style="text-align: left;">Retrieves the client computer name for the specified named pipe.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeclientprocessid" data-linktype="absolute-path">GetNamedPipeClientProcessId</a></td>
+<td style="text-align: left;">Retrieves the client process identifier for the specified named pipe.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeclientsessionid" data-linktype="absolute-path">GetNamedPipeClientSessionId</a></td>
+<td style="text-align: left;">Retrieves the client session identifier for the specified named pipe.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipehandlestatea" data-linktype="absolute-path">GetNamedPipeHandleStateA</a></td>
+<td style="text-align: left;">Retrieves information about a specified named pipe.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeserverprocessid" data-linktype="absolute-path">GetNamedPipeServerProcessId</a></td>
+<td style="text-align: left;">Retrieves the server process identifier for the specified named pipe.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeserversessionid" data-linktype="absolute-path">GetNamedPipeServerSessionId</a></td>
+<td style="text-align: left;">Retrieves the server session identifier for the specified named pipe.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnextumslistitem" data-linktype="absolute-path">GetNextUmsListItem</a></td>
+<td style="text-align: left;">Returns the next user-mode scheduling (UMS) thread context in a list of thread contexts.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumaavailablememorynode" data-linktype="absolute-path">GetNumaAvailableMemoryNode</a></td>
+<td style="text-align: left;">Retrieves the amount of memory available in the specified node.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumaavailablememorynodeex" data-linktype="absolute-path">GetNumaAvailableMemoryNodeEx</a></td>
+<td style="text-align: left;">Retrieves the amount of memory that is available in a node specified as a USHORT value.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumanodenumberfromhandle" data-linktype="absolute-path">GetNumaNodeNumberFromHandle</a></td>
+<td style="text-align: left;">Retrieves the NUMA node associated with the file or I/O device represented by the specified file handle.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumanodeprocessormask" data-linktype="absolute-path">GetNumaNodeProcessorMask</a></td>
+<td style="text-align: left;">Retrieves the processor mask for the specified node.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumaprocessornode" data-linktype="absolute-path">GetNumaProcessorNode</a></td>
+<td style="text-align: left;">Retrieves the node number for the specified processor.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumaprocessornodeex" data-linktype="absolute-path">GetNumaProcessorNodeEx</a></td>
+<td style="text-align: left;">Retrieves the node number as a USHORT value for the specified logical processor.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumaproximitynode" data-linktype="absolute-path">GetNumaProximityNode</a></td>
+<td style="text-align: left;">Retrieves the NUMA node number that corresponds to the specified proximity domain identifier.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getnumberofeventlogrecords" data-linktype="absolute-path">GetNumberOfEventLogRecords</a></td>
+<td style="text-align: left;">Retrieves the number of records in the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getoldesteventlogrecord" data-linktype="absolute-path">GetOldestEventLogRecord</a></td>
+<td style="text-align: left;">Retrieves the absolute record number of the oldest record in the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofileint" data-linktype="absolute-path">GetPrivateProfileInt</a></td>
+<td style="text-align: left;">Retrieves an integer associated with a key in the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofileinta" data-linktype="absolute-path">GetPrivateProfileIntA</a></td>
+<td style="text-align: left;">Retrieves an integer associated with a key in the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofileintw" data-linktype="absolute-path">GetPrivateProfileIntW</a></td>
+<td style="text-align: left;">Retrieves an integer associated with a key in the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilesection" data-linktype="absolute-path">GetPrivateProfileSection</a></td>
+<td style="text-align: left;">Retrieves all the keys and values for the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilesectiona" data-linktype="absolute-path">GetPrivateProfileSectionA</a></td>
+<td style="text-align: left;">Retrieves all the keys and values for the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilesectionnames" data-linktype="absolute-path">GetPrivateProfileSectionNames</a></td>
+<td style="text-align: left;">Retrieves the names of all sections in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilesectionnamesa" data-linktype="absolute-path">GetPrivateProfileSectionNamesA</a></td>
+<td style="text-align: left;">Retrieves the names of all sections in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilesectionnamesw" data-linktype="absolute-path">GetPrivateProfileSectionNamesW</a></td>
+<td style="text-align: left;">Retrieves the names of all sections in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilesectionw" data-linktype="absolute-path">GetPrivateProfileSectionW</a></td>
+<td style="text-align: left;">Retrieves all the keys and values for the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilestring" data-linktype="absolute-path">GetPrivateProfileString</a></td>
+<td style="text-align: left;">Retrieves a string from the specified section in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilestringa" data-linktype="absolute-path">GetPrivateProfileStringA</a></td>
+<td style="text-align: left;">Retrieves a string from the specified section in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilestringw" data-linktype="absolute-path">GetPrivateProfileStringW</a></td>
+<td style="text-align: left;">Retrieves a string from the specified section in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilestruct" data-linktype="absolute-path">GetPrivateProfileStruct</a></td>
+<td style="text-align: left;">Retrieves the data associated with a key in the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilestructa" data-linktype="absolute-path">GetPrivateProfileStructA</a></td>
+<td style="text-align: left;">Retrieves the data associated with a key in the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofilestructw" data-linktype="absolute-path">GetPrivateProfileStructW</a></td>
+<td style="text-align: left;">Retrieves the data associated with a key in the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprocessaffinitymask" data-linktype="absolute-path">GetProcessAffinityMask</a></td>
+<td style="text-align: left;">Retrieves the process affinity mask for the specified process and the system affinity mask for the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprocessdeppolicy" data-linktype="absolute-path">GetProcessDEPPolicy</a></td>
+<td style="text-align: left;">Gets the data execution prevention (DEP) and DEP-ATL thunk emulation settings for the specified 32-bit process.Windows XP with SP3:  Gets the DEP and DEP-ATL thunk emulation settings for the current process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprocessiocounters" data-linktype="absolute-path">GetProcessIoCounters</a></td>
+<td style="text-align: left;">Retrieves accounting information for all I/O operations performed by the specified process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprocessworkingsetsize" data-linktype="absolute-path">GetProcessWorkingSetSize</a></td>
+<td style="text-align: left;">Retrieves the minimum and maximum working set sizes of the specified process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprofileinta" data-linktype="absolute-path">GetProfileIntA</a></td>
+<td style="text-align: left;">Retrieves an integer from a key in the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprofileintw" data-linktype="absolute-path">GetProfileIntW</a></td>
+<td style="text-align: left;">Retrieves an integer from a key in the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprofilesectiona" data-linktype="absolute-path">GetProfileSectionA</a></td>
+<td style="text-align: left;">Retrieves all the keys and values for the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprofilesectionw" data-linktype="absolute-path">GetProfileSectionW</a></td>
+<td style="text-align: left;">Retrieves all the keys and values for the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprofilestringa" data-linktype="absolute-path">GetProfileStringA</a></td>
+<td style="text-align: left;">Retrieves the string associated with a key in the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getprofilestringw" data-linktype="absolute-path">GetProfileStringW</a></td>
+<td style="text-align: left;">Retrieves the string associated with a key in the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getshortpathnamea" data-linktype="absolute-path">GetShortPathNameA</a></td>
+<td style="text-align: left;">Retrieves the short path form of the specified path.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getsystemdeppolicy" data-linktype="absolute-path">GetSystemDEPPolicy</a></td>
+<td style="text-align: left;">Gets the data execution prevention (DEP) policy setting for the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getsystempowerstatus" data-linktype="absolute-path">GetSystemPowerStatus</a></td>
+<td style="text-align: left;">Retrieves the power status of the system. The status indicates whether the system is running on AC or DC power, whether the battery is currently charging, how much battery life remains, and if battery saver is on or off.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getsystemregistryquota" data-linktype="absolute-path">GetSystemRegistryQuota</a></td>
+<td style="text-align: left;">Retrieves the current size of the registry and the maximum size that the registry is allowed to attain on the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-gettapeparameters" data-linktype="absolute-path">GetTapeParameters</a></td>
+<td style="text-align: left;">Retrieves information that describes the tape or the tape drive.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-gettapeposition" data-linktype="absolute-path">GetTapePosition</a></td>
+<td style="text-align: left;">Retrieves the current address of the tape, in logical or absolute blocks.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-gettapestatus" data-linktype="absolute-path">GetTapeStatus</a></td>
+<td style="text-align: left;">Determines whether the tape device is ready to process tape commands.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-gettempfilename" data-linktype="absolute-path">GetTempFileName</a></td>
+<td style="text-align: left;">Creates a name for a temporary file. If a unique file name is generated, an empty file is created and the handle to it is released; otherwise, only a file name is generated.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getthreadselectorentry" data-linktype="absolute-path">GetThreadSelectorEntry</a></td>
+<td style="text-align: left;">Retrieves a descriptor table entry for the specified selector and thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getumscompletionlistevent" data-linktype="absolute-path">GetUmsCompletionListEvent</a></td>
+<td style="text-align: left;">Retrieves a handle to the event associated with the specified user-mode scheduling (UMS) completion list.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getumssystemthreadinformation" data-linktype="absolute-path">GetUmsSystemThreadInformation</a></td>
+<td style="text-align: left;">Queries whether the specified thread is a UMS scheduler thread, a UMS worker thread, or a non-UMS thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getusernamea" data-linktype="absolute-path">GetUserNameA</a></td>
+<td style="text-align: left;">Retrieves the name of the user associated with the current thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getusernamew" data-linktype="absolute-path">GetUserNameW</a></td>
+<td style="text-align: left;">Retrieves the name of the user associated with the current thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getvolumenameforvolumemountpointa" data-linktype="absolute-path">GetVolumeNameForVolumeMountPointA</a></td>
+<td style="text-align: left;">Retrieves a volume GUID path for the volume that is associated with the specified volume mount point ( drive letter, volume GUID path, or mounted folder).</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getvolumepathnamea" data-linktype="absolute-path">GetVolumePathNameA</a></td>
+<td style="text-align: left;">Retrieves the volume mount point where the specified path is mounted.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getvolumepathnamesforvolumenamea" data-linktype="absolute-path">GetVolumePathNamesForVolumeNameA</a></td>
+<td style="text-align: left;">Retrieves a list of drive letters and mounted folder paths for the specified volume.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-getxstatefeaturesmask" data-linktype="absolute-path">GetXStateFeaturesMask</a></td>
+<td style="text-align: left;">Returns the mask of XState features set within a CONTEXT structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globaladdatoma" data-linktype="absolute-path">GlobalAddAtomA</a></td>
+<td style="text-align: left;">Adds a character string to the global atom table and returns a unique value (an atom) identifying the string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globaladdatomexa" data-linktype="absolute-path">GlobalAddAtomExA</a></td>
+<td style="text-align: left;">Adds a character string to the global atom table and returns a unique value (an atom) identifying the string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globaladdatomexw" data-linktype="absolute-path">GlobalAddAtomExW</a></td>
+<td style="text-align: left;">Adds a character string to the global atom table and returns a unique value (an atom) identifying the string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globaladdatomw" data-linktype="absolute-path">GlobalAddAtomW</a></td>
+<td style="text-align: left;">Adds a character string to the global atom table and returns a unique value (an atom) identifying the string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalalloc" data-linktype="absolute-path">GlobalAlloc</a></td>
+<td style="text-align: left;">Allocates the specified number of bytes from the heap.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globaldeleteatom" data-linktype="absolute-path">GlobalDeleteAtom</a></td>
+<td style="text-align: left;">Decrements the reference count of a global string atom. If the atom's reference count reaches zero, GlobalDeleteAtom removes the string associated with the atom from the global atom table.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globaldiscard" data-linktype="absolute-path">GlobalDiscard</a></td>
+<td style="text-align: left;">Discards the specified global memory block.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalfindatoma" data-linktype="absolute-path">GlobalFindAtomA</a></td>
+<td style="text-align: left;">Searches the global atom table for the specified character string and retrieves the global atom associated with that string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalfindatomw" data-linktype="absolute-path">GlobalFindAtomW</a></td>
+<td style="text-align: left;">Searches the global atom table for the specified character string and retrieves the global atom associated with that string.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalflags" data-linktype="absolute-path">GlobalFlags</a></td>
+<td style="text-align: left;">Retrieves information about the specified global memory object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalfree" data-linktype="absolute-path">GlobalFree</a></td>
+<td style="text-align: left;">Frees the specified global memory object and invalidates its handle.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalgetatomnamea" data-linktype="absolute-path">GlobalGetAtomNameA</a></td>
+<td style="text-align: left;">Retrieves a copy of the character string associated with the specified global atom.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalgetatomnamew" data-linktype="absolute-path">GlobalGetAtomNameW</a></td>
+<td style="text-align: left;">Retrieves a copy of the character string associated with the specified global atom.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalhandle" data-linktype="absolute-path">GlobalHandle</a></td>
+<td style="text-align: left;">Retrieves the handle associated with the specified pointer to a global memory block.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globallock" data-linktype="absolute-path">GlobalLock</a></td>
+<td style="text-align: left;">Locks a global memory object and returns a pointer to the first byte of the object's memory block.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalmemorystatus" data-linktype="absolute-path">GlobalMemoryStatus</a></td>
+<td style="text-align: left;">Retrieves information about the system's current usage of both physical and virtual memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalrealloc" data-linktype="absolute-path">GlobalReAlloc</a></td>
+<td style="text-align: left;">Changes the size or attributes of a specified global memory object. The size can increase or decrease.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalsize" data-linktype="absolute-path">GlobalSize</a></td>
+<td style="text-align: left;">Retrieves the current size of the specified global memory object, in bytes.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-globalunlock" data-linktype="absolute-path">GlobalUnlock</a></td>
+<td style="text-align: left;">Decrements the lock count associated with a memory object that was allocated with GMEM_MOVEABLE.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-hasoverlappediocompleted" data-linktype="absolute-path">HasOverlappedIoCompleted</a></td>
+<td style="text-align: left;">Provides a high performance test operation that can be used to poll for the completion of an outstanding I/O operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-initatomtable" data-linktype="absolute-path">InitAtomTable</a></td>
+<td style="text-align: left;">Initializes the local atom table and sets the number of hash buckets to the specified size.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-initializecontext" data-linktype="absolute-path">InitializeContext</a></td>
+<td style="text-align: left;">Initializes a CONTEXT structure inside a buffer with the necessary size and alignment.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-initializecontext2" data-linktype="absolute-path">InitializeContext2</a></td>
+<td style="text-align: left;">Initializes a CONTEXT structure inside a buffer with the necessary size and alignment, with the option to specify an XSTATE compaction mask.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-initializethreadpoolenvironment" data-linktype="absolute-path">InitializeThreadpoolEnvironment</a></td>
+<td style="text-align: left;">Initializes a callback environment.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-interlockedexchangesubtract" data-linktype="absolute-path">InterlockedExchangeSubtract</a></td>
+<td style="text-align: left;">Performs an atomic subtraction of two values.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-isbadcodeptr" data-linktype="absolute-path">IsBadCodePtr</a></td>
+<td style="text-align: left;">Determines whether the calling process has read access to the memory at the specified address.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-isbadreadptr" data-linktype="absolute-path">IsBadReadPtr</a></td>
+<td style="text-align: left;">Verifies that the calling process has read access to the specified range of memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-isbadstringptra" data-linktype="absolute-path">IsBadStringPtrA</a></td>
+<td style="text-align: left;">Verifies that the calling process has read access to the specified range of memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-isbadstringptrw" data-linktype="absolute-path">IsBadStringPtrW</a></td>
+<td style="text-align: left;">Verifies that the calling process has read access to the specified range of memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-isbadwriteptr" data-linktype="absolute-path">IsBadWritePtr</a></td>
+<td style="text-align: left;">Verifies that the calling process has write access to the specified range of memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-isnativevhdboot" data-linktype="absolute-path">IsNativeVhdBoot</a></td>
+<td style="text-align: left;">Indicates if the OS was booted from a VHD container.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-issystemresumeautomatic" data-linktype="absolute-path">IsSystemResumeAutomatic</a></td>
+<td style="text-align: left;">Determines the current state of the computer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-istextunicode" data-linktype="absolute-path">IsTextUnicode</a></td>
+<td style="text-align: left;">Determines if a buffer is likely to contain a form of Unicode text.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-loadmodule" data-linktype="absolute-path">LoadModule</a></td>
+<td style="text-align: left;">Loads and executes an application or creates a new instance of an existing application.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary" data-linktype="absolute-path">LoadPackagedLibrary</a></td>
+<td style="text-align: left;">Loads the specified packaged module and its dependencies into the address space of the calling process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-localalloc" data-linktype="absolute-path">LocalAlloc</a></td>
+<td style="text-align: left;">Allocates the specified number of bytes from the heap.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-localflags" data-linktype="absolute-path">LocalFlags</a></td>
+<td style="text-align: left;">Retrieves information about the specified local memory object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-localfree" data-linktype="absolute-path">LocalFree</a></td>
+<td style="text-align: left;">Frees the specified local memory object and invalidates its handle.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-localhandle" data-linktype="absolute-path">LocalHandle</a></td>
+<td style="text-align: left;">Retrieves the handle associated with the specified pointer to a local memory object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-locallock" data-linktype="absolute-path">LocalLock</a></td>
+<td style="text-align: left;">Locks a local memory object and returns a pointer to the first byte of the object's memory block.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-localrealloc" data-linktype="absolute-path">LocalReAlloc</a></td>
+<td style="text-align: left;">Changes the size or the attributes of a specified local memory object. The size can increase or decrease.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-localsize" data-linktype="absolute-path">LocalSize</a></td>
+<td style="text-align: left;">Retrieves the current size of the specified local memory object, in bytes.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-localunlock" data-linktype="absolute-path">LocalUnlock</a></td>
+<td style="text-align: left;">Decrements the lock count associated with a memory object that was allocated with LMEM_MOVEABLE.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-locatexstatefeature" data-linktype="absolute-path">LocateXStateFeature</a></td>
+<td style="text-align: left;">Retrieves a pointer to the processor state for an XState feature within a CONTEXT structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-logonusera" data-linktype="absolute-path">LogonUserA</a></td>
+<td style="text-align: left;">The Win32 LogonUser function attempts to log a user on to the local computer. LogonUser returns a handle to a user token that you can use to impersonate user.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-logonuserexa" data-linktype="absolute-path">LogonUserExA</a></td>
+<td style="text-align: left;">The LogonUserEx function attempts to log a user on to the local computer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-logonuserexw" data-linktype="absolute-path">LogonUserExW</a></td>
+<td style="text-align: left;">The LogonUserEx function attempts to log a user on to the local computer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-logonuserw" data-linktype="absolute-path">LogonUserW</a></td>
+<td style="text-align: left;">The Win32 LogonUser function attempts to log a user on to the local computer. LogonUser returns a handle to a user token that you can use to impersonate user.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupaccountnamea" data-linktype="absolute-path">LookupAccountNameA</a></td>
+<td style="text-align: left;">Accepts the name of a system and an account as input. It retrieves a security identifier (SID) for the account and the name of the domain on which the account was found.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupaccountnamew" data-linktype="absolute-path">LookupAccountNameW</a></td>
+<td style="text-align: left;">Accepts the name of a system and an account as input. It retrieves a security identifier (SID) for the account and the name of the domain on which the account was found.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupaccountsida" data-linktype="absolute-path">LookupAccountSidA</a></td>
+<td style="text-align: left;">Accepts a security identifier (SID) as input. It retrieves the name of the account for this SID and the name of the first domain on which this SID is found.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupaccountsidlocala" data-linktype="absolute-path">LookupAccountSidLocalA</a></td>
+<td style="text-align: left;">Retrieves the name of the account for the specified SID on the local machine.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupaccountsidlocalw" data-linktype="absolute-path">LookupAccountSidLocalW</a></td>
+<td style="text-align: left;">Retrieves the name of the account for the specified SID on the local machine.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupaccountsidw" data-linktype="absolute-path">LookupAccountSidW</a></td>
+<td style="text-align: left;">Accepts a security identifier (SID) as input. It retrieves the name of the account for this SID and the name of the first domain on which this SID is found.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupprivilegedisplaynamea" data-linktype="absolute-path">LookupPrivilegeDisplayNameA</a></td>
+<td style="text-align: left;">Retrieves the display name that represents a specified privilege.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupprivilegedisplaynamew" data-linktype="absolute-path">LookupPrivilegeDisplayNameW</a></td>
+<td style="text-align: left;">Retrieves the display name that represents a specified privilege.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupprivilegenamea" data-linktype="absolute-path">LookupPrivilegeNameA</a></td>
+<td style="text-align: left;">Retrieves the name that corresponds to the privilege represented on a specific system by a specified locally unique identifier (LUID).</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupprivilegenamew" data-linktype="absolute-path">LookupPrivilegeNameW</a></td>
+<td style="text-align: left;">Retrieves the name that corresponds to the privilege represented on a specific system by a specified locally unique identifier (LUID).</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupprivilegevaluea" data-linktype="absolute-path">LookupPrivilegeValueA</a></td>
+<td style="text-align: left;">Retrieves the locally unique identifier (LUID) used on a specified system to locally represent the specified privilege name.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lookupprivilegevaluew" data-linktype="absolute-path">LookupPrivilegeValueW</a></td>
+<td style="text-align: left;">Retrieves the locally unique identifier (LUID) used on a specified system to locally represent the specified privilege name.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcata" data-linktype="absolute-path">lstrcatA</a></td>
+<td style="text-align: left;">Appends one string to another.Warning  Do not use.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcatw" data-linktype="absolute-path">lstrcatW</a></td>
+<td style="text-align: left;">Appends one string to another.Warning  Do not use.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcmpa" data-linktype="absolute-path">lstrcmpA</a></td>
+<td style="text-align: left;">Compares two character strings. The comparison is case-sensitive.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcmpia" data-linktype="absolute-path">lstrcmpiA</a></td>
+<td style="text-align: left;">Compares two character strings. The comparison is not case-sensitive.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcmpiw" data-linktype="absolute-path">lstrcmpiW</a></td>
+<td style="text-align: left;">Compares two character strings. The comparison is not case-sensitive.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcmpw" data-linktype="absolute-path">lstrcmpW</a></td>
+<td style="text-align: left;">Compares two character strings. The comparison is case-sensitive.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcpya" data-linktype="absolute-path">lstrcpyA</a></td>
+<td style="text-align: left;">Copies a string to a buffer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcpyna" data-linktype="absolute-path">lstrcpynA</a></td>
+<td style="text-align: left;">Copies a specified number of characters from a source string into a buffer.Warning  Do not use.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcpynw" data-linktype="absolute-path">lstrcpynW</a></td>
+<td style="text-align: left;">Copies a specified number of characters from a source string into a buffer.Warning  Do not use.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrcpyw" data-linktype="absolute-path">lstrcpyW</a></td>
+<td style="text-align: left;">Copies a string to a buffer.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrlena" data-linktype="absolute-path">lstrlenA</a></td>
+<td style="text-align: left;">Determines the length of the specified string (not including the terminating null character).</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-lstrlenw" data-linktype="absolute-path">lstrlenW</a></td>
+<td style="text-align: left;">Determines the length of the specified string (not including the terminating null character).</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-makeintatom" data-linktype="absolute-path">MAKEINTATOM</a></td>
+<td style="text-align: left;">Converts the specified atom into a string, so it can be passed to functions which accept either atoms or strings.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-mapuserphysicalpagesscatter" data-linktype="absolute-path">MapUserPhysicalPagesScatter</a></td>
+<td style="text-align: left;">Maps previously allocated physical memory pages at a specified address in an Address Windowing Extensions (AWE) region.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-mapviewoffileexnuma" data-linktype="absolute-path">MapViewOfFileExNuma</a></td>
+<td style="text-align: left;">Maps a view of a file mapping into the address space of a calling process and specifies the NUMA node for the physical memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefile" data-linktype="absolute-path">MoveFile</a></td>
+<td style="text-align: left;">Moves an existing file or a directory, including its children.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefilea" data-linktype="absolute-path">MoveFileA</a></td>
+<td style="text-align: left;">Moves an existing file or a directory, including its children.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefileexa" data-linktype="absolute-path">MoveFileExA</a></td>
+<td style="text-align: left;">Moves an existing file or directory, including its children, with various move options.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefileexw" data-linktype="absolute-path">MoveFileExW</a></td>
+<td style="text-align: left;">Moves an existing file or directory, including its children, with various move options.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefiletransacteda" data-linktype="absolute-path">MoveFileTransactedA</a></td>
+<td style="text-align: left;">Moves an existing file or a directory, including its children, as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefiletransactedw" data-linktype="absolute-path">MoveFileTransactedW</a></td>
+<td style="text-align: left;">Moves an existing file or a directory, including its children, as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefilew" data-linktype="absolute-path">MoveFileW</a></td>
+<td style="text-align: left;">Moves an existing file or a directory, including its children.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefilewithprogressa" data-linktype="absolute-path">MoveFileWithProgressA</a></td>
+<td style="text-align: left;">Moves a file or directory, including its children. You can provide a callback function that receives progress notifications.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-movefilewithprogressw" data-linktype="absolute-path">MoveFileWithProgressW</a></td>
+<td style="text-align: left;">Moves a file or directory, including its children. You can provide a callback function that receives progress notifications.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-muldiv" data-linktype="absolute-path">MulDiv</a></td>
+<td style="text-align: left;">Multiplies two 32-bit values and then divides the 64-bit result by a third 32-bit value.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-notifychangeeventlog" data-linktype="absolute-path">NotifyChangeEventLog</a></td>
+<td style="text-align: left;">Enables an application to receive notification when an event is written to the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-objectcloseauditalarma" data-linktype="absolute-path">ObjectCloseAuditAlarmA</a></td>
+<td style="text-align: left;">Generates an audit message in the security event log when a handle to a private object is deleted.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-objectdeleteauditalarma" data-linktype="absolute-path">ObjectDeleteAuditAlarmA</a></td>
+<td style="text-align: left;">Generates audit messages when an object is deleted.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-objectopenauditalarma" data-linktype="absolute-path">ObjectOpenAuditAlarmA</a></td>
+<td style="text-align: left;">Generates audit messages when a client application attempts to gain access to an object or to create a new one.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-objectprivilegeauditalarma" data-linktype="absolute-path">ObjectPrivilegeAuditAlarmA</a></td>
+<td style="text-align: left;">Generates an audit message in the security event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openbackupeventloga" data-linktype="absolute-path">OpenBackupEventLogA</a></td>
+<td style="text-align: left;">Opens a handle to a backup event log created by the BackupEventLog function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openbackupeventlogw" data-linktype="absolute-path">OpenBackupEventLogW</a></td>
+<td style="text-align: left;">Opens a handle to a backup event log created by the BackupEventLog function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-opencommport" data-linktype="absolute-path">OpenCommPort</a></td>
+<td style="text-align: left;">Attempts to open a communication device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openencryptedfilerawa" data-linktype="absolute-path">OpenEncryptedFileRawA</a></td>
+<td style="text-align: left;">Opens an encrypted file in order to backup (export) or restore (import) the file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openencryptedfileraww" data-linktype="absolute-path">OpenEncryptedFileRawW</a></td>
+<td style="text-align: left;">Opens an encrypted file in order to backup (export) or restore (import) the file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openeventloga" data-linktype="absolute-path">OpenEventLogA</a></td>
+<td style="text-align: left;">Opens a handle to the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openeventlogw" data-linktype="absolute-path">OpenEventLogW</a></td>
+<td style="text-align: left;">Opens a handle to the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openfile" data-linktype="absolute-path">OpenFile</a></td>
+<td style="text-align: left;">Creates, opens, reopens, or deletes a file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openfilebyid" data-linktype="absolute-path">OpenFileById</a></td>
+<td style="text-align: left;">Opens the file that matches the specified identifier.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openfilemappinga" data-linktype="absolute-path">OpenFileMappingA</a></td>
+<td style="text-align: left;">Opens a named file mapping object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openjobobjecta" data-linktype="absolute-path">OpenJobObjectA</a></td>
+<td style="text-align: left;">Opens an existing job object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-openprivatenamespacea" data-linktype="absolute-path">OpenPrivateNamespaceA</a></td>
+<td style="text-align: left;">Opens a private namespace.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-operationend" data-linktype="absolute-path">OperationEnd</a></td>
+<td style="text-align: left;">Notifies the system that the application is about to end an operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-operationstart" data-linktype="absolute-path">OperationStart</a></td>
+<td style="text-align: left;">Notifies the system that the application is about to start an operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-powerclearrequest" data-linktype="absolute-path">PowerClearRequest</a></td>
+<td style="text-align: left;">Decrements the count of power requests of the specified type for a power request object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-powercreaterequest" data-linktype="absolute-path">PowerCreateRequest</a></td>
+<td style="text-align: left;">Creates a new power request object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-powersetrequest" data-linktype="absolute-path">PowerSetRequest</a></td>
+<td style="text-align: left;">Increments the count of power requests of the specified type for a power request object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-preparetape" data-linktype="absolute-path">PrepareTape</a></td>
+<td style="text-align: left;">Prepares the tape to be accessed or removed.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-privilegedserviceauditalarma" data-linktype="absolute-path">PrivilegedServiceAuditAlarmA</a></td>
+<td style="text-align: left;">Generates an audit message in the security event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-pulseevent" data-linktype="absolute-path">PulseEvent</a></td>
+<td style="text-align: left;">Sets the specified event object to the signaled state and then resets it to the nonsignaled state after releasing the appropriate number of waiting threads.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-purgecomm" data-linktype="absolute-path">PurgeComm</a></td>
+<td style="text-align: left;">Discards all characters from the output or input buffer of a specified communications resource. It can also terminate pending read or write operations on the resource.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-queryactctxsettingsw" data-linktype="absolute-path">QueryActCtxSettingsW</a></td>
+<td style="text-align: left;">The QueryActCtxSettingsW function specifies the activation context, and the namespace and name of the attribute that is to be queried.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-queryactctxw" data-linktype="absolute-path">QueryActCtxW</a></td>
+<td style="text-align: left;">The QueryActCtxW function queries the activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-querydosdevicea" data-linktype="absolute-path">QueryDosDeviceA</a></td>
+<td style="text-align: left;">Retrieves information about MS-DOS device names.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-queryfullprocessimagenamea" data-linktype="absolute-path">QueryFullProcessImageNameA</a></td>
+<td style="text-align: left;">Retrieves the full name of the executable image for the specified process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-queryfullprocessimagenamew" data-linktype="absolute-path">QueryFullProcessImageNameW</a></td>
+<td style="text-align: left;">Retrieves the full name of the executable image for the specified process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-querythreadprofiling" data-linktype="absolute-path">QueryThreadProfiling</a></td>
+<td style="text-align: left;">Determines whether thread profiling is enabled for the specified thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-queryumsthreadinformation" data-linktype="absolute-path">QueryUmsThreadInformation</a></td>
+<td style="text-align: left;">Retrieves information about the specified user-mode scheduling (UMS) worker thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-readdirectorychangesexw" data-linktype="absolute-path">ReadDirectoryChangesExW</a></td>
+<td style="text-align: left;">Retrieves information that describes the changes within the specified directory, which can include extended information if that information type is specified.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-readdirectorychangesw" data-linktype="absolute-path">ReadDirectoryChangesW</a></td>
+<td style="text-align: left;">Retrieves information that describes the changes within the specified directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-readencryptedfileraw" data-linktype="absolute-path">ReadEncryptedFileRaw</a></td>
+<td style="text-align: left;">Backs up (export) encrypted files.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-readeventloga" data-linktype="absolute-path">ReadEventLogA</a></td>
+<td style="text-align: left;">Reads the specified number of entries from the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-readeventlogw" data-linktype="absolute-path">ReadEventLogW</a></td>
+<td style="text-align: left;">Reads the specified number of entries from the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-readthreadprofilingdata" data-linktype="absolute-path">ReadThreadProfilingData</a></td>
+<td style="text-align: left;">Reads the specified profiling data associated with the thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-registerapplicationrecoverycallback" data-linktype="absolute-path">RegisterApplicationRecoveryCallback</a></td>
+<td style="text-align: left;">Registers the active instance of an application for recovery.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-registerapplicationrestart" data-linktype="absolute-path">RegisterApplicationRestart</a></td>
+<td style="text-align: left;">Registers the active instance of an application for restart.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-registereventsourcea" data-linktype="absolute-path">RegisterEventSourceA</a></td>
+<td style="text-align: left;">Retrieves a registered handle to the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-registereventsourcew" data-linktype="absolute-path">RegisterEventSourceW</a></td>
+<td style="text-align: left;">Retrieves a registered handle to the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject" data-linktype="absolute-path">RegisterWaitForSingleObject</a></td>
+<td style="text-align: left;">Directs a wait thread in the thread pool to wait on the object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-releaseactctx" data-linktype="absolute-path">ReleaseActCtx</a></td>
+<td style="text-align: left;">The ReleaseActCtx function decrements the reference count of the specified activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-removedirectorytransacteda" data-linktype="absolute-path">RemoveDirectoryTransactedA</a></td>
+<td style="text-align: left;">Deletes an existing empty directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-removedirectorytransactedw" data-linktype="absolute-path">RemoveDirectoryTransactedW</a></td>
+<td style="text-align: left;">Deletes an existing empty directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-removesecurememorycachecallback" data-linktype="absolute-path">RemoveSecureMemoryCacheCallback</a></td>
+<td style="text-align: left;">Unregisters a callback function that was previously registered with the AddSecureMemoryCacheCallback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-reopenfile" data-linktype="absolute-path">ReOpenFile</a></td>
+<td style="text-align: left;">Reopens the specified file system object with different access rights, sharing mode, and flags.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-replacefilea" data-linktype="absolute-path">ReplaceFileA</a></td>
+<td style="text-align: left;">Replaces one file with another file, with the option of creating a backup copy of the original file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-replacefilew" data-linktype="absolute-path">ReplaceFileW</a></td>
+<td style="text-align: left;">Replaces one file with another file, with the option of creating a backup copy of the original file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-reporteventa" data-linktype="absolute-path">ReportEventA</a></td>
+<td style="text-align: left;">Writes an entry at the end of the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-reporteventw" data-linktype="absolute-path">ReportEventW</a></td>
+<td style="text-align: left;">Writes an entry at the end of the specified event log.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-requestwakeuplatency" data-linktype="absolute-path">RequestWakeupLatency</a></td>
+<td style="text-align: left;">Has no effect and returns STATUS_NOT_SUPPORTED. This function is provided only for compatibility with earlier versions of Windows.Windows Server 2008 and Windows Vista:  Has no effect and always returns success.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setcommbreak" data-linktype="absolute-path">SetCommBreak</a></td>
+<td style="text-align: left;">Suspends character transmission for a specified communications device and places the transmission line in a break state until the ClearCommBreak function is called.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setcommconfig" data-linktype="absolute-path">SetCommConfig</a></td>
+<td style="text-align: left;">Sets the current configuration of a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setcommmask" data-linktype="absolute-path">SetCommMask</a></td>
+<td style="text-align: left;">Specifies a set of events to be monitored for a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setcommstate" data-linktype="absolute-path">SetCommState</a></td>
+<td style="text-align: left;">Configures a communications device according to the specifications in a device-control block (a DCB structure). The function reinitializes all hardware and control settings, but it does not empty output or input queues.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setcommtimeouts" data-linktype="absolute-path">SetCommTimeouts</a></td>
+<td style="text-align: left;">Sets the time-out parameters for all read and write operations on a specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setcurrentdirectory" data-linktype="absolute-path">SetCurrentDirectory</a></td>
+<td style="text-align: left;">Changes the current directory for the current process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setdefaultcommconfiga" data-linktype="absolute-path">SetDefaultCommConfigA</a></td>
+<td style="text-align: left;">Sets the default configuration for a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setdefaultcommconfigw" data-linktype="absolute-path">SetDefaultCommConfigW</a></td>
+<td style="text-align: left;">Sets the default configuration for a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setdlldirectorya" data-linktype="absolute-path">SetDllDirectoryA</a></td>
+<td style="text-align: left;">Adds a directory to the search path used to locate DLLs for the application.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setdlldirectoryw" data-linktype="absolute-path">SetDllDirectoryW</a></td>
+<td style="text-align: left;">Adds a directory to the search path used to locate DLLs for the application.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setenvironmentvariable" data-linktype="absolute-path">SetEnvironmentVariable</a></td>
+<td style="text-align: left;">Sets the contents of the specified environment variable for the current process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfileattributestransacteda" data-linktype="absolute-path">SetFileAttributesTransactedA</a></td>
+<td style="text-align: left;">Sets the attributes for a file or directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw" data-linktype="absolute-path">SetFileAttributesTransactedW</a></td>
+<td style="text-align: left;">Sets the attributes for a file or directory as a transacted operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfilebandwidthreservation" data-linktype="absolute-path">SetFileBandwidthReservation</a></td>
+<td style="text-align: left;">Requests that bandwidth for the specified file stream be reserved. The reservation is specified as a number of bytes in a period of milliseconds for I/O requests on the specified file handle.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfilecompletionnotificationmodes" data-linktype="absolute-path">SetFileCompletionNotificationModes</a></td>
+<td style="text-align: left;">Sets the notification modes for a file handle, allowing you to specify how completion notifications work for the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfilesecuritya" data-linktype="absolute-path">SetFileSecurityA</a></td>
+<td style="text-align: left;">Sets the security of a file or directory object.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfileshortnamea" data-linktype="absolute-path">SetFileShortNameA</a></td>
+<td style="text-align: left;">Sets the short name for the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfileshortnamew" data-linktype="absolute-path">SetFileShortNameW</a></td>
+<td style="text-align: left;">Sets the short name for the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfirmwareenvironmentvariablea" data-linktype="absolute-path">SetFirmwareEnvironmentVariableA</a></td>
+<td style="text-align: left;">Sets the value of the specified firmware environment variable.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfirmwareenvironmentvariableexa" data-linktype="absolute-path">SetFirmwareEnvironmentVariableExA</a></td>
+<td style="text-align: left;">Sets the value of the specified firmware environment variable as the attributes that indicate how this variable is stored and maintained.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfirmwareenvironmentvariableexw" data-linktype="absolute-path">SetFirmwareEnvironmentVariableExW</a></td>
+<td style="text-align: left;">Sets the value of the specified firmware environment variable and the attributes that indicate how this variable is stored and maintained.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setfirmwareenvironmentvariablew" data-linktype="absolute-path">SetFirmwareEnvironmentVariableW</a></td>
+<td style="text-align: left;">Sets the value of the specified firmware environment variable.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-sethandlecount" data-linktype="absolute-path">SetHandleCount</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setmailslotinfo" data-linktype="absolute-path">SetMailslotInfo</a></td>
+<td style="text-align: left;">Sets the time-out value used by the specified mailslot for a read operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setprocessaffinitymask" data-linktype="absolute-path">SetProcessAffinityMask</a></td>
+<td style="text-align: left;">Sets a processor affinity mask for the threads of the specified process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setprocessdeppolicy" data-linktype="absolute-path">SetProcessDEPPolicy</a></td>
+<td style="text-align: left;">Changes data execution prevention (DEP) and DEP-ATL thunk emulation settings for a 32-bit process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setprocessworkingsetsize" data-linktype="absolute-path">SetProcessWorkingSetSize</a></td>
+<td style="text-align: left;">Sets the minimum and maximum working set sizes for the specified process.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setsearchpathmode" data-linktype="absolute-path">SetSearchPathMode</a></td>
+<td style="text-align: left;">Sets the per-process mode that the SearchPath function uses when locating files.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setsystempowerstate" data-linktype="absolute-path">SetSystemPowerState</a></td>
+<td style="text-align: left;">Suspends the system by shutting power down. Depending on the ForceFlag parameter, the function either suspends operation immediately or requests permission from all applications and device drivers before doing so.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-settapeparameters" data-linktype="absolute-path">SetTapeParameters</a></td>
+<td style="text-align: left;">Specifies the block size of a tape or configures the tape device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-settapeposition" data-linktype="absolute-path">SetTapePosition</a></td>
+<td style="text-align: left;">Sets the tape position on the specified device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadaffinitymask" data-linktype="absolute-path">SetThreadAffinityMask</a></td>
+<td style="text-align: left;">Sets a processor affinity mask for the specified thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadexecutionstate" data-linktype="absolute-path">SetThreadExecutionState</a></td>
+<td style="text-align: left;">Enables an application to inform the system that it is in use, thereby preventing the system from entering sleep or turning off the display while the application is running.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadpoolcallbackcleanupgroup" data-linktype="absolute-path">SetThreadpoolCallbackCleanupGroup</a></td>
+<td style="text-align: left;">Associates the specified cleanup group with the specified callback environment.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadpoolcallbacklibrary" data-linktype="absolute-path">SetThreadpoolCallbackLibrary</a></td>
+<td style="text-align: left;">Ensures that the specified DLL remains loaded as long as there are outstanding callbacks.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadpoolcallbackpersistent" data-linktype="absolute-path">SetThreadpoolCallbackPersistent</a></td>
+<td style="text-align: left;">Specifies that the callback should run on a persistent thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadpoolcallbackpool" data-linktype="absolute-path">SetThreadpoolCallbackPool</a></td>
+<td style="text-align: left;">Sets the thread pool to be used when generating callbacks.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadpoolcallbackpriority" data-linktype="absolute-path">SetThreadpoolCallbackPriority</a></td>
+<td style="text-align: left;">Specifies the priority of a callback function relative to other work items in the same thread pool.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setthreadpoolcallbackrunslong" data-linktype="absolute-path">SetThreadpoolCallbackRunsLong</a></td>
+<td style="text-align: left;">Indicates that callbacks associated with this callback environment may not return quickly.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setumsthreadinformation" data-linktype="absolute-path">SetUmsThreadInformation</a></td>
+<td style="text-align: left;">Sets application-specific context information for the specified user-mode scheduling (UMS) worker thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setupcomm" data-linktype="absolute-path">SetupComm</a></td>
+<td style="text-align: left;">Initializes the communications parameters for a specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setvolumelabela" data-linktype="absolute-path">SetVolumeLabelA</a></td>
+<td style="text-align: left;">Sets the label of a file system volume.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setvolumelabelw" data-linktype="absolute-path">SetVolumeLabelW</a></td>
+<td style="text-align: left;">Sets the label of a file system volume.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setvolumemountpointa" data-linktype="absolute-path">SetVolumeMountPointA</a></td>
+<td style="text-align: left;">Associates a volume with a drive letter or a directory on another volume.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setvolumemountpointw" data-linktype="absolute-path">SetVolumeMountPointW</a></td>
+<td style="text-align: left;">Associates a volume with a drive letter or a directory on another volume.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-setxstatefeaturesmask" data-linktype="absolute-path">SetXStateFeaturesMask</a></td>
+<td style="text-align: left;">Sets the mask of XState features set within a CONTEXT structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-switchtofiber" data-linktype="absolute-path">SwitchToFiber</a></td>
+<td style="text-align: left;">Schedules a fiber. The function must be called on a fiber.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-transmitcommchar" data-linktype="absolute-path">TransmitCommChar</a></td>
+<td style="text-align: left;">Transmits a specified character ahead of any pending data in the output buffer of the specified communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-umsthreadyield" data-linktype="absolute-path">UmsThreadYield</a></td>
+<td style="text-align: left;">Yields control to the user-mode scheduling (UMS) scheduler thread on which the calling UMS worker thread is running.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-unregisterapplicationrecoverycallback" data-linktype="absolute-path">UnregisterApplicationRecoveryCallback</a></td>
+<td style="text-align: left;">Removes the active instance of an application from the recovery list.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-unregisterapplicationrestart" data-linktype="absolute-path">UnregisterApplicationRestart</a></td>
+<td style="text-align: left;">Removes the active instance of an application from the restart list.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-unregisterwait" data-linktype="absolute-path">UnregisterWait</a></td>
+<td style="text-align: left;">Cancels a registered wait operation issued by the RegisterWaitForSingleObject function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-updateresourcea" data-linktype="absolute-path">UpdateResourceA</a></td>
+<td style="text-align: left;">Adds, deletes, or replaces a resource in a portable executable (PE) file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-updateresourcew" data-linktype="absolute-path">UpdateResourceW</a></td>
+<td style="text-align: left;">Adds, deletes, or replaces a resource in a portable executable (PE) file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-verifyversioninfoa" data-linktype="absolute-path">VerifyVersionInfoA</a></td>
+<td style="text-align: left;">Compares a set of operating system version requirements to the corresponding values for the currently running version of the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-verifyversioninfow" data-linktype="absolute-path">VerifyVersionInfoW</a></td>
+<td style="text-align: left;">Compares a set of operating system version requirements to the corresponding values for the currently running version of the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-waitcommevent" data-linktype="absolute-path">WaitCommEvent</a></td>
+<td style="text-align: left;">Waits for an event to occur for a specified communications device. The set of events that are monitored by this function is contained in the event mask associated with the device handle.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-waitnamedpipea" data-linktype="absolute-path">WaitNamedPipeA</a></td>
+<td style="text-align: left;">Waits until either a time-out interval elapses or an instance of the specified named pipe is available for connection (that is, the pipe's server process has a pending ConnectNamedPipe operation on the pipe).</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-winexec" data-linktype="absolute-path">WinExec</a></td>
+<td style="text-align: left;">Runs the specified application.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-winmain" data-linktype="absolute-path">WinMain</a></td>
+<td style="text-align: left;">The user-provided entry point for a graphical Windows-based application.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-wow64enablewow64fsredirection" data-linktype="absolute-path">Wow64EnableWow64FsRedirection</a></td>
+<td style="text-align: left;">Enables or disables file system redirection for the calling thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-wow64getthreadselectorentry" data-linktype="absolute-path">Wow64GetThreadSelectorEntry</a></td>
+<td style="text-align: left;">Retrieves a descriptor table entry for the specified selector and WOW64 thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeencryptedfileraw" data-linktype="absolute-path">WriteEncryptedFileRaw</a></td>
+<td style="text-align: left;">Restores (import) encrypted files.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprivateprofilesectiona" data-linktype="absolute-path">WritePrivateProfileSectionA</a></td>
+<td style="text-align: left;">Replaces the keys and values for the specified section in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprivateprofilesectionw" data-linktype="absolute-path">WritePrivateProfileSectionW</a></td>
+<td style="text-align: left;">Replaces the keys and values for the specified section in an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprivateprofilestringa" data-linktype="absolute-path">WritePrivateProfileStringA</a></td>
+<td style="text-align: left;">Copies a string into the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprivateprofilestringw" data-linktype="absolute-path">WritePrivateProfileStringW</a></td>
+<td style="text-align: left;">Copies a string into the specified section of an initialization file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprivateprofilestructa" data-linktype="absolute-path">WritePrivateProfileStructA</a></td>
+<td style="text-align: left;">Copies data into a key in the specified section of an initialization file. As it copies the data, the function calculates a checksum and appends it to the end of the data.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprivateprofilestructw" data-linktype="absolute-path">WritePrivateProfileStructW</a></td>
+<td style="text-align: left;">Copies data into a key in the specified section of an initialization file. As it copies the data, the function calculates a checksum and appends it to the end of the data.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprofilesectiona" data-linktype="absolute-path">WriteProfileSectionA</a></td>
+<td style="text-align: left;">Replaces the contents of the specified section in the Win.ini file with specified keys and values.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprofilesectionw" data-linktype="absolute-path">WriteProfileSectionW</a></td>
+<td style="text-align: left;">Replaces the contents of the specified section in the Win.ini file with specified keys and values.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprofilestringa" data-linktype="absolute-path">WriteProfileStringA</a></td>
+<td style="text-align: left;">Copies a string into the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writeprofilestringw" data-linktype="absolute-path">WriteProfileStringW</a></td>
+<td style="text-align: left;">Copies a string into the specified section of the Win.ini file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-writetapemark" data-linktype="absolute-path">WriteTapemark</a></td>
+<td style="text-align: left;">Writes a specified number of filemarks, setmarks, short filemarks, or long filemarks to a tape device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-wtsgetactiveconsolesessionid" data-linktype="absolute-path">WTSGetActiveConsoleSessionId</a></td>
+<td style="text-align: left;">Retrieves the session identifier of the console session.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nf-winbase-zombifyactctx" data-linktype="absolute-path">ZombifyActCtx</a></td>
+<td style="text-align: left;">The ZombifyActCtx function deactivates the specified activation context, but does not deallocate it.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="callback-functions">Callback functions</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nc-winbase-lpprogress_routine" data-linktype="absolute-path">LPPROGRESS_ROUTINE</a></td>
+<td style="text-align: left;">An application-defined callback function used with the CopyFileEx, MoveFileTransacted, and MoveFileWithProgress functions.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nc-winbase-pcopyfile2_progress_routine" data-linktype="absolute-path">PCOPYFILE2_PROGRESS_ROUTINE</a></td>
+<td style="text-align: left;">An application-defined callback function used with the CopyFile2 function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nc-winbase-pfe_export_func" data-linktype="absolute-path">PFE_EXPORT_FUNC</a></td>
+<td style="text-align: left;">An application-defined callback function used with ReadEncryptedFileRaw.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nc-winbase-pfe_import_func" data-linktype="absolute-path">PFE_IMPORT_FUNC</a></td>
+<td style="text-align: left;">An application-defined callback function used with WriteEncryptedFileRaw. The system calls ImportCallback one or more times, each time to retrieve a portion of a backup file's data.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/nc-winbase-pfiber_start_routine" data-linktype="absolute-path">PFIBER_START_ROUTINE</a></td>
+<td style="text-align: left;">An application-defined function used with the CreateFiber function. It serves as the starting address for a fiber.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="structures">Structures</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-actctx_section_keyed_data" data-linktype="absolute-path">ACTCTX_SECTION_KEYED_DATA</a></td>
+<td style="text-align: left;">The ACTCTX_SECTION_KEYED_DATA structure is used by the FindActCtxSectionString and FindActCtxSectionGuid functions to return the activation context information along with either the GUID or 32-bit integer-tagged activation context section.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-actctxa" data-linktype="absolute-path">ACTCTXA</a></td>
+<td style="text-align: left;">The ACTCTX structure is used by the CreateActCtx function to create the activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-actctxw" data-linktype="absolute-path">ACTCTXW</a></td>
+<td style="text-align: left;">The ACTCTX structure is used by the CreateActCtx function to create the activation context.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-commconfig" data-linktype="absolute-path">COMMCONFIG</a></td>
+<td style="text-align: left;">Contains information about the configuration state of a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-commprop" data-linktype="absolute-path">COMMPROP</a></td>
+<td style="text-align: left;">Contains information about a communications driver.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-commtimeouts" data-linktype="absolute-path">COMMTIMEOUTS</a></td>
+<td style="text-align: left;">Contains the time-out parameters for a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-comstat" data-linktype="absolute-path">COMSTAT</a></td>
+<td style="text-align: left;">Contains information about a communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-copyfile2_extended_parameters" data-linktype="absolute-path">COPYFILE2_EXTENDED_PARAMETERS</a></td>
+<td style="text-align: left;">Contains extended parameters for the CopyFile2 function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-copyfile2_message" data-linktype="absolute-path">COPYFILE2_MESSAGE</a></td>
+<td style="text-align: left;">Passed to the CopyFile2ProgressRoutine callback function with information about a pending copy operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-dcb" data-linktype="absolute-path">DCB</a></td>
+<td style="text-align: left;">Defines the control setting for a serial communications device.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-eventlog_full_information" data-linktype="absolute-path">EVENTLOG_FULL_INFORMATION</a></td>
+<td style="text-align: left;">Indicates whether the event log is full.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_alignment_info" data-linktype="absolute-path">FILE_ALIGNMENT_INFO</a></td>
+<td style="text-align: left;">Contains alignment information for a file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_allocation_info" data-linktype="absolute-path">FILE_ALLOCATION_INFO</a></td>
+<td style="text-align: left;">Contains the total number of bytes that should be allocated for a file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_attribute_tag_info" data-linktype="absolute-path">FILE_ATTRIBUTE_TAG_INFO</a></td>
+<td style="text-align: left;">Receives the requested file attribute information. Used for any handles.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_basic_info" data-linktype="absolute-path">FILE_BASIC_INFO</a></td>
+<td style="text-align: left;">Contains the basic information for a file. Used for file handles.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_compression_info" data-linktype="absolute-path">FILE_COMPRESSION_INFO</a></td>
+<td style="text-align: left;">Receives file compression information.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_disposition_info" data-linktype="absolute-path">FILE_DISPOSITION_INFO</a></td>
+<td style="text-align: left;">Indicates whether a file should be deleted. Used for any handles.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_end_of_file_info" data-linktype="absolute-path">FILE_END_OF_FILE_INFO</a></td>
+<td style="text-align: left;">Contains the specified value to which the end of the file should be set.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_full_dir_info" data-linktype="absolute-path">FILE_FULL_DIR_INFO</a></td>
+<td style="text-align: left;">Contains directory information for a file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_id_both_dir_info" data-linktype="absolute-path">FILE_ID_BOTH_DIR_INFO</a></td>
+<td style="text-align: left;">Contains information about files in the specified directory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_id_descriptor" data-linktype="absolute-path">FILE_ID_DESCRIPTOR</a></td>
+<td style="text-align: left;">Specifies the type of ID that is being used.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_id_extd_dir_info" data-linktype="absolute-path">FILE_ID_EXTD_DIR_INFO</a></td>
+<td style="text-align: left;">Contains identification information for a file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_id_info" data-linktype="absolute-path">FILE_ID_INFO</a></td>
+<td style="text-align: left;">Contains identification information for a file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_io_priority_hint_info" data-linktype="absolute-path">FILE_IO_PRIORITY_HINT_INFO</a></td>
+<td style="text-align: left;">Specifies the priority hint for a file I/O operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_name_info" data-linktype="absolute-path">FILE_NAME_INFO</a></td>
+<td style="text-align: left;">Receives the file name.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_remote_protocol_info" data-linktype="absolute-path">FILE_REMOTE_PROTOCOL_INFO</a></td>
+<td style="text-align: left;">Contains file remote protocol information.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_rename_info" data-linktype="absolute-path">FILE_RENAME_INFO</a></td>
+<td style="text-align: left;">Contains the name to which the file should be renamed.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_standard_info" data-linktype="absolute-path">FILE_STANDARD_INFO</a></td>
+<td style="text-align: left;">Receives extended information for the file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_storage_info" data-linktype="absolute-path">FILE_STORAGE_INFO</a></td>
+<td style="text-align: left;">Contains directory information for a file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-file_stream_info" data-linktype="absolute-path">FILE_STREAM_INFO</a></td>
+<td style="text-align: left;">Receives file stream information for the specified file.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-hw_profile_infoa" data-linktype="absolute-path">HW_PROFILE_INFOA</a></td>
+<td style="text-align: left;">Contains information about a hardware profile.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-hw_profile_infow" data-linktype="absolute-path">HW_PROFILE_INFOW</a></td>
+<td style="text-align: left;">Contains information about a hardware profile.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-memorystatus" data-linktype="absolute-path">MEMORYSTATUS</a></td>
+<td style="text-align: left;">Contains information about the current state of both physical and virtual memory.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-ofstruct" data-linktype="absolute-path">OFSTRUCT</a></td>
+<td style="text-align: left;">Contains information about a file that the OpenFile function opened or attempted to open.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-operation_end_parameters" data-linktype="absolute-path">OPERATION_END_PARAMETERS</a></td>
+<td style="text-align: left;">This structure is used by the OperationEnd function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-operation_start_parameters" data-linktype="absolute-path">OPERATION_START_PARAMETERS</a></td>
+<td style="text-align: left;">This structure is used by the OperationStart function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-startupinfoexa" data-linktype="absolute-path">STARTUPINFOEXA</a></td>
+<td style="text-align: left;">Specifies the window station, desktop, standard handles, and attributes for a new process. It is used with the CreateProcess and CreateProcessAsUser functions.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-startupinfoexw" data-linktype="absolute-path">STARTUPINFOEXW</a></td>
+<td style="text-align: left;">Specifies the window station, desktop, standard handles, and attributes for a new process. It is used with the CreateProcess and CreateProcessAsUser functions.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-system_power_status" data-linktype="absolute-path">SYSTEM_POWER_STATUS</a></td>
+<td style="text-align: left;">Contains information about the power status of the system.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-ums_scheduler_startup_info" data-linktype="absolute-path">UMS_SCHEDULER_STARTUP_INFO</a></td>
+<td style="text-align: left;">Specifies attributes for a user-mode scheduling (UMS) scheduler thread.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-ums_system_thread_information" data-linktype="absolute-path">UMS_SYSTEM_THREAD_INFORMATION</a></td>
+<td style="text-align: left;">Specifies a UMS scheduler thread, UMS worker thread, or non-UMS thread. The GetUmsSystemThreadInformation function uses this structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ns-winbase-win32_stream_id" data-linktype="absolute-path">WIN32_STREAM_ID</a></td>
+<td style="text-align: left;">Contains stream data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ne-winbase-copyfile2_copy_phase" data-linktype="absolute-path">COPYFILE2_COPY_PHASE</a></td>
+<td style="text-align: left;">Indicates the phase of a copy at the time of an error.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ne-winbase-copyfile2_message_action" data-linktype="absolute-path">COPYFILE2_MESSAGE_ACTION</a></td>
+<td style="text-align: left;">Returned by the CopyFile2ProgressRoutine callback function to indicate what action should be taken for the pending copy operation.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ne-winbase-copyfile2_message_type" data-linktype="absolute-path">COPYFILE2_MESSAGE_TYPE</a></td>
+<td style="text-align: left;">Indicates the type of message passed in the COPYFILE2_MESSAGE structure to the CopyFile2ProgressRoutine callback function.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ne-winbase-file_id_type" data-linktype="absolute-path">FILE_ID_TYPE</a></td>
+<td style="text-align: left;">Discriminator for the union in the FILE_ID_DESCRIPTOR structure.</td>
+</tr>
+<tr>
+<td><a href="/en-us/windows/win32/api/winbase/ne-winbase-priority_hint" data-linktype="absolute-path">PRIORITY_HINT</a></td>
+<td style="text-align: left;">Defines values that are used with the FILE_IO_PRIORITY_HINT_INFO structure to specify the priority hint for a file I/O operation.</td>
+</tr>
+</tbody>
+</table>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-small">
+									
+									
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								</div>
+						<!-- end page rating section -->
+
+
+						<!-- feedback section -->
+
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable">
+								
+								
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+								<h3>In this article</h3>
+							</nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+	<span id="adobe-target-experiment-container" hidden></span>
+</body>
+</html>

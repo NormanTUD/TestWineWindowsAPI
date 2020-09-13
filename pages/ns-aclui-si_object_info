@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="SI_OBJECT_INFO (aclui.h) - Win32 apps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/windows/win32/api/aclui/ns-aclui-si_object_info" />
+			<meta property="og:description" content="Used to initialize the access control editor." />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+
+	<meta name="APILocation" content="Aclui.h" />
+<meta name="APIName" content="SI_OBJECT_INFO" />
+<meta name="APIType" content="HeaderDef" />
+<meta name="author" content="mikben" />
+<meta name="breadcrumb_path" content="/windows/desktop/api/breadcrumb/toc.json" />
+<meta name="depot_name" content="MSDN.sdk-api-build" />
+<meta name="description" content="Used to initialize the access control editor." />
+<meta name="document_id" content="c45ec65e-bebe-0be9-dfbd-2a08f5b9d774" />
+<meta name="document_version_independent_id" content="f1434b4e-a48d-8df1-200f-2a70752a2570" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build/commit/80958e5ed7dca317a3858faf8ae9181162089a2c?path=/sdk-api-src/content/aclui/ns-aclui-si_object_info.md&amp;_a=contents" />
+<meta name="locale" content="en-us" />
+<meta name="ms.assetid" content="bdfd0753-4727-4ca1-ac36-0a77db0a16c5" />
+<meta name="ms.author" content="mikben" />
+<meta name="ms.custom" content="19H1" />
+<meta name="ms.date" content="12/05/2018" />
+<meta name="ms.keywords" content="*PSI_OBJECT_INFO, PSI_OBJECT_INFO, PSI_OBJECT_INFO structure pointer [Security], SI_ADVANCED, SI_AUDITS_ELEVATION_REQUIRED, SI_CONTAINER, SI_DISABLE_DENY_ACE, SI_EDIT_ALL, SI_EDIT_AUDITS, SI_EDIT_EFFECTIVE, SI_EDIT_OWNER, SI_EDIT_PERMS, SI_EDIT_PROPERTIES, SI_ENABLE_CENTRAL_POLICY, SI_ENABLE_EDIT_ATTRIBUTE_CONDITION, SI_MAY_WRITE, SI_NO_ACL_PROTECT, SI_NO_ADDITIONAL_PERMISSION, SI_NO_TREE_APPLY, SI_OBJECT_GUID, SI_OBJECT_INFO, SI_OBJECT_INFO structure [Security], SI_OWNER_ELEVATION_REQUIRED, SI_OWNER_READONLY, SI_OWNER_RECURSE, SI_PAGE_TITLE, SI_PERMS_ELEVATION_REQUIRED, SI_READONLY, SI_RESET, SI_RESET_DACL, SI_RESET_DACL_TREE, SI_RESET_OWNER, SI_RESET_SACL, SI_RESET_SACL_TREE, SI_SCOPE_ELEVATION_REQUIRED, SI_SERVER_IS_DC, SI_VIEW_ONLY, _win32_si_object_info_str, aclui/PSI_OBJECT_INFO, aclui/SI_OBJECT_INFO, security.si_object_info" />
+<meta name="ms.prod" content="desktop" />
+<meta name="ms.technology" content="sdk-api-reference" />
+<meta name="ms.topic" content="language-reference" />
+<meta name="old-location" content="security\si_object_info.htm" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/aclui/ns-aclui-si_object_info.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="req.assembly" content="" />
+<meta name="req.ddi-compliance" content="" />
+<meta name="req.dll" content="" />
+<meta name="req.header" content="aclui.h" />
+<meta name="req.idl" content="" />
+<meta name="req.include-header" content="" />
+<meta name="req.irql" content="" />
+<meta name="req.kmdf-ver" content="" />
+<meta name="req.lib" content="" />
+<meta name="req.max-support" content="" />
+<meta name="req.namespace" content="" />
+<meta name="req.redist" content="" />
+<meta name="req.target-min-winverclnt" content="Windows XP [desktop apps only]" />
+<meta name="req.target-min-winversvr" content="Windows Server 2003 [desktop apps only]" />
+<meta name="req.target-type" content="Windows" />
+<meta name="req.type-library" content="" />
+<meta name="req.typenames" content="SI_OBJECT_INFO, *PSI_OBJECT_INFO" />
+<meta name="req.umdf-ver" content="" />
+<meta name="req.unicode-ansi" content="" />
+<meta name="search.ms_docsetname" content="sdk-api-build" />
+<meta name="search.ms_product" content="MSDN" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="targetos" content="Windows" />
+<meta name="tech.root" content="security" />
+<meta name="TopicType" content="APIRef" />
+<meta name="TopicType" content="kbSyntax" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDevCenter" />
+<meta name="UID" content="NS:aclui._SI_OBJECT_INFO" />
+<meta name="updated_at" content="2020-08-24 11:50 PM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="../_security/toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.sdk-api-build/{branchName}{pdfName}" />
+<meta name="feedback_config_error" content="feedback_system metadata is invalid. Expected GitHub. Received none." />
+<meta name="search.mshattr.devlang" content="c++" />
+<meta name="word_count" content="1701" />
+
+
+	<meta name="scope" content="Windows, Desktop" />
+<link href="https://docs.microsoft.com/en-us/windows/win32/api/aclui/ns-aclui-si_object_info" rel="canonical">
+	<title>SI_OBJECT_INFO (aclui.h) - Win32 apps | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/284eaf13.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/2e5ce4ab.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/aclui/ns-aclui-si_object_info.md',
+			extendBreadcrumb: true,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/2f860d58.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+							<li id="contenteditbtn">
+								<a href="https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/aclui/ns-aclui-si_object_info.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/aclui/ns-aclui-si_object_info.md&version=GBlive&_a=contents" data-original_content_git_url_template="{repo}?path=/sdk-api-src/content/aclui/ns-aclui-si_object_info.md&version=GB{branch}&_a=contents" data-pr_repo="" data-pr_branch="">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-edit-outline"></span>
+								</span>
+								<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+							</a>
+						</li>
+					<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="si_object_info-structure">SI_OBJECT_INFO structure</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li>
+								<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2018-12-05T00:00:00.000Z" data-article-date-source="ms.date">12/05/2018</time>
+							</li>
+								<li class="readingTime">8 minutes to read</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+							<h3>In this article</h3>
+						</nav>
+
+						<!-- <content> -->
+							<p>The <b>SI_OBJECT_INFO</b> structure is used by the
+<a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getobjectinformation" data-linktype="absolute-path">ISecurityInformation::GetObjectInformation</a> method to specify information used to initialize the access control editor.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-cpp">typedef struct _SI_OBJECT_INFO {
+  DWORD     dwFlags;
+  HINSTANCE hInstance;
+  LPWSTR    pszServerName;
+  LPWSTR    pszObjectName;
+  LPWSTR    pszPageTitle;
+  GUID      guidObjectType;
+} SI_OBJECT_INFO, *PSI_OBJECT_INFO;
+</code></pre>
+<h2 id="members">Members</h2>
+<p><code>dwFlags</code></p>
+<p>A set of bit flags that determine the editing options available to the user. This member can be a combination of the following values.</p>
+<table>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%"><a id="SI_ADVANCED_"></a><a id="si_advanced_"></a><dl>
+<dt><b>SI_ADVANCED
+</b></dt>
+<dt>0x00000010L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the <b>Advanced</b> button is displayed on the basic security property page. If the user clicks this button, the system displays an 
+<a href="/en-us/windows/desktop/SecAuthZ/advanced-security-property-sheet" data-linktype="absolute-path">advanced security property sheet</a> that enables advanced editing of the <a href="/en-us/windows/desktop/SecGloss/d-gly" data-linktype="absolute-path">discretionary access control list</a> (DACL) of the object. 
+<p>Combine this flag with the SI_EDIT_AUDITS, SI_EDIT_OWNER, and SI_EDIT_PROPERTIES flags to enable editing of the object's SACL, owner, and object-specific <a href="/en-us/windows/desktop/SecGloss/a-gly" data-linktype="absolute-path">access control entries</a> (ACEs).</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_AUDITS_ELEVATION_REQUIRED"></a><a id="si_audits_elevation_required"></a><dl>
+<dt><b>SI_AUDITS_ELEVATION_REQUIRED</b></dt>
+<dt>0x02000000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, a shield is displayed on the <b>Edit</b> button of the advanced <b>Auditing</b> pages. For NTFS objects, this flag is requested when the user does not have <b>READ_CONTROL</b> or <b>ACCESS_SYSTEM_SECURITY</b> access.
+<p><b>Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_CONTAINER_"></a><a id="si_container_"></a><dl>
+<dt><b>SI_CONTAINER
+</b></dt>
+<dt>0x00000004L</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the object is a container. If this flag is set, the access control editor enables the controls relevant to the inheritance of permissions onto child objects.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_DISABLE_DENY_ACE"></a><a id="si_disable_deny_ace"></a><dl>
+<dt><b>SI_DISABLE_DENY_ACE</b></dt>
+<dt>0x80000000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the system disables denying an ACE.  Clients of the access control editor must implement the <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation4" data-linktype="absolute-path">ISecurityInformation4</a> interface to set this flag.
+<p><b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_EDIT_ALL_"></a><a id="si_edit_all_"></a><dl>
+<dt><b>SI_EDIT_ALL
+</b></dt>
+</dl>
+</td>
+<td width="60%">
+Combines the SI_EDIT_PERMS,
+SI_EDIT_OWNER, and SI_EDIT_AUDITS flags.
+										
+								
+							
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_EDIT_AUDITS_"></a><a id="si_edit_audits_"></a><dl>
+<dt><b>SI_EDIT_AUDITS
+</b></dt>
+<dt>0x00000002L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set and the user clicks the <b>Advanced</b> button, the system displays an advanced security property sheet that includes an <a href="/en-us/windows/desktop/SecAuthZ/auditing-property-page" data-linktype="absolute-path">Auditing property page</a>for editing the object's SACL. To display the <b>Advanced</b> button, set the SI_ADVANCED flag.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_EDIT_EFFECTIVE"></a><a id="si_edit_effective"></a><dl>
+<dt><b>SI_EDIT_EFFECTIVE</b></dt>
+<dt>0x00020000L</dt>
+</dl>
+</td>
+<td width="60%">
+ If this flag is set, the <b>Effective Permissions</b> page is displayed. This flag is ignored if the <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation" data-linktype="absolute-path">ISecurityInformation</a> object that initialized the access control editor does not implement the <a href="/en-us/windows/desktop/api/aclui/nn-aclui-ieffectivepermission" data-linktype="absolute-path">IEffectivePermission</a> interface.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_EDIT_OWNER_"></a><a id="si_edit_owner_"></a><dl>
+<dt><b>SI_EDIT_OWNER
+</b></dt>
+<dt>0x00000001L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set and the user clicks the <b>Advanced</b> button, the system displays an advanced security property sheet that includes an 
+<a href="/en-us/windows/desktop/SecAuthZ/owner-property-page" data-linktype="absolute-path">Owner property page</a>for changing the object's owner. To display the <b>Advanced</b> button, set the SI_ADVANCED flag.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_EDIT_PERMS_"></a><a id="si_edit_perms_"></a><dl>
+<dt><b>SI_EDIT_PERMS
+</b></dt>
+<dt>0x00000000L</dt>
+</dl>
+</td>
+<td width="60%">
+This is the default value. The basic security property page always displays the controls for basic editing of the object's DACL. To disable these controls, set the SI_READONLY flag.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_EDIT_PROPERTIES_"></a><a id="si_edit_properties_"></a><dl>
+<dt><b>SI_EDIT_PROPERTIES
+</b></dt>
+<dt>0x00000080L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the system enables controls for editing ACEs that apply to the object's property sets and properties. These controls are available only on the property sheet displayed when the user clicks the <b>Advanced</b> button.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_ENABLE_CENTRAL_POLICY"></a><a id="si_enable_central_policy"></a><dl>
+<dt><b>SI_ENABLE_CENTRAL_POLICY</b></dt>
+<dt>0x40000000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the system enables editing attributes.  Clients of the access control editor must implement the <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation4" data-linktype="absolute-path">ISecurityInformation4</a> interface to set this flag.
+<p><b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_ENABLE_EDIT_ATTRIBUTE_CONDITION"></a><a id="si_enable_edit_attribute_condition"></a><dl>
+<dt><b>SI_ENABLE_EDIT_ATTRIBUTE_CONDITION</b></dt>
+<dt>0x20000000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the system enables editing attributes.  Clients of the access control editor must implement the <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation4" data-linktype="absolute-path">ISecurityInformation4</a> interface to set this flag.
+<p><b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_MAY_WRITE"></a><a id="si_may_write"></a><dl>
+<dt><b>SI_MAY_WRITE</b></dt>
+<dt>0x10000000L</dt>
+</dl>
+</td>
+<td width="60%">
+Indicates that the access control editor cannot read the DACL but might be able to write to the DACL. If a call to the <a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getsecurity" data-linktype="absolute-path">ISecurityInformation::GetSecurity</a> method returns <b>AccessDenied</b>, the user can try to add a new ACE, and a more appropriate warning is displayed.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_NO_ACL_PROTECT_"></a><a id="si_no_acl_protect_"></a><dl>
+<dt><b>SI_NO_ACL_PROTECT
+</b></dt>
+<dt>0x00000200L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the access control editor hides the check box that allows inheritable ACEs to propagate from the parent object to this object. If this flag is not set, the check box is visible. 
+<p>The check box is clear if the SE_DACL_PROTECTED flag is set in the object's security descriptor. In this case, the object's DACL is protected from being modified by inheritable ACEs.</p>
+<p>If the user clears the check box, any inherited ACEs in the security descriptor are deleted or converted to noninherited ACEs. Before proceeding with this conversion, the system displays a warning message box to confirm the change.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_NO_ADDITIONAL_PERMISSION"></a><a id="si_no_additional_permission"></a><dl>
+<dt><b>SI_NO_ADDITIONAL_PERMISSION</b></dt>
+<dt>0x00200000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the access control editor hides the <b>Special Permissions</b> tab on the <b>Advanced Security Settings</b>  page.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_NO_TREE_APPLY_"></a><a id="si_no_tree_apply_"></a><dl>
+<dt><b>SI_NO_TREE_APPLY
+</b></dt>
+<dt>0x00000400L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the access control editor hides the check box that controls the NO_PROPAGATE_INHERIT_ACE flag. This flag is relevant only when the SI_ADVANCED flag is also set.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_OBJECT_GUID_"></a><a id="si_object_guid_"></a><dl>
+<dt><b>SI_OBJECT_GUID
+</b></dt>
+<dt>0x00010000L</dt>
+</dl>
+</td>
+<td width="60%">
+When set, indicates that the <b>guidObjectType</b> member of the <b>SI_OBJECT_INFO</b> structure is valid. This is set in comparisons with object-specific ACEs in determining whether the ACE applies to the current object.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_OWNER_ELEVATION_REQUIRED"></a><a id="si_owner_elevation_required"></a><dl>
+<dt><b>SI_OWNER_ELEVATION_REQUIRED</b></dt>
+<dt>0x04000000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, a shield is displayed on the <b>Edit</b> button of the advanced <b>Owner</b> page. For NTFS objects, this flag is requested when the user does not have <b>WRITE_OWNER</b> access. This flag is valid only if the owner page is requested.
+<p><b>Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_OWNER_READONLY_"></a><a id="si_owner_readonly_"></a><dl>
+<dt><b>SI_OWNER_READONLY
+</b></dt>
+<dt>0x00000040L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the user cannot change the owner of the object. Set this flag if SI_EDIT_OWNER is set but the user does not have permission to change the owner.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_OWNER_RECURSE_"></a><a id="si_owner_recurse_"></a><dl>
+<dt><b>SI_OWNER_RECURSE
+</b></dt>
+<dt>0x00000100L</dt>
+</dl>
+</td>
+<td width="60%">
+Combine this flag with SI_CONTAINER to display a check box on the owner page that indicates whether the user intends the new owner to be applied to all child objects as well as the current object. The access control editor does not perform the recursion; the recursion should be performed by the application in 
+<a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-setsecurity" data-linktype="absolute-path">ISecurityInformation::SetSecurity</a>.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_PAGE_TITLE_"></a><a id="si_page_title_"></a><dl>
+<dt><b>SI_PAGE_TITLE
+</b></dt>
+<dt>0x00000800L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the <b>pszPageTitle</b> member is used as the title of the basic security property page. Otherwise, a default title is used.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_PERMS_ELEVATION_REQUIRED"></a><a id="si_perms_elevation_required"></a><dl>
+<dt><b>SI_PERMS_ELEVATION_REQUIRED</b></dt>
+<dt>0x01000000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, an image of a shield is displayed on the <b>Edit</b> button of the simple and advanced <b>Permissions</b> pages. For NTFS objects, this flag is requested when the user does not have <b>READ_CONTROL</b> or <b>WRITE_DAC</b> access.
+<p><b>Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_READONLY_"></a><a id="si_readonly_"></a><dl>
+<dt><b>SI_READONLY
+</b></dt>
+<dt>0x00000008L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the editor displays the object's security information, but the controls for editing the information are disabled.
+<p>This flag cannot be combined with the <b>SI_VIEW_ONLY</b> flag.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_RESET_"></a><a id="si_reset_"></a><dl>
+<dt><b>SI_RESET
+</b></dt>
+<dt>0x00000020L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, the <b>Default</b> button is displayed. If the user clicks this button, the access control editor calls the 
+<a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getsecurity" data-linktype="absolute-path">ISecurityInformation::GetSecurity</a> method to retrieve an application-defined default security descriptor. The access control editor uses this security descriptor to reinitialize the property sheet, and the user is allowed to apply the change or cancel.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_RESET_DACL"></a><a id="si_reset_dacl"></a><dl>
+<dt><b>SI_RESET_DACL</b></dt>
+<dt>0x00040000L</dt>
+</dl>
+</td>
+<td width="60%">
+When set, this flag displays the <b>Reset Defaults</b> button on the <b>Permissions</b> page.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_RESET_DACL_TREE_"></a><a id="si_reset_dacl_tree_"></a><dl>
+<dt><b>SI_RESET_DACL_TREE
+</b></dt>
+<dt>0x00004000L</dt>
+</dl>
+</td>
+<td width="60%">
+When set, this flag displays the Reset permissions on all child objects and enable propagation of inheritable permissions check box in the Permissions page of the Access Control Settings window. If this check box is selected when the user clicks the <b>Apply</b> button, a bitwise-<b>OR</b> operation is performed on the <i>SecurityInformation</i> parameter of 
+<a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-setsecurity" data-linktype="absolute-path">ISecurityInformation::SetSecurity</a> with SI_RESET_DACL_TREE. This function does not reset the permissions and enable propagation of inheritable permissions; the implementation of <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation" data-linktype="absolute-path">ISecurityInformation</a> must do this.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_RESET_OWNER"></a><a id="si_reset_owner"></a><dl>
+<dt><b>SI_RESET_OWNER</b></dt>
+<dt>0x00100000L</dt>
+</dl>
+</td>
+<td width="60%">
+When set, this flag displays the <b>Reset Defaults</b> button on the <b>Owner</b> page.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_RESET_SACL"></a><a id="si_reset_sacl"></a><dl>
+<dt><b>SI_RESET_SACL</b></dt>
+<dt>0x00080000L</dt>
+</dl>
+</td>
+<td width="60%">
+When set, this flag displays the <b>Reset Defaults</b> button on the <b>Auditing</b> page.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_RESET_SACL_TREE_"></a><a id="si_reset_sacl_tree_"></a><dl>
+<dt><b>SI_RESET_SACL_TREE
+</b></dt>
+<dt>0x00008000L</dt>
+</dl>
+</td>
+<td width="60%">
+When set, this flag displays the Reset auditing entries on all child objects and enables propagation of the inheritable auditing entries check box in the Auditing page of the Access Control Settings window. If this check box is selected when the user clicks the <b>Apply</b> button, a bitwise-<b>OR</b> operation is performed on the <i>SecurityInformation</i> parameter of 
+<a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-setsecurity" data-linktype="absolute-path">ISecurityInformation::SetSecurity</a> with SI_RESET_SACL_TREE. This function does not reset the permissions and enable propagation of inheritable permissions; the implementation of <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation" data-linktype="absolute-path">ISecurityInformation</a> must do this.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_SCOPE_ELEVATION_REQUIRED"></a><a id="si_scope_elevation_required"></a><dl>
+<dt><b>SI_SCOPE_ELEVATION_REQUIRED</b></dt>
+<dt>0x08000000L</dt>
+</dl>
+</td>
+<td width="60%">
+If this flag is set, an image of a shield is displayed on the <b>Change</b> button of the Scope attribute. For NTFS objects, this flag is requested when the user does not have READ_CONTROL or WRITE_DAC access.  Clients of the access control editor must implement the <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation4" data-linktype="absolute-path">ISecurityInformation4</a> interface to set this flag.
+<p><b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_SERVER_IS_DC_"></a><a id="si_server_is_dc_"></a><dl>
+<dt><b>SI_SERVER_IS_DC
+</b></dt>
+<dt>0x00001000L</dt>
+</dl>
+</td>
+<td width="60%">
+Set this flag if the <b>pszServerName</b> computer is known to be a domain controller. If this flag is set, the domain name is included in the scope list of the <b>Add Users and Groups</b> dialog box. Otherwise, the <b>pszServerName</b> computer is used to determine the scope list of the dialog box.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="SI_VIEW_ONLY"></a><a id="si_view_only"></a><dl>
+<dt><b>SI_VIEW_ONLY</b></dt>
+<dt>0x00400000L</dt>
+</dl>
+</td>
+<td width="60%">
+This flag is set by the access control editor client to display read-only versions of the access control editor dialog boxes. These versions of the dialog boxes do not allow editing of the associated object's permissions. Clients of the access control editor must implement the <a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation3" data-linktype="absolute-path">ISecurityInformation3</a> interface to set this flag.
+<p>This flag cannot be combined with the <b>SI_READONLY</b> flag.</p>
+<p><b>Windows Server 2003 and Windows XP:  </b>This flag is not supported.</p>
+</td>
+</tr>
+</table>
+<p><code>hInstance</code></p>
+<p>Identifies a module that contains string resources to be used in the property sheet. The
+<a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getaccessrights" data-linktype="absolute-path">ISecurityInformation::GetAccessRights</a> and
+<a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getinherittypes" data-linktype="absolute-path">ISecurityInformation::GetInheritTypes</a> methods can specify string resource identifiers for display names.</p>
+<p><code>pszServerName</code></p>
+<p>A pointer to a <b>null</b>-terminated, <a href="/en-us/windows/desktop/SecGloss/u-gly" data-linktype="absolute-path">Unicode</a> string that names the computer on which to look up account names and SIDs. This value can be <b>NULL</b> to specify the local computer. The access control editor does not free this pointer.</p>
+<p><code>pszObjectName</code></p>
+<p>A pointer to a <b>null</b>-terminated, Unicode string that names the object being edited. This name appears in the title of the advanced security property sheet and any error message boxes displayed by the access control editor. The access control editor does not free this pointer.</p>
+<p><code>pszPageTitle</code></p>
+<p>A pointer to a <b>null</b>-terminated, Unicode string used as the title of the basic security property page. This member is ignored unless the SI_PAGE_TITLE flag is set in <b>dwFlags</b>. If the page title is not provided, a default title is used. The access control editor does not free this pointer.</p>
+<p><code>guidObjectType</code></p>
+<p>A
+GUID for the object. This member is ignored unless the SI_OBJECT_GUID flag is set in <b>dwFlags</b>.</p>
+<h2 id="requirements">Requirements</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th style="text-align: left;"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimum supported client</strong></td>
+<td style="text-align: left;">Windows XP [desktop apps only]</td>
+</tr>
+<tr>
+<td><strong>Minimum supported server</strong></td>
+<td style="text-align: left;">Windows Server 2003 [desktop apps only]</td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td style="text-align: left;">aclui.h</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See also</h2>
+<p><a href="/en-us/windows/desktop/api/aclui/nn-aclui-isecurityinformation" data-linktype="absolute-path">ISecurityInformation</a></p>
+<p><a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getaccessrights" data-linktype="absolute-path">ISecurityInformation::GetAccessRights</a></p>
+<p><a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getinherittypes" data-linktype="absolute-path">ISecurityInformation::GetInheritTypes</a></p>
+<p><a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getobjectinformation" data-linktype="absolute-path">ISecurityInformation::GetObjectInformation</a></p>
+<p><a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-getsecurity" data-linktype="absolute-path">ISecurityInformation::GetSecurity</a></p>
+<p><a href="/en-us/windows/desktop/api/aclui/nf-aclui-isecurityinformation-setsecurity" data-linktype="absolute-path">ISecurityInformation::SetSecurity</a></p>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-small">
+									
+									
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								</div>
+						<!-- end page rating section -->
+
+
+						<!-- feedback section -->
+
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable">
+								
+								
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+								<h3>In this article</h3>
+							</nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+	<span id="adobe-target-experiment-container" hidden></span>
+</body>
+</html>

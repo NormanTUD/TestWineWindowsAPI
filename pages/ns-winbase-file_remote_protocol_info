@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="en-us" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="FILE_REMOTE_PROTOCOL_INFO (winbase.h) - Win32 apps" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_remote_protocol_info" />
+			<meta property="og:description" content="Contains file remote protocol information." />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+
+
+	<meta name="APILocation" content="WinBase.h" />
+<meta name="APIName" content="FILE_REMOTE_PROTOCOL_INFO" />
+<meta name="APIType" content="HeaderDef" />
+<meta name="author" content="lastnameholiu" />
+<meta name="breadcrumb_path" content="/windows/desktop/api/breadcrumb/toc.json" />
+<meta name="depot_name" content="MSDN.sdk-api-build" />
+<meta name="description" content="Contains file remote protocol information." />
+<meta name="document_id" content="e6985bf6-c197-61ce-f1d1-6f88ff25c696" />
+<meta name="document_version_independent_id" content="9869a04f-34b6-b0ce-0992-4667a017c99c" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build/commit/80958e5ed7dca317a3858faf8ae9181162089a2c?path=/sdk-api-src/content/winbase/ns-winbase-file_remote_protocol_info.md&amp;_a=contents" />
+<meta name="locale" content="en-us" />
+<meta name="ms.assetid" content="ddb555ad-0acb-4538-88ce-a871adfc21fc" />
+<meta name="ms.author" content="alholiu" />
+<meta name="ms.custom" content="19H1" />
+<meta name="ms.date" content="12/05/2018" />
+<meta name="ms.keywords" content="*PFILE_REMOTE_PROTOCOL_INFO, FILE_REMOTE_PROTOCOL_INFO, FILE_REMOTE_PROTOCOL_INFO structure [Files], PFILE_REMOTE_PROTOCOL_INFO, PFILE_REMOTE_PROTOCOL_INFO structure pointer [Files], REMOTE_PROTOCOL_FLAG_LOOPBACK, REMOTE_PROTOCOL_FLAG_OFFLINE, REMOTE_PROTOCOL_INFO_FLAG_INTEGRITY, REMOTE_PROTOCOL_INFO_FLAG_MUTUAL_AUTH, REMOTE_PROTOCOL_INFO_FLAG_PERSISTENT_HANDLE, REMOTE_PROTOCOL_INFO_FLAG_PRIVACY, WNNC_NET_10NET, WNNC_NET_3IN1, WNNC_NET_9TILES, WNNC_NET_APPLETALK, WNNC_NET_AS400, WNNC_NET_AVID, WNNC_NET_AVID1, WNNC_NET_BMC, WNNC_NET_BWNFS, WNNC_NET_CLEARCASE, WNNC_NET_COGENT, WNNC_NET_CSC, WNNC_NET_DAV, WNNC_NET_DCE, WNNC_NET_DECORB, WNNC_NET_DFS, WNNC_NET_DISTINCT, WNNC_NET_DOCUSPACE, WNNC_NET_DRIVEONWEB, WNNC_NET_EXIFS, WNNC_NET_EXTENDNET, WNNC_NET_FARALLON, WNNC_NET_FJ_REDIR, WNNC_NET_FOXBAT, WNNC_NET_FRONTIER, WNNC_NET_FTP_NFS, WNNC_NET_GOOGLE, WNNC_NET_HOB_NFS, WNNC_NET_IBMAL, WNNC_NET_INTERGRAPH, WNNC_NET_KNOWARE, WNNC_NET_KWNP, WNNC_NET_LANMAN, WNNC_NET_LANSTEP, WNNC_NET_LANTASTIC, WNNC_NET_LIFENET, WNNC_NET_LOCK, WNNC_NET_LOCUS, WNNC_NET_MANGOSOFT, WNNC_NET_MASFAX, WNNC_NET_MFILES, WNNC_NET_MSNET, WNNC_NET_MS_NFS, WNNC_NET_NDFS, WNNC_NET_NETWARE, WNNC_NET_OBJECT_DIRE, WNNC_NET_OPENAFS, WNNC_NET_PATHWORKS, WNNC_NET_POWERLAN, WNNC_NET_PROTSTOR, WNNC_NET_QUINCY, WNNC_NET_RDR2SAMPLE, WNNC_NET_RIVERFRONT1, WNNC_NET_RIVERFRONT2, WNNC_NET_RSFX, WNNC_NET_SERNET, WNNC_NET_SHIVA, WNNC_NET_SMB, WNNC_NET_SRT, WNNC_NET_STAC, WNNC_NET_SUN_PC_NFS, WNNC_NET_SYMFONET, WNNC_NET_TERMSRV, WNNC_NET_TWINS, WNNC_NET_VINES, WNNC_NET_VMWARE, WNNC_NET_YAHOO, WNNC_NET_ZENWORKS, _FILE_REMOTE_PROTOCOL_INFO, fs.file_remote_protocol_information, winbase/FILE_REMOTE_PROTOCOL_INFO, winbase/PFILE_REMOTE_PROTOCOL_INFO" />
+<meta name="ms.prod" content="desktop" />
+<meta name="ms.technology" content="sdk-api-reference" />
+<meta name="ms.topic" content="language-reference" />
+<meta name="old-location" content="fs\file_remote_protocol_information.htm" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/ns-winbase-file_remote_protocol_info.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="req.assembly" content="" />
+<meta name="req.ddi-compliance" content="" />
+<meta name="req.dll" content="" />
+<meta name="req.header" content="winbase.h" />
+<meta name="req.idl" content="" />
+<meta name="req.include-header" content="Windows.h" />
+<meta name="req.irql" content="" />
+<meta name="req.kmdf-ver" content="" />
+<meta name="req.lib" content="" />
+<meta name="req.max-support" content="" />
+<meta name="req.namespace" content="" />
+<meta name="req.redist" content="" />
+<meta name="req.target-min-winverclnt" content="Windows 7 [desktop apps only]" />
+<meta name="req.target-min-winversvr" content="Windows Server 2008 R2 [desktop apps only]" />
+<meta name="req.target-type" content="Windows" />
+<meta name="req.type-library" content="" />
+<meta name="req.typenames" content="FILE_REMOTE_PROTOCOL_INFO, *PFILE_REMOTE_PROTOCOL_INFO" />
+<meta name="req.umdf-ver" content="" />
+<meta name="req.unicode-ansi" content="" />
+<meta name="search.ms_docsetname" content="sdk-api-build" />
+<meta name="search.ms_product" content="MSDN" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="targetos" content="Windows" />
+<meta name="tech.root" content="fs" />
+<meta name="TopicType" content="APIRef" />
+<meta name="TopicType" content="kbSyntax" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDevCenter" />
+<meta name="UID" content="NS:winbase._FILE_REMOTE_PROTOCOL_INFO" />
+<meta name="updated_at" content="2020-08-24 11:50 PM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="../_fs/toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.sdk-api-build/{branchName}{pdfName}" />
+<meta name="feedback_config_error" content="feedback_system metadata is invalid. Expected GitHub. Received none." />
+<meta name="search.mshattr.devlang" content="c++" />
+<meta name="word_count" content="546" />
+
+
+	<meta name="scope" content="Windows, Desktop" />
+<link href="https://docs.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_remote_protocol_info" rel="canonical">
+	<title>FILE_REMOTE_PROTOCOL_INFO (winbase.h) - Win32 apps | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/284eaf13.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/2e5ce4ab.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/ns-winbase-file_remote_protocol_info.md',
+			extendBreadcrumb: true,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/2f860d58.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+							<li id="contenteditbtn">
+								<a href="https://github.com/MicrosoftDocs/sdk-api/blob/docs/sdk-api-src/content/winbase/ns-winbase-file_remote_protocol_info.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/sdk-api-build?path=/sdk-api-src/content/winbase/ns-winbase-file_remote_protocol_info.md&version=GBlive&_a=contents" data-original_content_git_url_template="{repo}?path=/sdk-api-src/content/winbase/ns-winbase-file_remote_protocol_info.md&version=GB{branch}&_a=contents" data-pr_repo="" data-pr_branch="">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-edit-outline"></span>
+								</span>
+								<span class="is-visually-hidden-touch is-hidden-portrait">Edit</span>
+							</a>
+						</li>
+					<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">Share</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Email</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="file_remote_protocol_info-structure">FILE_REMOTE_PROTOCOL_INFO structure</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li>
+								<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2018-12-05T00:00:00.000Z" data-article-date-source="ms.date">12/05/2018</time>
+							</li>
+								<li class="readingTime">2 minutes to read</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+							<h3>In this article</h3>
+						</nav>
+
+						<!-- <content> -->
+							<p>Contains file remote protocol information. This structure is returned from the
+<a href="/en-us/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex" data-linktype="absolute-path">GetFileInformationByHandleEx</a> function when
+<b>FileRemoteProtocolInfo</b> is passed in the <i>FileInformationClass</i>
+parameter.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="lang-cpp">typedef struct _FILE_REMOTE_PROTOCOL_INFO {
+  USHORT StructureVersion;
+  USHORT StructureSize;
+  ULONG  Protocol;
+  USHORT ProtocolMajorVersion;
+  USHORT ProtocolMinorVersion;
+  USHORT ProtocolRevision;
+  USHORT Reserved;
+  ULONG  Flags;
+  struct {
+    ULONG Reserved[8];
+  } GenericReserved;
+  struct {
+    ULONG Reserved[16];
+  } ProtocolSpecificReserved;
+  union {
+    struct {
+      struct {
+        ULONG Capabilities;
+      } Server;
+      struct {
+        ULONG Capabilities;
+        ULONG CachingFlags;
+      } Share;
+    } Smb2;
+    ULONG Reserved[16];
+  } ProtocolSpecific;
+} FILE_REMOTE_PROTOCOL_INFO, *PFILE_REMOTE_PROTOCOL_INFO;
+</code></pre>
+<h2 id="members">Members</h2>
+<p><code>StructureVersion</code></p>
+<p>Version of this structure. This member should be set to 2 if the communication is between
+computers running Windows 8, Windows Server 2012, or later and 1 otherwise.</p>
+<p><code>StructureSize</code></p>
+<p>Size of this structure. This member should be set to
+<code>sizeof(FILE_REMOTE_PROTOCOL_INFO)</code>.</p>
+<p><code>Protocol</code></p>
+<p>Remote protocol (<b>WNNC_NET_*</b>) defined in Wnnc.h or
+Ntifs.h.</p>
+<h4 id="wnnc_net_msnet-0x00010000">WNNC_NET_MSNET (0x00010000)</h4>
+<h4 id="wnnc_net_smb-0x00020000">WNNC_NET_SMB (0x00020000)</h4>
+<h4 id="wnnc_net_lanman-0x00020000">WNNC_NET_LANMAN (0x00020000)</h4>
+<h4 id="wnnc_net_netware-0x00030000">WNNC_NET_NETWARE (0x00030000)</h4>
+<h4 id="wnnc_net_vines-0x00040000">WNNC_NET_VINES (0x00040000)</h4>
+<h4 id="wnnc_net_10net-0x00050000">WNNC_NET_10NET (0x00050000)</h4>
+<h4 id="wnnc_net_locus-0x00060000">WNNC_NET_LOCUS (0x00060000)</h4>
+<h4 id="wnnc_net_sun_pc_nfs-0x00070000">WNNC_NET_SUN_PC_NFS (0x00070000)</h4>
+<h4 id="wnnc_net_lanstep-0x00080000">WNNC_NET_LANSTEP (0x00080000)</h4>
+<h4 id="wnnc_net_9tiles-0x00090000">WNNC_NET_9TILES (0x00090000)</h4>
+<h4 id="wnnc_net_lantastic-0x000a0000">WNNC_NET_LANTASTIC (0x000A0000)</h4>
+<h4 id="wnnc_net_as400-0x000b0000">WNNC_NET_AS400 (0x000B0000)</h4>
+<h4 id="wnnc_net_ftp_nfs-0x000c0000">WNNC_NET_FTP_NFS (0x000C0000)</h4>
+<h4 id="wnnc_net_pathworks-0x000d0000">WNNC_NET_PATHWORKS (0x000D0000)</h4>
+<h4 id="wnnc_net_lifenet-0x000e0000">WNNC_NET_LIFENET (0x000E0000)</h4>
+<h4 id="wnnc_net_powerlan-0x000f0000">WNNC_NET_POWERLAN (0x000F0000)</h4>
+<h4 id="wnnc_net_bwnfs-0x00100000">WNNC_NET_BWNFS (0x00100000)</h4>
+<h4 id="wnnc_net_cogent-0x00110000">WNNC_NET_COGENT (0x00110000)</h4>
+<h4 id="wnnc_net_farallon-0x00120000">WNNC_NET_FARALLON (0x00120000)</h4>
+<h4 id="wnnc_net_appletalk-0x00130000">WNNC_NET_APPLETALK (0x00130000)</h4>
+<h4 id="wnnc_net_intergraph-0x00140000">WNNC_NET_INTERGRAPH (0x00140000)</h4>
+<h4 id="wnnc_net_symfonet-0x00150000">WNNC_NET_SYMFONET (0x00150000)</h4>
+<h4 id="wnnc_net_clearcase-0x00160000">WNNC_NET_CLEARCASE (0x00160000)</h4>
+<h4 id="wnnc_net_frontier-0x00170000">WNNC_NET_FRONTIER (0x00170000)</h4>
+<h4 id="wnnc_net_bmc-0x00180000">WNNC_NET_BMC (0x00180000)</h4>
+<h4 id="wnnc_net_dce-0x00190000">WNNC_NET_DCE (0x00190000)</h4>
+<h4 id="wnnc_net_avid-0x001a0000">WNNC_NET_AVID (0x001A0000)</h4>
+<h4 id="wnnc_net_docuspace-0x001b0000">WNNC_NET_DOCUSPACE (0x001B0000)</h4>
+<h4 id="wnnc_net_mangosoft-0x001c0000">WNNC_NET_MANGOSOFT (0x001C0000)</h4>
+<h4 id="wnnc_net_sernet-0x001d0000">WNNC_NET_SERNET (0x001D0000)</h4>
+<h4 id="wnnc_net_riverfront1-0x001e0000">WNNC_NET_RIVERFRONT1 (0x001E0000)</h4>
+<h4 id="wnnc_net_riverfront2-0x001f0000">WNNC_NET_RIVERFRONT2 (0x001F0000)</h4>
+<h4 id="wnnc_net_decorb-0x00200000">WNNC_NET_DECORB (0x00200000)</h4>
+<h4 id="wnnc_net_protstor-0x00210000">WNNC_NET_PROTSTOR (0x00210000)</h4>
+<h4 id="wnnc_net_fj_redir-0x00220000">WNNC_NET_FJ_REDIR (0x00220000)</h4>
+<h4 id="wnnc_net_distinct-0x00230000">WNNC_NET_DISTINCT (0x00230000)</h4>
+<h4 id="wnnc_net_twins-0x00240000">WNNC_NET_TWINS (0x00240000)</h4>
+<h4 id="wnnc_net_rdr2sample-0x00250000">WNNC_NET_RDR2SAMPLE (0x00250000)</h4>
+<h4 id="wnnc_net_csc-0x00260000">WNNC_NET_CSC (0x00260000)</h4>
+<h4 id="wnnc_net_3in1-0x00270000">WNNC_NET_3IN1 (0x00270000)</h4>
+<h4 id="wnnc_net_extendnet-0x00290000">WNNC_NET_EXTENDNET (0x00290000)</h4>
+<h4 id="wnnc_net_stac-0x002a0000">WNNC_NET_STAC (0x002A0000)</h4>
+<h4 id="wnnc_net_foxbat-0x002b0000">WNNC_NET_FOXBAT (0x002B0000)</h4>
+<h4 id="wnnc_net_yahoo-0x002c0000">WNNC_NET_YAHOO (0x002C0000)</h4>
+<h4 id="wnnc_net_exifs-0x002d0000">WNNC_NET_EXIFS (0x002D0000)</h4>
+<h4 id="wnnc_net_dav-0x002e0000">WNNC_NET_DAV (0x002E0000)</h4>
+<h4 id="wnnc_net_knoware-0x002f0000">WNNC_NET_KNOWARE (0x002F0000)</h4>
+<h4 id="wnnc_net_object_dire-0x00300000">WNNC_NET_OBJECT_DIRE (0x00300000)</h4>
+<h4 id="wnnc_net_masfax-0x00310000">WNNC_NET_MASFAX (0x00310000)</h4>
+<h4 id="wnnc_net_hob_nfs-0x00320000">WNNC_NET_HOB_NFS (0x00320000)</h4>
+<h4 id="wnnc_net_shiva-0x00330000">WNNC_NET_SHIVA (0x00330000)</h4>
+<h4 id="wnnc_net_ibmal-0x00340000">WNNC_NET_IBMAL (0x00340000)</h4>
+<h4 id="wnnc_net_lock-0x00350000">WNNC_NET_LOCK (0x00350000)</h4>
+<h4 id="wnnc_net_termsrv-0x00360000">WNNC_NET_TERMSRV (0x00360000)</h4>
+<h4 id="wnnc_net_srt-0x00370000">WNNC_NET_SRT (0x00370000)</h4>
+<h4 id="wnnc_net_quincy-0x00380000">WNNC_NET_QUINCY (0x00380000)</h4>
+<h4 id="wnnc_net_openafs-0x00390000">WNNC_NET_OPENAFS (0x00390000)</h4>
+<h4 id="wnnc_net_avid1-0x003a0000">WNNC_NET_AVID1 (0x003A0000)</h4>
+<h4 id="wnnc_net_dfs-0x003b0000">WNNC_NET_DFS (0x003B0000)</h4>
+<h4 id="wnnc_net_kwnp-0x003c0000">WNNC_NET_KWNP (0x003C0000)</h4>
+<h4 id="wnnc_net_zenworks-0x003d0000">WNNC_NET_ZENWORKS (0x003D0000)</h4>
+<h4 id="wnnc_net_driveonweb-0x003e0000">WNNC_NET_DRIVEONWEB (0x003E0000)</h4>
+<h4 id="wnnc_net_vmware-0x003f0000">WNNC_NET_VMWARE (0x003F0000)</h4>
+<h4 id="wnnc_net_rsfx-0x00400000">WNNC_NET_RSFX (0x00400000)</h4>
+<h4 id="wnnc_net_mfiles-0x00410000">WNNC_NET_MFILES (0x00410000)</h4>
+<h4 id="wnnc_net_ms_nfs-0x00420000">WNNC_NET_MS_NFS (0x00420000)</h4>
+<h4 id="wnnc_net_google-0x00430000">WNNC_NET_GOOGLE (0x00430000)</h4>
+<h4 id="wnnc_net_ndfs-0x00440000">WNNC_NET_NDFS (0x00440000)</h4>
+<p><code>ProtocolMajorVersion</code></p>
+<p>Major version of the remote protocol.</p>
+<p><code>ProtocolMinorVersion</code></p>
+<p>Minor version of the remote protocol.</p>
+<p><code>ProtocolRevision</code></p>
+<p>Revision of the remote protocol.</p>
+<p><code>Reserved</code></p>
+<p>Should be set to zero. Do not use this member.</p>
+<p><code>Flags</code></p>
+<p>Remote protocol information. This member can be set to zero or more of the following flags.</p>
+<table>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td width="40%"><a id="REMOTE_PROTOCOL_FLAG_LOOPBACK"></a><a id="remote_protocol_flag_loopback"></a><dl>
+<dt><b>REMOTE_PROTOCOL_FLAG_LOOPBACK</b></dt>
+<dt>0x1</dt>
+</dl>
+</td>
+<td width="60%">
+The remote protocol is using a loopback.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="REMOTE_PROTOCOL_FLAG_OFFLINE"></a><a id="remote_protocol_flag_offline"></a><dl>
+<dt><b>REMOTE_PROTOCOL_FLAG_OFFLINE</b></dt>
+<dt>0x2</dt>
+</dl>
+</td>
+<td width="60%">
+The remote protocol is using an offline cache.
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="REMOTE_PROTOCOL_INFO_FLAG_PERSISTENT_HANDLE"></a><a id="remote_protocol_info_flag_persistent_handle"></a><dl>
+<dt><b>REMOTE_PROTOCOL_INFO_FLAG_PERSISTENT_HANDLE</b></dt>
+<dt>0x4</dt>
+</dl>
+</td>
+<td width="60%">
+The remote protocol is using a persistent handle.
+<p><b>Windows 7 and Windows Server 2008 R2:  </b>This flag is not supported before Windows 8 and Windows Server 2012.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="REMOTE_PROTOCOL_INFO_FLAG_PRIVACY"></a><a id="remote_protocol_info_flag_privacy"></a><dl>
+<dt><b>REMOTE_PROTOCOL_INFO_FLAG_PRIVACY</b></dt>
+<dt>0x8</dt>
+</dl>
+</td>
+<td width="60%">
+The remote protocol is using privacy. This is only supported if the 
+        <b>StructureVersion</b> member is 2 or higher.
+<p><b>Windows 7 and Windows Server 2008 R2:  </b>This flag is not supported before Windows 8 and Windows Server 2012.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="REMOTE_PROTOCOL_INFO_FLAG_INTEGRITY"></a><a id="remote_protocol_info_flag_integrity"></a><dl>
+<dt><b>REMOTE_PROTOCOL_INFO_FLAG_INTEGRITY</b></dt>
+<dt>0x10</dt>
+</dl>
+</td>
+<td width="60%">
+The remote protocol is using integrity so the data is signed. This is only supported if the 
+        <b>StructureVersion</b> member is 2 or higher.
+<p><b>Windows 7 and Windows Server 2008 R2:  </b>This flag is not supported before Windows 8 and Windows Server 2012.</p>
+</td>
+</tr>
+<tr>
+<td width="40%"><a id="REMOTE_PROTOCOL_INFO_FLAG_MUTUAL_AUTH"></a><a id="remote_protocol_info_flag_mutual_auth"></a><dl>
+<dt><b>REMOTE_PROTOCOL_INFO_FLAG_MUTUAL_AUTH</b></dt>
+<dt>0x20</dt>
+</dl>
+</td>
+<td width="60%">
+The remote protocol is using mutual authentication using Kerberos. This is only supported if the 
+        <b>StructureVersion</b> member is 2 or higher.
+<p><b>Windows 7 and Windows Server 2008 R2:  </b>This flag is not supported before Windows 8 and Windows Server 2012.</p>
+</td>
+</tr>
+</table>
+<p><code>GenericReserved</code></p>
+<p>Protocol-generic information structure.</p>
+<p><code>GenericReserved.Reserved</code></p>
+<p>Should be set to zero. Do not use this member.</p>
+<p><code>ProtocolSpecificReserved</code></p>
+<p>Protocol-specific information structure.</p>
+<p><code>ProtocolSpecificReserved.Reserved</code></p>
+<p>Should be set to zero. Do not use this member.</p>
+<p><code>ProtocolSpecific</code></p>
+<p><code>ProtocolSpecific.Smb2</code></p>
+<p><code>ProtocolSpecific.Smb2.Server</code></p>
+<p><code>ProtocolSpecific.Smb2.Server.Capabilities</code></p>
+<p><code>ProtocolSpecific.Smb2.Share</code></p>
+<p><code>ProtocolSpecific.Smb2.Share.Capabilities</code></p>
+<p><code>ProtocolSpecific.Smb2.Share.CachingFlags</code></p>
+<p><code>ProtocolSpecific.Reserved</code></p>
+<h2 id="remarks">Remarks</h2>
+<p>The <b>FILE_REMOTE_PROTOCOL_INFO</b>
+structure is valid only for use with the
+<a href="/en-us/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex" data-linktype="absolute-path">GetFileInformationByHandleEx</a> function.</p>
+<h2 id="requirements">Requirements</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th style="text-align: left;"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimum supported client</strong></td>
+<td style="text-align: left;">Windows 7 [desktop apps only]</td>
+</tr>
+<tr>
+<td><strong>Minimum supported server</strong></td>
+<td style="text-align: left;">Windows Server 2008 R2 [desktop apps only]</td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td style="text-align: left;">winbase.h (include Windows.h)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See also</h2>
+<p><a href="/en-us/windows/desktop/api/minwinbase/ne-minwinbase-file_info_by_handle_class" data-linktype="absolute-path">FILE_INFO_BY_HANDLE_CLASS</a></p>
+<p><a href="/en-us/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex" data-linktype="absolute-path">GetFileInformationByHandleEx</a></p>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-small">
+									
+									
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>								</div>
+						<!-- end page rating section -->
+
+
+						<!-- feedback section -->
+
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable">
+								
+								
+<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+            <h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+            <div>
+                <button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>Yes</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">Any additional feedback?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">Skip</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>Thank you.</p>
+    </div>
+</div>							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+								<h3>In this article</h3>
+							</nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Light					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/teamblog" data-bi-name="bloglink">Blog</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2020</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+	<span id="adobe-target-experiment-container" hidden></span>
+</body>
+</html>
